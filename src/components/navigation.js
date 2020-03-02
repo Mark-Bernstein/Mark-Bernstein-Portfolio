@@ -36,26 +36,32 @@ function NavBar() {
                     <div>
                         <Button
                             className="navButton"
-                            size="small"
+                            variant="primary"
+                            color="primary"
                             variant="outlined"
-                            color="primary">
-                            <Link className="link" to="/resume">
-                                Resume
-                                </Link>
+                        >
+                            <Link className="link" to="/resume"> Resume </Link>
                         </Button>
                     </div>
                     <div>
                         <Button
                             className="navButton"
-                            size="small"
-                            variant="outlined"
+                            variant="primary"
                             color="primary"
+                            variant="outlined"
                         >
-                            <Link className="link" to="/projects">Projects</Link>
+                            <Link className="link" to="/projects"> Projects </Link>
                         </Button>
                     </div>
                     <div>
-                        <Button className="navButton" size="small" variant="outlined" color="primary"> <Link className="link" to="/">About</Link></Button>
+                        <Button 
+                            className="navButton"  
+                            variant="primary" 
+                            color="primary"
+                            variant="outlined"
+                        > 
+                            <Link className="link" to="/"> About </Link>
+                        </Button>
                     </div>
                 </div>
             </motion.div>

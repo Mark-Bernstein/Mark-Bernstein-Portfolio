@@ -1,15 +1,15 @@
 var projects = {
     "musicConnoisseurs": {
         "title": "Music Connoisseurs",
-        "text": "An application that creates a database of music genres and provides a description to broaden your musical knowledge."
+        "text": "A web application that creates a database of music genres and provides a description to broaden your musical knowledge."
     },
     "burger": {
         "title": "MVC Burger",
-        "text": "This app uses JavaScript, HTML, CSS, MySql, Node, Express, Handlebars, and a homemade ORM to log out burgers."
+        "text": "This web application uses JavaScript, HTML, CSS, MySql, Node, Express, Handlebars, and a homemade ORM to log out burgers."
     },
     "noteTaker": {
         "title": "Note Taker",
-        "text": "An application that can be used to write, save, and delete notes."
+        "text": "A web application that can be used to write, save, and delete notes."
     },
     "cityScout": {
         "title": "City Scout",
@@ -17,7 +17,7 @@ var projects = {
     },
     "weatherDashboard": {
         "title": "Weather Dashboard",
-        "text": "A weather dashboard using the OpenWeather API."
+        "text": "A weather dashboard web application using the OpenWeather API."
     },
 }
 

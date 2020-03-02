@@ -14,10 +14,6 @@ const modalVariants = {
     visible: { opacity: 1, y: 0 }
 }
 
-function rand() {
-    return Math.round(Math.random() * 20) - 10;
-}
-
 function getModalStyle() {
     const top = 50;
     const left = 50;
@@ -55,11 +51,6 @@ function ProjectCard(props) {
     // let pdflink = <div></div>
     let githublink = <div>
         <a href={props.projectDetails["github"]} target="_blank">Github</a>
-        {/* insert image here */}
-        {/* insert image here */}
-        {/* insert image here */}
-        {/* insert image here */}
-        {/* insert image here */}
     </div>
 
 

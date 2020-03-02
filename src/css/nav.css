@@ -36,13 +36,19 @@
 
 @media only screen and (max-width: 700px) {
     .navButton {
-        font-size: 14pt;
+        font-size: 8pt;
         margin-top: 8px;
     }
 }
 
+@media only screen and (max-width: 540px) {
+    .link {
+        font-size: 7pt;
+    }
+}
+
 .link {
-    color: lightblue;
+    color: rgb(82, 70, 250);
     text-decoration: none;
     display:inline-block;
 }

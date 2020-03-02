@@ -3,6 +3,7 @@ import '../css/nav.css';
 import { motion } from 'framer-motion';
 import MarkProfilePicture from '../images/MarkProfilePicture.JPG';
 import BodyText from '../components/bodytext';
+import BackgroundImage from '../images/background-image-portfolio.jpg';
 
 const variants = {
     hidden: { opacity: 0, scale: 0 },
@@ -17,6 +18,7 @@ const variantsY = {
 function AboutContainer() {
     return (
         <div>
+            {/* <img src={BackgroundImage}></img> */}
             <div className="aboutContainer">
                 <motion.div
                     initial="hidden"
