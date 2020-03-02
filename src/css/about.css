@@ -1,0 +1,35 @@
+
+#aboutImage {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.aboutText {
+    font-family: 'Darker grotesque', sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    width: 69%;
+    margin: auto;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 700px) {
+    .aboutText {
+        width: 80%;
+    }
+}
+
+.slides {
+    margin: auto;
+    width: 50%;
+}
+
+.contain {
+    max-width:100%;
+    max-height:100%;
+}
+
+

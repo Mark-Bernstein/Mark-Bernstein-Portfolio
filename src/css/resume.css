@@ -1,0 +1,60 @@
+a {
+    font-size: 20px;
+}
+
+.projectPage {
+    height: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+    a {
+        font-size: 15px;
+    }
+}
+
+.resumeContainer {
+    margin: auto;
+    margin-top: 25px;
+    height: 250px;
+    width: 80%;
+    /* border: lightgray solid; */
+    font-family: 'Darker grotesque', sans-serif;
+    text-align: left;
+    padding-bottom: 25px;
+}
+
+@media only screen and (max-width: 700px) {
+    .resumeContainer {
+        width: 80%;
+    }
+}
+
+.resumeTitle {
+    font-weight: 800;
+    font-size: 32pt;
+    
+}
+
+.resumeSectionHeader {
+    font-weight: 800;
+    font-size: 24pt;
+}
+
+.resumeSubHeader {
+    font-weight: 800;
+    font-size: 16pt;
+    float: left;
+}
+
+.resumeSectionInfo {
+    font-weight: 400;
+    font-size: 18pt;
+    
+}
+
+.resumeText {
+    font-weight: 400;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 15pt;
+}
