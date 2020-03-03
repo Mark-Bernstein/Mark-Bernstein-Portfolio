@@ -1,5 +1,6 @@
 a {
     font-size: 20px;
+    float: right;
 }
 
 .projectPage {
@@ -17,7 +18,6 @@ a {
     margin-top: 25px;
     height: 250px;
     width: 80%;
-    /* border: lightgray solid; */
     font-family: 'Darker grotesque', sans-serif;
     text-align: left;
     padding-bottom: 25px;
@@ -32,7 +32,6 @@ a {
 .resumeTitle {
     font-weight: 800;
     font-size: 32pt;
-    
 }
 
 .resumeSectionHeader {
@@ -49,7 +48,6 @@ a {
 .resumeSectionInfo {
     font-weight: 400;
     font-size: 18pt;
-    
 }
 
 .resumeText {

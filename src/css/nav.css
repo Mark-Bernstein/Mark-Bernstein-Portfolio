@@ -1,3 +1,9 @@
+p {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
 .appBar {
     height: 60px;
     padding-top: 10px;

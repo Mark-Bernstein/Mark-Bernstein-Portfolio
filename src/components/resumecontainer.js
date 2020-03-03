@@ -5,11 +5,6 @@ import Button from '@material-ui/core/Button';
 import GithubLogo from '../images/GitHub_32.png';
 import LinkedinLogo from '../images/linkedin_32.png';
 
-const variants = {
-    hidden: { opacity: 0, scale: 0 },
-    visible: { opacity: 1, scale: 1 },
-}
-
 const variantsY = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
@@ -26,7 +21,7 @@ function ResumeContainer() {
             <div className="resumeContainer">
                 <div className="resumeTitle">Resume / CV</div>
                 <div>
-                    <Button>
+                    <Button >
                         <a href="https://github.com/Mark-Bernstein" style={{ float: 'left' }} target="_blank" >
                             <img src={GithubLogo}></img>
                             GitHub
@@ -38,7 +33,15 @@ function ResumeContainer() {
                             LinkedIn
                         </a>
                     </Button>
+
+                    <p>
+                        eMail: ProgrammingByMark@gmail.com
+                    </p>
+                    
                 </div>
+
+                
+
 
                 <hr></hr>
 
@@ -72,11 +75,11 @@ function ResumeContainer() {
 
                 <div className="resumeSectionHeader">
                     Professional Summary
-            </div>
+                </div>
                 <div className="sectionContainer">
                     <p className="resumeText">
                         Full Stack Web Developer with a passion for creativity and excited to contribute to the programming world. Patient in tackling problems in an exceptionally detail-oriented and methodical nature. Performs well under pressure of organizing and upholding project deadlines by being flexible and dependable. Earned the Full Stack Coding Bootcamp Certificate from UCSD and the Programming Certificate of Performance from Mesa College.
-                </p>
+                    </p>
                 </div>
 
                 <br></br>
