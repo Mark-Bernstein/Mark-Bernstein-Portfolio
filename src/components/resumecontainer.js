@@ -59,12 +59,12 @@ function ResumeContainer() {
                     <div className="resumeSubHeader">Technical Skills&nbsp;</div>
                     <div className="resumeSectionInfo">&nbsp;</div>
                     <ul className="resumeText">
-                        <p>JavaScript | Reach | HTML | CSS | Java | C++/C# | Lisp | Visual Basic | Node | Express | Bootstrap | Sonic Pi | Github | Git Bash | Heroku | Node | Express | Handlebars | jQuery | JSON | AJAX | Photoshop | FL Studio | Final Cut Pro </p>
+                        <p>JavaScript | React | HTML | CSS | Java | C++/C# | Lisp | Visual Basic | Node | Express | Bootstrap | Sonic Pi | Github | Git Bash | Heroku | Node | Express | Handlebars | jQuery | JSON | AJAX | Photoshop | FL Studio | Final Cut Pro </p>
                     </ul>
                     <div className="resumeSubHeader">Soft Skills&nbsp;</div>
                     <div className="resumeSectionInfo">&nbsp;</div>
                     <ul className="resumeText">
-                        <p>Communicator | Detail-oriented | Collaborator | Team player | Creator | Problem Solver | Flexible | Dependable</p>
+                        <p>Communicator | Detail-oriented | Collaborator | Team player | Problem Solver | Flexible | Dependable</p>
                     </ul>
                 </div>
 

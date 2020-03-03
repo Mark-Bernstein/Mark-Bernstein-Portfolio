@@ -5,7 +5,7 @@ var projects = {
     },
     "burger": {
         "title": "MVC Burger",
-        "text": "This web application uses JavaScript, HTML, CSS, MySql, Node, Express, Handlebars, and a homemade ORM to log out burgers."
+        "text": "A web application uses JavaScript, HTML, CSS, MySql, Node, Express, Handlebars, and a homemade ORM to log out burgers."
     },
     "noteTaker": {
         "title": "Note Taker",
@@ -17,7 +17,7 @@ var projects = {
     },
     "weatherDashboard": {
         "title": "Weather Dashboard",
-        "text": "A weather dashboard web application using the OpenWeather API."
+        "text": "A web application using the OpenWeather API."
     },
 }
 

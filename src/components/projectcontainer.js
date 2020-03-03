@@ -13,36 +13,36 @@ function ProjectContainer() {
     return (
         <div className="cardList">
             <GrowToRight
-                propColor="#FFBA49"
+                propColor="#63A375"
                 delay={0}
                 projectData={projects["musicConnoisseurs"]}
                 projectDetails={details["musicConnoisseurs"]}
                 projectLogo={ReactLogo}
             />
             <GrowToLeft
-                propColor="#20A39E"
-                delay={1}
+                propColor="#713E5A"
+                delay={0.5}
                 projectData={projects["burger"]}
                 projectDetails={details["burger"]}
                 projectLogo={MySqlLogo}
             />
             <GrowToRight
                 propColor="#EF5B5B"
-                delay={2}
+                delay={1}
                 projectData={projects["noteTaker"]}
                 projectDetails={details["noteTaker"]}
                 projectLogo={HTMLLogo}
             />
             <GrowToLeft
-                propColor="#713E5A"
-                delay={3}
+                propColor="#20A39E"
+                delay={1.5}
                 projectData={projects["cityScout"]}
                 projectDetails={details["cityScout"]}
                 projectLogo={JSLogo}
             />
             <GrowToRight
-                propColor="#63A375"
-                delay={4}
+                propColor="#FFBA49"
+                delay={2}
                 projectData={projects["weatherDashboard"]}
                 projectDetails={details["weatherDashboard"]}
                 projectLogo={HTMLLogo}

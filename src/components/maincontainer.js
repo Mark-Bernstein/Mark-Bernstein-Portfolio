@@ -15,9 +15,11 @@ function MainContainer() {
                         <Route exact path="/">
                             <About />
                         </Route>
+
                         <Route path="/projects">
                             <Projects />
                         </Route>
+                        
                         <Route path="/resume">
                             <Resume />
                         </Route>

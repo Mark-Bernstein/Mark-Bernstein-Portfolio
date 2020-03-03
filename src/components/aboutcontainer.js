@@ -18,7 +18,6 @@ const variantsY = {
 function AboutContainer() {
     return (
         <div>
-            {/* <img src={BackgroundImage}></img> */}
             <div className="aboutContainer">
                 <motion.div
                     initial="hidden"
@@ -36,7 +35,9 @@ function AboutContainer() {
                     variants={variantsY}
                     transition={{ ease: "easeOut", duration: 1.2 }}
                 >
-                    <BodyText />
+
+                <BodyText />
+                
                 </motion.div>
             </div>
         </div>

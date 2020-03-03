@@ -44,11 +44,9 @@ const useStyles = makeStyles(theme => ({
 
 function ProjectCard(props) {
     const classes = useStyles();
-    // getModalStyle is not a pure function, we roll the style only on the first render
     const [modalStyle] = React.useState(getModalStyle);
     const [open, setOpen] = React.useState(false);
 
-    // let pdflink = <div></div>
     let githublink = <div>
         <a href={props.projectDetails["github"]} target="_blank">Github</a>
     </div>
@@ -110,6 +108,7 @@ function ProjectCard(props) {
                         >
                             <p id="simple-modal-title" className="detailsTitle">{props.projectData["title"]}</p>
                         </motion.div>
+
                         <motion.div
                             initial="hidden"
                             animate="visible"
@@ -117,15 +116,14 @@ function ProjectCard(props) {
                             transition={{ ease: "easeOut", duration: 0.5, delay: 0.4 }}
                         >
                             <div className="detailsImage">
-                                <a href={props.projectDetails["heroku"]} target="_blank" className="detailsImage">{props.projectDetails.image}
+                                <a href={props.projectDetails["heroku"]} target="_blank" className="detailsImage">
+                                    {props.projectDetails.image}
                                     <img src={props.projectDetails.image}></img>
                                 </a>
                             </div>
-
                         </motion.div>
 
                         <div className="detailsParagraph" >
-
                             <motion.div
                                 initial="hidden"
                                 animate="visible"
@@ -137,11 +135,9 @@ function ProjectCard(props) {
                                 {paragraphs}
                             </motion.div>
                         </div>
-
                     </div>
                 </motion.div>
             </Modal>
-
         </div>
     )
 }

@@ -36,8 +36,6 @@ function NavBar() {
                     <div>
                         <Button
                             className="navButton"
-                            variant="primary"
-                            color="primary"
                             variant="outlined"
                         >
                             <Link className="link" to="/resume"> Resume </Link>
@@ -46,8 +44,6 @@ function NavBar() {
                     <div>
                         <Button
                             className="navButton"
-                            variant="primary"
-                            color="primary"
                             variant="outlined"
                         >
                             <Link className="link" to="/projects"> Projects </Link>
@@ -55,9 +51,7 @@ function NavBar() {
                     </div>
                     <div>
                         <Button 
-                            className="navButton"  
-                            variant="primary" 
-                            color="primary"
+                            className="navButton"   
                             variant="outlined"
                         > 
                             <Link className="link" to="/"> About </Link>
