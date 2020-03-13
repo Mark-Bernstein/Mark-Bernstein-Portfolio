@@ -15,6 +15,7 @@ function AboutText() {
             Although that is where I still currently live, I do enjoy traveling to new destinations
             whenever given the chance.
         </div>
+
     );
 }
 
