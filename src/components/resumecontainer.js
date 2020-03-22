@@ -77,7 +77,7 @@ function ResumeContainer() {
                 </div>
                 <div className="sectionContainer">
                     <p className="resumeText">
-                        Full Stack Web Developer with a passion for creativity and excited to contribute to the programming world. Patient in tackling problems in an exceptionally detail-oriented and methodical nature. Performs well under pressure of organizing and upholding project deadlines by being flexible and dependable. Earned the Programming Certificate of Performance from Mesa College and the Full Stack Coding Bootcamp Certificate from UCSD.
+                        Full Stack Web Developer with a passion for creativity and excited to contribute to the programming world. Patient in tackling problems in an exceptionally detail-oriented and methodical nature. Performs well under pressure in all circumstances. Organizes and upholds project deadlines by being flexible and dependable. Earned the Programming Certificate of Performance from Mesa College and the Full Stack Coding Bootcamp Certificate from UCSD.
                     </p>
                 </div>
 
