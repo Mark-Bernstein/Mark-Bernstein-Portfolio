@@ -31,37 +31,50 @@ function NavBar() {
                 variants={variants}
                 transition={{ ease: "easeOut", duration: 1.5 }}
             >
-                <div className="appBar">
+                {/* <nav className="shift">
                     <div className="navTitle">Mark Bernstein</div>
-                    <div>
-                        <Button
-                            className="navButton"
-                            variant="outlined"
-                        >
-                            <Link className="link" to="/resume"> Resume </Link>
-                        </Button>
+
+                    <div className="navLinks">
+                        <Link className="link" to="/"> About </Link>
                     </div>
-                    <div>
-                        <Button
-                            className="navButton"
-                            variant="outlined"
-                        >
-                            <Link className="link" to="/projects"> Projects </Link>
-                        </Button>
+                    <div className="navLinks">
+                        <Link className="link" to="/projects"> Projects </Link>
                     </div>
-                    <div>
-                        <Button 
-                            className="navButton"   
-                            variant="outlined"
-                        > 
-                            <Link className="link" to="/"> About </Link>
-                        </Button>
+                    <div className="navLinks">
+                        <Link className="link" to="/resume"> Resume </Link>
                     </div>
-                </div>
+                </nav> */}
+
+                <nav className="shift">
+                    <div className="navTitle">Mark Bernstein</div>
+
+                    <div class="buttons-container" className="navLinks">
+                        <ul>
+                            <li id="aboutTab"> <Link className="link" to="/"> About </Link></li>
+                            <li id="projectsTab"> <Link className="link" to="/projects"> Projects </Link></li>
+                            <li id="resumeTab"> <Link className="link" to="/resume"> Resume </Link></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                {/* <div className="appBar">
+                    <div className="navTitle">Mark Bernstein</div>
+                    
+                    <div className="navLinks">
+                        <Link className="link" to="/resume"> Resume </Link>
+                    </div>
+                    <div className="navLinks">
+                        <Link className="link" to="/projects"> Projects </Link>
+                    </div>
+                    <div className="navLinks">
+                        <Link className="link" to="/"> About </Link>
+                    </div>
+                </div> */}
             </motion.div>
             <NavSpacer />
-        </div>
 
+
+        </div>
     )
 }
 

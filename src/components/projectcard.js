@@ -3,6 +3,8 @@ import '../css/nav.css';
 import { motion } from 'framer-motion';
 import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
+import GithubLogo from '../images/GitHub_32.png';
+import LinkedinLogo from '../images/linkedin_32.png';
 
 const variants = {
     hidden: { opacity: 0 },
@@ -28,8 +30,8 @@ function getModalStyle() {
 const useStyles = makeStyles(theme => ({
     paper: {
         position: 'absolute',
-        height: "80%",
-        width: "80%",
+        height: "60%",
+        width: "60%",
         backgroundColor: theme.palette.background.paper,
         border: '2px solid #FFF',
         boxShadow: theme.shadows[4],
@@ -38,7 +40,7 @@ const useStyles = makeStyles(theme => ({
         borderRadius: "15px",
         fontFamily: 'Darker grotesque',
         fontStyle: 'sans-serif'
-    },
+    }
 }));
 
 
@@ -47,14 +49,29 @@ function ProjectCard(props) {
     const [modalStyle] = React.useState(getModalStyle);
     const [open, setOpen] = React.useState(false);
 
-    let githublink = <div>
-        <a href={props.projectDetails["github"]} target="_blank">Github</a>
-    </div>
+    let githubLink =
+        <div>
+            <a
+                href={props.projectDetails["github"]}
+                target="_blank"
+                style={{ float: "left", display: "block" }}
+            >
+                <img src={GithubLogo}></img>
+                Github
+            </a>
+        </div>
 
 
-    let herokulink = <div>
-        <a href={props.projectDetails["heroku"]} target="_blank">Live hosted website</a>
-    </div>
+    let herokuLink =
+        <div>
+            <a
+                href={props.projectDetails["heroku"]}
+                target="_blank"
+                style={{ float: "left", display: "block" }}
+            >
+                Live hosted website
+            </a>
+        </div>
 
     const handleOpen = () => {
         setOpen(true);
@@ -71,7 +88,7 @@ function ProjectCard(props) {
     return (
         <div>
             <motion.div
-                whileHover={{ scale: 1.10 }}
+                whileHover={{ scale: 1.1 }}
                 transition={{ ease: "easeOut", duration: 0.4 }}
             >
                 <div className="projectCard" style={{ backgroundColor: props.propColor }} onClick={handleOpen}>
@@ -130,11 +147,13 @@ function ProjectCard(props) {
                                 variants={modalVariants}
                                 transition={{ ease: "easeOut", duration: 0.5, delay: 0.4 }}
                             >
-                                {githublink}
-                                {herokulink}
                                 {paragraphs}
+                                {herokuLink} <p>  <i class="arrow left"></i></p>
+                                {githubLink} <p>  <i class="arrow left"></i></p>
+
                             </motion.div>
                         </div>
+                        
                     </div>
                 </motion.div>
             </Modal>

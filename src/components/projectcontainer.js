@@ -13,38 +13,38 @@ function ProjectContainer() {
     return (
         <div className="cardList">
             <GrowToRight
-                propColor="#63A375"
+                propColor="black"
                 delay={0}
+                projectData={projects["DrugBud"]}
+                projectDetails={details["DrugBud"]}
+                projectLogo={ReactLogo}
+            />
+            <GrowToLeft
+                propColor="black"
+                delay={0.5}
                 projectData={projects["musicConnoisseurs"]}
                 projectDetails={details["musicConnoisseurs"]}
                 projectLogo={ReactLogo}
             />
-            <GrowToLeft
-                propColor="#713E5A"
-                delay={0.5}
+            <GrowToRight
+                propColor="black"
+                delay={1}
                 projectData={projects["burger"]}
                 projectDetails={details["burger"]}
                 projectLogo={MySqlLogo}
             />
-            <GrowToRight
-                propColor="#EF5B5B"
-                delay={1}
+            <GrowToLeft
+                propColor="black"
+                delay={1.5}
                 projectData={projects["noteTaker"]}
                 projectDetails={details["noteTaker"]}
-                projectLogo={HTMLLogo}
-            />
-            <GrowToLeft
-                propColor="#20A39E"
-                delay={1.5}
-                projectData={projects["cityScout"]}
-                projectDetails={details["cityScout"]}
                 projectLogo={JSLogo}
             />
             <GrowToRight
-                propColor="#FFBA49"
+                propColor="black"
                 delay={2}
-                projectData={projects["weatherDashboard"]}
-                projectDetails={details["weatherDashboard"]}
+                projectData={projects["cityScout"]}
+                projectDetails={details["cityScout"]}
                 projectLogo={HTMLLogo}
             />
         </div>

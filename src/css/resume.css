@@ -1,5 +1,5 @@
 a {
-    font-size: 20px;
+    font-size: 18px;
     float: right;
 }
 
@@ -42,7 +42,7 @@ a {
 
 .resumeSubHeader {
     font-weight: 800;
-    font-size: 16pt;
+    font-size: 18pt;
     float: left;
 }
 
@@ -61,4 +61,5 @@ a {
 #eMail {
     font-family: 'Darker grotesque', sans-serif;
     font-weight: 800;
+    font-size: 18pt;
 }
