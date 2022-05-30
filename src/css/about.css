@@ -1,46 +1,55 @@
-
-#aboutImage {
-    width: 300px;
-    height: 300px;
-    margin-bottom: 25px;
-    margin-top: 25px;
-    position: relative;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 1);
-    padding: 5px;
-    background: black;
+.aboutImage {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  position: relative;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 1);
+  padding: 5px;
+  background: black;
+  /* float: left; */
 }
 
 p {
-    color: black;
-    font-weight: 600;
-    /* font-family: Andale Mono, monospace; */
-    font-family: "Segoe UI";
-    /* text-shadow: 1px 1px 1px red; */
+  color: black;
+  font-weight: 600;
+  font-family: "Segoe UI";
+  font-family: "Chakra Petch", sans-serif;
 }
+
 .aboutText {
-    font-family: 'Darker grotesque', sans-serif;
-    font-weight: 400;
-    font-size: 18pt;
-    width: 69%;
-    margin: auto;
-    text-align: justify;
-    margin-bottom: 25px;
-    color: black;
-    
+  font-family: "Darker grotesque", sans-serif;
+  font-size: 18pt;
+  width: 69%;
+  margin: auto;
+  text-align: left;
+  color: gold;
+  text-shadow: 2px 2px 10px rgb(0, 0, 0);
+  /* float: right; */
+  /* background-image: url("./images/hexagonBackground.png"); */
+  /* background-image: url("../images/planet-background.jpg");
+  background-blend-mode: lighten;
+  background-repeat: no-repeat, repeat; */
+}
+
+.aboutText > p {
+  color: white;
+  float: right;
+  margin: 0 0 20px 0;
 }
 
 @media only screen and (max-width: 700px) {
-    .aboutText {
-        width: 80%;
-    }
+  .aboutText {
+    width: 85%;
+  }
 }
 
 .slides {
-    margin: auto;
-    width: 50%;
+  margin: auto;
+  width: 50%;
 }
 
 .contain {
-    max-width:100%;
-    max-height:100%;
+  max-width: 100%;
+  max-height: 100%;
 }

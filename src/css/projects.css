@@ -1,135 +1,171 @@
 .cardContainer {
-    margin: auto;
-    height: 250px;
-    width: 50%;
-    border-width: 1px;
-    box-shadow: 0px 2px 6px -2px;
-    font-family: 'Darker grotesque', sans-serif;
-    font-weight: 400;
-    border-radius: 5px;
+  margin: auto;
+  height: 250px;
+  width: 50%;
+  border-width: 1px;
+  box-shadow: 0px 2px 6px -2px;
+  font-family: "Darker grotesque", sans-serif;
+  font-weight: 400;
+  border-radius: 5px;
 }
 
 .cardList {
-    margin: auto;
+  margin: auto;
 }
 
 .projectPage {
-    height: 100%;
+  height: 100%;
 }
 
 .projectSpacer {
-    height: 150px;
-    width: 100%;  
-    padding-top: 15px;
+  height: 150px;
+  width: 100%;
+  padding-top: 15px;
 }
 .projectRightSpacer {
-    position: relative;
+  position: relative;
 }
 
 .projectLeftSpacer {
-    position: relative;
+  position: relative;
 }
 
 .detailsParagraph {
-    justify-content: center;
-    font-size: 16pt;
-    display: block;
+  font-size: 20px;
+  display: inline-flex;
 }
+
 .projectCard {
-    height: 130px;
-    width: 50%;
-    border: solid white; 
-    margin: auto;
-    border-radius: 10px;
-    border-width: 2px;
-    box-shadow: 0px 2px 10px -2px black;
+  height: 130px;
+  width: 50%;
+  border: solid rgb(0, 221, 255);
+  margin: auto;
+  border-radius: 10px;
+  border-width: 2px;
+  box-shadow: 0px 2px 10px -2px black;
 }
 
 @media only screen and (max-width: 1048px) {
-    .projectCard {
-        width: 80%;
-    }
+  .projectCard {
+    width: 80%;
+  }
 }
 
-.detailsTitle {
-    font-size: 32pt;
-    font-weight: 800;
-}
-
-.projectCard:hover{
-    cursor: pointer;
+.projectCard:hover {
+  cursor: pointer;
 }
 
 .projectLogo {
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 10px;
-    width: 120px;
-    height: 120px;
-    background-color: rgb(255, 255, 255);
-    float: left;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 10px;
+  width: 120px;
+  height: 120px;
+  background-color: rgb(255, 255, 255);
+  float: left;
 }
 .projectInfoHeader {
-    font-family: 'Darker grotesque', sans-serif;
-    font-weight: 800;
-    text-align: left;
-    font-size: 20pt;
-    color: rgb(255, 0, 0); 
+  font-family: "Darker grotesque", sans-serif;
+  font-weight: 800;
+  text-align: left;
+  font-size: 20pt;
+  color: rgb(255, 0, 0);
 }
 
 @media only screen and (max-width: 500px) {
-    .projectInfoHeader {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 22pt;
-        margin-top: -5px;
-        margin-right: 5px;
-        text-align: center;
-    }
+  .projectInfoHeader {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18pt;
+    margin-top: -5px;
+    margin-right: 5px;
+    text-align: center;
+  }
 }
 
-@media only screen and (max-width: 385px) {
-    .projectInfoHeader {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 12pt;
-        margin-top: -5px;
-        margin-right: 5px;
-        text-align: center;
-    }
+@media only screen and (max-width: 356px) {
+  .projectInfoHeader {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12pt;
+    margin-top: -5px;
+    margin-right: 5px;
+    text-align: center;
+  }
 }
 
 .projectInfoText {
-    font-family: 'Darker grotesque', sans-serif;
-    font-weight: 400;
-    text-align: left;
-    font-size: 14pt;
-    color: rgb(255, 255, 255);  
+  font-family: "Darker grotesque", sans-serif;
+  font-weight: 400;
+  text-align: left;
+  font-size: 14pt;
+  color: rgb(255, 255, 255);
 }
 
 @media only screen and (max-width: 525px) {
-    .projectInfoText {
-        display: none;
-    }
+  .projectInfoText {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 657px) {
-    .projectInfoText {
-        font-size: 12pt;
-    }
+  .projectInfoText {
+    font-size: 12pt;
+  }
 }
 
 .projectImg {
-    max-width: 120px;
-    max-height: 120px;
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.detailsImage {
+  display: block;
 }
 
 .detailsImage > img {
-    align-content: center;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 15px;
-    margin-top: -20px;
+  border-radius: 50px;
+  margin-top: 0px;
+  max-width: 100%;
+  display: block;
+}
+
+.websiteScreenshot {
+  max-width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.retired-project-p,
+.private-github {
+  color: red;
+}
+
+.website-link {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.website-link > a {
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: blue;
+}
+
+/* .github-link {
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: blue;
+  display: flex;
+  margin-top: 15px;
+  text-align: left;
+} */
+
+.project-details-paragraph {
+  background-color: whitesmoke;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

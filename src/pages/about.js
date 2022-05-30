@@ -1,13 +1,13 @@
-import React from 'react';
-import AboutContainer from '../components/aboutcontainer';
-import '../css/about.css';
+import React from "react";
+import AboutContainer from "../components/aboutcontainer";
+import "../css/about.css";
 
-function About() {
+const About = () => {
   return (
-    <div>
+    <div className="aboutPage">
       <AboutContainer />
     </div>
   );
-}
+};
 
 export default About;

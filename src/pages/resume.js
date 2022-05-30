@@ -1,12 +1,12 @@
-import React from 'react';
-import ResumeContainer from '../components/resumecontainer';
+import React from "react";
+import ResumeContainer from "../components/resumecontainer";
 
-function Resume() {
+const Resume = () => {
   return (
     <div className="resumePage">
       <ResumeContainer />
     </div>
   );
-}
+};
 
 export default Resume;

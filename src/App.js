@@ -1,6 +1,6 @@
-import React from 'react';
-import MainContainer from './components/maincontainer';
-import './App.css';
+import React from "react";
+import MainContainer from "./components/maincontainer";
+import "./App.css";
 import { Helmet } from "react-helmet";
 
 function App() {
@@ -9,7 +9,10 @@ function App() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Mark Bernstein's React Website</title>
-        <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque:400,800&display=swap" rel="stylesheet"></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300&display=swap" rel="stylesheet" />
       </Helmet>
       <MainContainer />
     </div>

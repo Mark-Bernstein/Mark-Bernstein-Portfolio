@@ -1,81 +1,92 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import '../css/nav.css';
-import NavSpacer from './navspacer';
-import { makeStyles } from '@material-ui/core/styles';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import Button from "@material-ui/core/Button";
+import "../css/nav.css";
+import NavSpacer from "./navspacer";
+import { makeStyles } from "@material-ui/core/styles";
+import { motion } from "framer-motion";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-
 const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-}
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        '& > *': {
-            margin: 0
-        },
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& > *": {
+      margin: 0,
     },
+  },
 }));
 
-function NavBar() {
-    const classes = useStyles();
+const NavBar = () => {
+  const classes = useStyles();
 
-    return (
-        <div className={classes.root}>
-            <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={variants}
-                transition={{ ease: "easeOut", duration: 1.5 }}
-            >
-                {/* <nav className="shift">
-                    <div className="navTitle">Mark Bernstein</div>
+  const [open, setOpen] = useState(false);
 
-                    <div className="navLinks">
-                        <Link className="link" to="/"> About </Link>
-                    </div>
-                    <div className="navLinks">
-                        <Link className="link" to="/projects"> Projects </Link>
-                    </div>
-                    <div className="navLinks">
-                        <Link className="link" to="/resume"> Resume </Link>
-                    </div>
-                </nav> */}
+  const handleOpen = () => {
+    setOpen(!open);
+  };
 
-                <nav className="shift">
-                    <div className="navTitle">Mark Bernstein</div>
+  return (
+    <div className={classes.root}>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        transition={{ ease: "easeOut", duration: 1.5 }}
+      >
+        <nav className="shift">
+          <div className={`base${open ? "" : " close"}`} onClick={handleOpen}>
+            <div className={`menu${open ? "" : " close"}`} onClick={handleOpen}>
+              <div className="icon">
+                <div className="bar"></div>
+              </div>
+            </div>
+            <div className="page-option">
+              <Link className="about-page link" aria-hidden="true" to="/">
+                <li id="aboutTab"> About </li>
+              </Link>
 
-                    <div class="buttons-container" className="navLinks">
-                        <ul>
-                            <li id="aboutTab"> <Link className="link" to="/"> About </Link></li>
-                            <li id="projectsTab"> <Link className="link" to="/projects"> Projects </Link></li>
-                            <li id="resumeTab"> <Link className="link" to="/resume"> Resume </Link></li>
-                        </ul>
-                    </div>
-                </nav>
+              <Link className="project-page link" aria-hidden="true" to="/projects">
+                <li id="projectsTab"> Projects</li>
+              </Link>
 
-                {/* <div className="appBar">
-                    <div className="navTitle">Mark Bernstein</div>
-                    
-                    <div className="navLinks">
-                        <Link className="link" to="/resume"> Resume </Link>
-                    </div>
-                    <div className="navLinks">
-                        <Link className="link" to="/projects"> Projects </Link>
-                    </div>
-                    <div className="navLinks">
-                        <Link className="link" to="/"> About </Link>
-                    </div>
-                </div> */}
-            </motion.div>
-            <NavSpacer />
+              <Link className="resume-page link" aria-hidden="true" to="/resume">
+                <li id="resumeTab"> Resume </li>
+              </Link>
+            </div>
+            <div className="section">
+              <div className="cover1">
+                <div className="cover2">
+                  <Link className="content" to="/projects"></Link>
+                </div>
+              </div>
+            </div>
+            <Link className="section-static top" to="/"></Link>
+            <Link className="section-static bottom" to="/resume"></Link>
+          </div>
 
+          <div className="navTitle">Mark Bernstein</div>
 
-        </div>
-    )
-}
+          {/* <div className="buttons-container" className="navLinks">
+            <ul>
+              <Link className="link about neonText" to="/">
+                <li id="aboutTab"> About </li>
+              </Link>
+              <Link className="link projects neonText" to="/projects">
+                <li id="projectsTab"> Projects</li>
+              </Link>
+              <Link className="link resume neonText" to="/resume">
+                <li id="resumeTab"> Resume </li>
+              </Link>
+            </ul>
+          </div> */}
+        </nav>
+      </motion.div>
+      <NavSpacer />
+    </div>
+  );
+};
 
 export default NavBar;

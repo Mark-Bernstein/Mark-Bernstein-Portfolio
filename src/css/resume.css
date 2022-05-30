@@ -1,66 +1,124 @@
 a {
-    font-size: 18px;
-    float: right;
+  font-size: 20px;
+  color: cyan;
+}
+
+.resume-links {
+  text-shadow: 0 2px 7px black;
+  border: 5px solid rgb(0, 0, 0, 0);
+  padding: 8px;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: rgba(106, 126, 255, 0.4);
+  border-radius: 50%;
+}
+
+.resume-links:hover {
+  text-shadow: 0 2px 4px black;
+  color: gold;
+  box-shadow: 0 0 5px 5px rgb(208, 255, 0, 0.5);
+  transition: all 1s;
+  border-top: 2px double black;
+  border-bottom: 2px double black;
+  border-left: 2px dotted black;
+  border-right: 2px dotted black;
+  padding: 5px;
 }
 
 .projectPage {
-    height: 100%;
-}
-
-@media only screen and (max-width: 700px) {
-    a {
-        font-size: 15px;
-    }
+  height: 100%;
 }
 
 .resumeContainer {
-    margin: auto;
-    margin-top: 25px;
-    height: 250px;
-    width: 80%;
-    font-family: 'Darker grotesque', sans-serif;
-    text-align: left;
-    padding-bottom: 25px;
+  margin: auto;
+  margin-top: 25px;
+  height: 250px;
+  width: 80%;
+  font-family: "Chakra Petch", sans-serif;
+  text-align: left;
+  padding-bottom: 25px;
+  color: gold;
 }
 
 @media only screen and (max-width: 700px) {
-    .resumeContainer {
-        width: 80%;
-    }
+  .resumeContainer {
+    width: 80%;
+  }
 }
 
 .resumeTitle {
-    font-weight: 800;
-    font-size: 32pt;
-    text-shadow: 2px 2px 5px red;
+  font-weight: 800;
+  font-size: 32pt;
+  text-shadow: 2px 2px 5px red;
 }
 
 .resumeSectionHeader {
-    font-weight: 800;
-    font-size: 24pt;
+  font-weight: 800;
+  font-size: 24pt;
 }
 
 .resumeSubHeader {
-    font-weight: 800;
-    font-size: 18pt;
-    float: left;
+  font-weight: 800;
+  font-size: 24px;
+  float: left;
 }
 
 .resumeSectionInfo {
-    font-weight: 400;
-    font-size: 18pt;
+  font-weight: 400;
+  font-size: 24px;
 }
 
 .resumeText {
-    font-weight: 400;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    font-size: 15pt;
-    justify-content: left;
+  font-weight: 400;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 20px;
+  justify-content: left;
+  color: white;
+}
+
+.resumeText > p {
+  color: white;
 }
 
 #eMail {
-    font-family: 'Darker grotesque', sans-serif;
-    font-weight: 800;
-    font-size: 18pt;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: cyan;
+  text-shadow: 2px 2px 7px black;
+  margin: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .resumeContainer {
+    font-size: 20px;
+  }
+
+  .resumeSectionHeader {
+    color: white;
+    font-size: 28px;
+  }
+
+  .resumeSubHeader {
+    color: cyan;
+  }
+
+  .resumeSubHeader,
+  .resumeSectionInfo,
+  .gpa {
+    font-size: 18px;
+  }
+
+  .gpa {
+    margin-bottom: 20px;
+  }
+
+  #eMail {
+    font-size: 20px;
+  }
+
+  .resumeText {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
 }
