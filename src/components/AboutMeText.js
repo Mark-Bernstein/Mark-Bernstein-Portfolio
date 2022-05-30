@@ -26,9 +26,8 @@ const AboutMeText = () => {
       </p>
       <p>
         In his free time, he loves to play guitar, make electronic music, go to the beach, play volleyball, and spend
-        time with friends and family. He is 30 years young and was born in San Diego, California. He enjoys traveling to
-        new destinations whenever given the chance. No matter the destination, he always yearns for knowledge and new
-        adventures.{" "}
+        time with friends and family. He was born in San Diego, California and enjoys traveling to new destinations
+        whenever given the chance. No matter the destination, he always yearns for knowledge and new adventures.{" "}
       </p>
       <span role="img" aria-label="cheers">
         ...🍻

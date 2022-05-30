@@ -54,13 +54,10 @@ const ResumeContainer = () => {
         <div className="sectionContainer">
           <div className="resumeSubHeader">UCSD Full Stack Coding Bootcamp&nbsp;</div>
           <div className="resumeSectionInfo"> Certificate of Completion</div>
-          <div className="gpa">March 2020</div>
           <div className="resumeSubHeader">San Diego Mesa College&nbsp;</div>
           <div className="resumeSectionInfo"> Programming Certificate of Performance</div>
-          <div className="gpa">GPA: 3.89</div>
           <div className="resumeSubHeader">Cal State University San Marcos&nbsp;</div>
           <div className="resumeSectionInfo"> Bachelor of Arts: Arts and Technology</div>
-          <div className="gpa">GPA: 3.80</div>
         </div>
 
         <hr></hr>
@@ -86,7 +83,7 @@ const ResumeContainer = () => {
 
         <hr></hr>
 
-        <div className="resumeSectionHeader">Full Stack Web Developer Ready to Bring Impactful Transformation</div>
+        <div className="resumeSectionHeader">Full Stack Web Developer Ready to Bring Impactful Transformations</div>
         <div className="sectionContainer">
           <p className="resumeText">
             Full Stack Web Developer with a passion for creativity and excited to contribute to the programming world.
