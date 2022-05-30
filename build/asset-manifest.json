@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cda8e923.css",
+    "main.js": "/static/js/main.db166ebf.js",
+    "static/media/MarkProfilePicture.jpg": "/static/media/MarkProfilePicture.2ecd486046f1e7ce91e0.jpg",
+    "static/media/slashRollScreenshot.jpg": "/static/media/slashRollScreenshot.dfac98eee61b4469a6db.jpg",
+    "static/media/musicConnoisseursScreenshot.JPG": "/static/media/musicConnoisseursScreenshot.0a883735803b0f33b414.JPG",
+    "static/media/planet-background.jpg": "/static/media/planet-background.57198e0bab3e2b9355bd.jpg",
+    "static/media/cityScoutScreenshot.jpg": "/static/media/cityScoutScreenshot.0d743594e1c292455770.jpg",
+    "static/media/drugglerScreenshot.JPG": "/static/media/drugglerScreenshot.07257d4f50ab758eba6c.JPG",
+    "static/media/burgerScreenshot.JPG": "/static/media/burgerScreenshot.80a47942d5c2dfc37871.JPG",
+    "static/media/reactlogo.png": "/static/media/reactlogo.bd8a938105b1e40aa0c6.png",
+    "static/media/noteTakerScreenshot.JPG": "/static/media/noteTakerScreenshot.1b25cb3e7a3f0efde544.JPG",
+    "static/media/JavaScript_512.png": "/static/media/JavaScript_512.1563f4ef21dfd1676960.png",
+    "static/media/MySQL_512.png": "/static/media/MySQL_512.2c583ce9223cd25080ed.png",
+    "index.html": "/index.html",
+    "main.cda8e923.css.map": "/static/css/main.cda8e923.css.map",
+    "main.db166ebf.js.map": "/static/js/main.db166ebf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cda8e923.css",
+    "static/js/main.db166ebf.js"
+  ]
+}
