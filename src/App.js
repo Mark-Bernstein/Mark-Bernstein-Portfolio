@@ -1,5 +1,5 @@
 import React from "react";
-import MainContainer from "./components/MainContainer";
+import WebsiteContainer from "./components/WebsiteContainer";
 import "./App.css";
 import { Helmet } from "react-helmet";
 
@@ -14,7 +14,7 @@ function App() {
         <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300&display=swap" rel="stylesheet" />
       </Helmet>
-      <MainContainer />
+      <WebsiteContainer />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import About from "../pages/about";
 import Projects from "../pages/projects";
 import Resume from "../pages/resume";
 
-const MainContainer = () => {
+const WebsiteContainer = () => {
   return (
     <div>
       <Router>
@@ -30,4 +30,4 @@ const MainContainer = () => {
   );
 };
 
-export default MainContainer;
+export default WebsiteContainer;
