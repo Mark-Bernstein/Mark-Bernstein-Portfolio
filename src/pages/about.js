@@ -1,5 +1,5 @@
 import React from "react";
-import AboutContainer from "../components/aboutcontainer";
+import AboutContainer from "../components/AboutContainer";
 import "../css/about.css";
 
 const About = () => {

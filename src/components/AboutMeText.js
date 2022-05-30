@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/about.css";
 
-const BodyText = () => {
+const AboutMeText = () => {
   return (
     <div className="aboutText">
       <p>
@@ -39,4 +39,4 @@ const BodyText = () => {
   );
 };
 
-export default BodyText;
+export default AboutMeText;

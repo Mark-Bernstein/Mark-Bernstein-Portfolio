@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/nav.css";
-import GrowToRight from "../components/growtoright";
-import GrowToLeft from "../components/growtoleft";
+import GrowToRight from "./GrowToRight";
+import GrowToLeft from "./GrowToLeft";
 import projects from "../data/projects";
 import details from "../data/details";
 import ReactLogo from "../images/reactlogo.png";

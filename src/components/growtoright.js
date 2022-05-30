@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/nav.css";
 import { motion } from "framer-motion";
-import ProjectCard from "./projectcard";
+import ProjectCard from "./ProjectCard";
 
 const infoVariants = {
   hidden: { y: 169, opacity: 0 },

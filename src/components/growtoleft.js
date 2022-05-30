@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/nav.css";
 import { motion } from "framer-motion";
-import ProjectCard from "./projectcard";
+import ProjectCard from "./ProjectCard";
 
 const variants = {
   hidden: { x: "20%", scaleX: 0 },

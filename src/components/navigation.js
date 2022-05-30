@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../css/nav.css";
-import NavSpacer from "./navspacer";
+import NavSpacer from "./NavSpacer";
 import { makeStyles } from "@material-ui/core/styles";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";

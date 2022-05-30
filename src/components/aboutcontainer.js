@@ -2,7 +2,7 @@ import React from "react";
 import "../css/nav.css";
 import { motion } from "framer-motion";
 import MarkProfilePicture from "../images/MarkProfilePicture.jpg";
-import BodyText from "../components/bodytext";
+import AboutMeText from "./AboutMeText";
 
 const variants = {
   hidden: { opacity: 0, scale: 0 },
@@ -26,7 +26,7 @@ const AboutContainer = () => {
         variants={variantsY}
         transition={{ ease: "easeOut", duration: 1.5 }}
       >
-        <BodyText />
+        <AboutMeText />
       </motion.div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import MainContainer from "./components/maincontainer";
+import MainContainer from "./components/MainContainer";
 import "./App.css";
 import { Helmet } from "react-helmet";
 
