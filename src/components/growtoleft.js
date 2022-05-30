@@ -13,7 +13,7 @@ const infoVariants = {
   visible: { y: 0, opacity: 1 },
 };
 
-function GrowtoLeft(props) {
+const GrowtoLeft = (props) => {
   return (
     <motion.div
       initial="hidden"
@@ -38,6 +38,6 @@ function GrowtoLeft(props) {
       </div>
     </motion.div>
   );
-}
+};
 
 export default GrowtoLeft;

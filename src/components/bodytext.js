@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/about.css";
 
-const AboutText = () => {
+const BodyText = () => {
   return (
     <div className="aboutText">
       <p>
@@ -14,11 +14,11 @@ const AboutText = () => {
           Technology?"
         </em>{" "}
         Then it hit him – software engineering! He then decided to study computer science at San Diego Mesa College for
-        2 years. After completing all of the courses required to receive the Programming Certificate of Achievement, and
+        2 years. After completing all of the courses required to receive the Programming Certificate of Performance, and
         finishing with a 3.89 GPA, his sights were set. He took a major leap towards his dream career by joining the
         UCSD Coding Bootcamp. After successfully completing the bootcamp and receiving the Certificate of Completion, he
-        was excited to take his newly learned skills into the real world and continue his learning indefinitely in such
-        an evolving field.
+        was excited to take his newly learned skills into the real world and continue his learning indefinitely in the
+        ever-evolving field.
       </p>
       <p>
         He then landed his first Software Engineering position at Mindera Software Craft and worked for big name clients
@@ -33,8 +33,10 @@ const AboutText = () => {
       <span role="img" aria-label="cheers">
         ...🍻
       </span>
+      <br></br>
+      <br></br>
     </div>
   );
 };
 
-export default AboutText;
+export default BodyText;

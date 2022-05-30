@@ -9,7 +9,7 @@ import HTMLLogo from "../images/HTML5_Logo_512.png";
 import MySqlLogo from "../images/MySQL_512.png";
 import JSLogo from "../images/JavaScript_512.png";
 
-function ProjectContainer() {
+const ProjectContainer = () => {
   return (
     <div className="cardList">
       <GrowToRight
@@ -56,6 +56,6 @@ function ProjectContainer() {
       />
     </div>
   );
-}
+};
 
 export default ProjectContainer;

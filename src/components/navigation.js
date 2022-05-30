@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import Button from "@material-ui/core/Button";
 import "../css/nav.css";
 import NavSpacer from "./navspacer";
 import { makeStyles } from "@material-ui/core/styles";
 import { motion } from "framer-motion";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const variants = {
   hidden: { opacity: 0 },
@@ -22,11 +21,9 @@ const useStyles = makeStyles((theme) => ({
 const NavBar = () => {
   const classes = useStyles();
 
-  const [open, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
-  const handleOpen = () => {
-    setOpen(!open);
-  };
+  const handleOpen = () => setOpen(!isOpen);
 
   return (
     <div className={classes.root}>
@@ -37,8 +34,8 @@ const NavBar = () => {
         transition={{ ease: "easeOut", duration: 1.5 }}
       >
         <nav className="shift">
-          <div className={`base${open ? "" : " close"}`} onClick={handleOpen}>
-            <div className={`menu${open ? "" : " close"}`} onClick={handleOpen}>
+          <div className={`base${isOpen ? " close" : ""}`} onClick={handleOpen}>
+            <div className="menu">
               <div className="icon">
                 <div className="bar"></div>
               </div>

@@ -34,15 +34,15 @@ i {
   height: 85px;
 } */
 
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 700px) {
   .appBar {
     height: 40px;
   }
-}
+} */
 
 .navTitle {
   font-weight: 800;
-  font-size: 30pt;
+  font-size: 40px;
   float: center;
   text-shadow: 2px 2px 5px rgb(64, 89, 248);
   width: auto;
@@ -55,6 +55,7 @@ i {
   display: block;
   font-family: "Oxanium", cursive;
   color: cyan;
+  margin-top: 15px;
 }
 
 @media only screen and (max-width: 344px) {
@@ -255,9 +256,22 @@ li {
 @media only screen and (max-width: 760px) {
   .navTitle {
     font-size: 35px;
-    height: 85px;
-    text-align: right;
+    height: 50px;
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .navTitle {
+    font-size: 35px;
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .navTitle {
+    font-size: 28px;
+    text-align: right;
   }
 }
 
@@ -348,16 +362,18 @@ body .base .menu .icon:after {
   transform: rotate(0deg);
   transition: top 0.5s ease 0.5s, transform 0.5s ease, background-color 0.75s ease 0.25s;
 }
+
 body .base .menu .icon .bar,
 body .base .menu .icon:before,
 body .base .menu .icon:after {
   position: absolute;
-  height: 5px;
-  left: 0px;
-  right: 0px;
+  height: 4px;
+  left: -10px;
+  right: 5px;
   border-radius: 5px;
   background-color: black;
-  box-shadow: 0px 0px 10px white;
+  transform: rotate(-360deg);
+  transition: 1s all;
 }
 
 body .base .menu .icon .bar {
@@ -502,7 +518,7 @@ body .base.close .menu {
 body .base.close .menu .icon .bar,
 body .base.close .menu .icon:before,
 body .base.close .menu .icon:after {
-  background-color: blue;
+  background-color: black;
 }
 
 body .base.close .menu .icon .bar {
@@ -532,7 +548,7 @@ body .base.close .page-option {
 
 body .base.close .page-option > * {
   position: absolute;
-  font-size: 30px;
+  font-size: 26px;
   color: #21264b;
   transition: 0.3s cubic-bezier(0.5, 0, 0.05, 1.75) 0.7s;
   pointer-events: none;
@@ -541,8 +557,8 @@ body .base.close .page-option > * {
 body .base.close .page-option .about-page {
   top: 8px;
   left: 175px;
-  transform: rotate(10deg);
   color: cyan;
+  transform: rotate(10deg);
 }
 
 body .base.close .page-option .project-page {
@@ -556,9 +572,9 @@ body .base.close .page-option .project-page {
 body .base.close .page-option .resume-page {
   top: 180px;
   left: 0px;
+  color: cyan;
   transition-delay: 0.8s;
   transform: rotate(70deg);
-  color: cyan;
 }
 
 body .base.close .section .cover1 {

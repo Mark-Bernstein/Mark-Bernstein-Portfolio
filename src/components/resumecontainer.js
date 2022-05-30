@@ -11,7 +11,7 @@ const variantsY = {
   visible: { opacity: 1 },
 };
 
-function ResumeContainer() {
+const ResumeContainer = () => {
   return (
     <motion.div initial="hidden" animate="visible" variants={variantsY} transition={{ ease: "easeOut", duration: 1.5 }}>
       <div className="resumeContainer">
@@ -23,6 +23,7 @@ function ResumeContainer() {
               href="https://github.com/Mark-Bernstein"
               style={{ float: "left", margin: "0", display: "inline-block" }}
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img alt="github logo" src={GithubLogo}></img>
               GitHub
@@ -34,6 +35,7 @@ function ResumeContainer() {
               href="https://www.linkedin.com/in/mark-bernstein-b287948a/"
               style={{ float: "left", margin: "0", display: "inline-block" }}
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img alt="linkedin logo" src={LinkedinLogo}></img>
               LinkedIn
@@ -69,8 +71,9 @@ function ResumeContainer() {
           <div className="resumeSectionInfo">&nbsp;</div>
 
           <p className="resumeText">
-            JavaScript | React | HTML | CSS | Java | C++/C# | Lisp | Visual Basic | Node | Express | Bootstrap | Sonic
-            Pi | Github | Git Bash | Heroku | Handlebars | jQuery | JSON | AJAX | Photoshop | FL Studio | Final Cut Pro{" "}
+            JavaScript | React | React Native | TypeScript | Jest | Enzyme | Node | HTML | CSS | Java | C++/C# | Lisp |
+            Visual Basic | Express | Sonic Pi | Handlebars | jQuery | JSON | AJAX | Github | Git Bash | BitBucket |
+            Heroku | Photoshop | FL Studio | Final Cut Pro{" "}
           </p>
 
           <div className="resumeSubHeader">Soft Skills&nbsp;</div>
@@ -89,8 +92,6 @@ function ResumeContainer() {
             Full Stack Web Developer with a passion for creativity and excited to contribute to the programming world.
             Patient in tackling problems in an exceptionally detail-oriented and methodical nature. Performs well under
             pressure in all circumstances. Organizes and upholds project deadlines by being flexible and dependable.
-            Earned the Programming Certificate of Performance from Mesa College and the Full Stack Coding Bootcamp
-            Certificate from UCSD.
           </p>
         </div>
 
@@ -99,6 +100,6 @@ function ResumeContainer() {
       </div>
     </motion.div>
   );
-}
+};
 
 export default ResumeContainer;

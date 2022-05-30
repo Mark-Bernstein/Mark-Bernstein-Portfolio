@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
 import GithubLogo from "../images/GitHub_32.png";
-import LinkedinLogo from "../images/linkedin_32.png";
 
 const variants = {
   hidden: { opacity: 0 },
@@ -50,7 +49,7 @@ const ProjectCard = (props) => {
 
   let githubLink = (
     <div className="github-link">
-      <a href={props.projectDetails["github"]} target="_blank">
+      <a href={props.projectDetails["github"]} target="_blank" rel="noopener noreferrer">
         <img alt="github logo" src={GithubLogo}></img>
         Github
       </a>
@@ -59,7 +58,7 @@ const ProjectCard = (props) => {
 
   let websiteLink = (
     <div className="website-link">
-      <a href={props.projectDetails["websiteLink"]} target="_blank">
+      <a href={props.projectDetails["websiteLink"]} target="_blank" rel="noopener noreferrer">
         Live hosted website
       </a>
     </div>
@@ -126,7 +125,12 @@ const ProjectCard = (props) => {
             >
               <div className="detailsImage">
                 {props.projectDetails["websiteLink"] ? (
-                  <a className="websiteScreenshot" href={props.projectDetails["websiteLink"]} target="_blank">
+                  <a
+                    className="websiteScreenshot"
+                    href={props.projectDetails["websiteLink"]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img className="websiteScreenshot" src={props.projectDetails.image} alt="project"></img>
                   </a>
                 ) : (

@@ -9,7 +9,7 @@ var details = {
   slashRoll: {
     image: slashRollScreenshot,
     paragraphs: [
-      "Slash Roll is an easy and fun way to randomly decide a winner from 2-12 players, all while tracking the number of wins and the average roll of each player.",
+      "Slash Roll is an easy and fun way to randomly decides a winner from 2-12 players, all while tracking the number of wins and the average roll of each player.",
     ],
     websiteLink: "https://slash-roll.vercel.app",
   },
@@ -28,6 +28,14 @@ var details = {
     github: "https://github.com/Mark-Bernstein/music-connoisseurs",
     websiteLink: "https://music-connoisseurs.herokuapp.com/genre",
   },
+  cityScout: {
+    image: cityScoutScreenshot,
+    paragraphs: [
+      "An application that allows a user to get basic information about a city. The user first chooses a continent they are interested in and then they can choose from a list of countries. When the user selects a country, a list of the ten most populour cities from that country. When they choose a city, a page is rendered that displays basic information about the city such as: population, currency exchange, an image of the city, and 8 charts indicating how the city ranks in various categories like education and cost of living.",
+    ],
+    github: "https://github.com/Mark-Bernstein/cityScout",
+    websiteLink: "https://mark-bernstein.github.io/cityScout/",
+  },
   burger: {
     image: burgerScreenshot,
     paragraphs: [
@@ -43,14 +51,6 @@ var details = {
     ],
     github: "https://github.com/Mark-Bernstein/note-taker",
     websiteLink: "https://note-taker-web-app.herokuapp.com",
-  },
-  cityScout: {
-    image: cityScoutScreenshot,
-    paragraphs: [
-      "An application that allows a user to get basic information about a city. The user first chooses a continent they are interested in and then they can choose from a list of countries. When the user selects a country, a list of the ten most populour cities from that country. When they choose a city, a page is rendered that displays basic information about the city such as: population, currency exchange, an image of the city, and 8 charts indicating how the city ranks in various categories like education and cost of living.",
-    ],
-    github: "https://github.com/Mark-Bernstein/cityScout",
-    websiteLink: "https://mark-bernstein.github.io/cityScout/",
   },
 };
 
