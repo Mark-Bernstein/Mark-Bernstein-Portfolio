@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./Navigation";
+import MenuNav from "./MenuNav";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "../pages/about";
 import Projects from "../pages/projects";
@@ -9,6 +10,7 @@ const WebsiteContainer = () => {
   return (
     <div>
       <Router>
+        <MenuNav />
         <NavBar />
         <div>
           <Switch>

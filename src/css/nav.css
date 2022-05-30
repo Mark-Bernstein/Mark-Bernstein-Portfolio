@@ -24,22 +24,6 @@ i {
   -webkit-transform: rotate(-45deg);
 }
 
-/* .appBar {
-  height: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-} */
-
-/* .shift {
-  height: 85px;
-} */
-
-/* @media only screen and (max-width: 700px) {
-  .appBar {
-    height: 40px;
-  }
-} */
-
 .navTitle {
   font-weight: 800;
   font-size: 40px;
@@ -64,21 +48,7 @@ i {
   }
 }
 
-/* .navButton {
-  font-family: "Darker grotesque", sans-serif;
-  font-weight: 400;
-  font-size: 16pt;
-  float: right;
-  margin-right: 5%;
-  margin-top: 15px;
-  bottom: 0px;
-  flex-wrap: wrap;
-} */
-
 .link {
-  /* color: rgb(0, 0, 0); */
-  /* text-decoration: none; */
-  /* text-align: right; */
   display: flex;
   font-family: "Chakra Petch", sans-serif;
   font-size: 18px;
@@ -227,44 +197,24 @@ li {
   padding: 0px;
   height: 69px;
   width: 95px;
-  /* color: gold; */
   transition: all 1.5s;
   /* box-shadow: 0px 30px 10px 30px rgba(0, 0, 0, 0.2); */
   /* border-top: 5px dotted gold;
   border-bottom: 5px dotted gold; */
 }
 
-/* li:nth-of-type(1) {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-style: dashed;
-  border-bottom-style: dashed;
-} */
-
-/* li:last-of-type {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-} */
-
-/* li:hover {
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-} */
-
 @media only screen and (max-width: 760px) {
   .navTitle {
-    font-size: 35px;
     height: 50px;
     justify-content: center;
   }
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 500px) {
   .navTitle {
-    font-size: 35px;
+    font-size: 30px;
     text-align: right;
+    margin-right: 25px;
   }
 }
 
@@ -286,36 +236,6 @@ li {
   box-shadow: -5px 5px 20px blue;
   color: blue;
 }
-
-/* .about:hover {
-  transition: all 1s;
-  margin-left: -20px;
-  margin-right: 20px;
-} */
-
-/* .projects:hover {
-  transition: all 1s ease;
-  margin-left: 20px;
-  margin-right: 20px;
-} */
-
-/* .resume:hover {
-  transition: all 1;
-  margin-right: -20px;
-  margin-left: 20px;
-} */
-
-/* #aboutTab:hover {
-  margin-left: 20px;
-}
-
-#projectsTab:hover {
-  margin-left: -20px;
-}
-
-#resumeTab:hover {
-  margin-left: 20px;
-} */
 
 body {
   overflow-x: hidden;
