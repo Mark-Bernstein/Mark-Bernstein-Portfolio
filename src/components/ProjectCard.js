@@ -32,12 +32,10 @@ const useStyles = makeStyles(() => ({
     marginTop: "30px",
     height: "75%",
     width: "80%",
-    backgroundColor: "white",
+    background: "lightblue",
     border: "2px solid #FFF",
     padding: "15px",
     overflowY: "scroll",
-    fontFamily: "Darker grotesque",
-    fontStyle: "sans-serif",
   },
 }));
 
@@ -123,7 +121,7 @@ const ProjectCard = (props) => {
               transition={{ ease: "easeOut", duration: 0.5, delay: 0.4 }}
             >
               <div id="closeIcon" onClick={handleClose}>
-                X
+                x
               </div>
               <div className="detailsImage">
                 {props.projectDetails["websiteLink"] ? (

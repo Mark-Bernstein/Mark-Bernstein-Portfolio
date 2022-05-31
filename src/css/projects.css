@@ -47,6 +47,7 @@
 }
 
 .projectCard {
+  font-family: "Chakra Petch", cursive;
   height: 130px;
   width: 50%;
   border: solid rgb(0, 221, 255);
@@ -75,6 +76,7 @@
   background-color: rgb(255, 255, 255);
   float: left;
 }
+
 .projectInfoHeader {
   font-weight: 800;
   text-align: left;
@@ -107,7 +109,7 @@
 }
 
 .projectInfoText {
-  font-family: "Darker grotesque", sans-serif;
+  font-family: "Chakra Petch", cursive;
   font-weight: 400;
   text-align: left;
   font-size: 14pt;
@@ -153,15 +155,22 @@
   color: red;
 }
 
-.website-link {
+.website-link,
+.github-link {
+  font-family: "Chakra Petch", cursive;
   display: flex;
   margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .website-link > a {
-  font-size: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: blue;
+  text-shadow: 0 0 18px blue;
+}
+
+.github-link > a {
+  color: rgb(35, 0, 190);
+  text-shadow: 0 0 18px blue;
 }
 
 .project-details-paragraph {
