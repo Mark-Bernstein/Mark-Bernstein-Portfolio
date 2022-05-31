@@ -1,5 +1,6 @@
 html {
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 p {
@@ -22,6 +23,20 @@ i {
 .right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+}
+
+.nav-bar {
+  position: absolute;
+  width: 100%;
+  background: url("../images/planet-background.jpg");
+  z-index: 8000;
+  top: 0;
+}
+
+.navbar {
+  z-index: 9000;
+  position: absolute;
+  width: 100%;
 }
 
 .navTitle {
@@ -77,13 +92,19 @@ i {
 .spacer {
   height: 15px;
   width: 100%;
-  background-color: black;
+  background-color: transparent;
   margin: 0;
   box-shadow: 1px 5px 5px rgb(64, 89, 248);
 }
 
 .navButton:hover {
   cursor: pointer;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes clockwise {
@@ -251,12 +272,12 @@ body .base {
   height: 98px;
   transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1);
   border-bottom-right-radius: 100%;
-  box-shadow: 2px 2px 10px gold;
+  box-shadow: 3px 3px 10px gold;
 }
 
 body .base .menu {
   z-index: 100;
-  background-color: rgb(64, 89, 248);
+  background-image: linear-gradient(to bottom right, red, yellow);
   position: absolute;
   top: 0px;
   left: 0px;
@@ -264,7 +285,9 @@ body .base .menu {
   height: 100px;
   border-bottom-right-radius: 200px;
   cursor: pointer;
-  transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1), background-color 1s ease;
+  transition: all 1.5s cubic-bezier(0.5, -0.75, 0.05, 1);
+  box-shadow: 0 0 30px 5px rgb(255, 0, 0), 0 0 15px 5px rgb(255, 167, 167);
+  transition: box-shadow 5s ease-in-out;
 }
 
 body .base .menu .icon {

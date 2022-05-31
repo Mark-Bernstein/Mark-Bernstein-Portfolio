@@ -10,7 +10,7 @@ const variants = {
 
 const NavBar = () => {
   return (
-    <nav className="navbar">
+    <nav className="nav-bar">
       <motion.div
         initial="hidden"
         animate="visible"

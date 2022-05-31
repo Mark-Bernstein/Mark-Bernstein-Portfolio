@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
 import GithubLogo from "../images/GitHub_32.png";
+import { red } from "@material-ui/core/colors";
 
 const variants = {
   hidden: { opacity: 0 },
@@ -15,7 +16,7 @@ const modalVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-function getModalStyle() {
+const getModalStyle = () => {
   const top = 50;
   const left = 50;
 
@@ -24,17 +25,16 @@ function getModalStyle() {
     left: `${left}%`,
     transform: `translate(-${top}%, -${left}%)`,
   };
-}
+};
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   paper: {
     position: "absolute",
-    height: "80%",
+    marginTop: "30px",
+    height: "75%",
     width: "80%",
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "white",
     border: "2px solid #FFF",
-    boxShadow: theme.shadows[4],
-    // padding: theme.spacing(2, 8, 4),
     padding: "15px",
     overflowY: "scroll",
     fontFamily: "Darker grotesque",
@@ -123,6 +123,9 @@ const ProjectCard = (props) => {
               variants={modalVariants}
               transition={{ ease: "easeOut", duration: 0.5, delay: 0.4 }}
             >
+              <div id="closeIcon" onClick={handleClose}>
+                X
+              </div>
               <div className="detailsImage">
                 {props.projectDetails["websiteLink"] ? (
                   <a
@@ -145,7 +148,6 @@ const ProjectCard = (props) => {
                   variants={modalVariants}
                   transition={{ ease: "easeOut", duration: 0.5, delay: 0.4 }}
                 >
-                  {/* {paragraphs} */}
                   {props.projectDetails["websiteLink"] ? websiteLink : retiredWebsite}
                   {props.projectDetails["github"] ? githubLink : privateGithub}
                 </motion.div>

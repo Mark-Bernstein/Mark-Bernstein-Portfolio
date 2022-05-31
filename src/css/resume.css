@@ -3,6 +3,10 @@ a {
   color: cyan;
 }
 
+.resumePage {
+  margin-top: 110px;
+}
+
 .resume-links {
   text-shadow: 0 2px 7px black;
   border: 6px solid rgb(0, 0, 0, 0);
@@ -38,7 +42,6 @@ a {
 
 .resumeContainer {
   margin: auto;
-  margin-top: 25px;
   height: 250px;
   width: 80%;
   font-family: "Chakra Petch", sans-serif;

@@ -1,3 +1,11 @@
+#closeIcon {
+  font-family: "Oxanium", cursive;
+  font-size: 30px;
+  padding: 10px 20px;
+  font-weight: bold;
+  float: right;
+}
+
 .cardContainer {
   margin: auto;
   height: 250px;
@@ -7,14 +15,17 @@
   font-family: "Darker grotesque", sans-serif;
   font-weight: 400;
   border-radius: 5px;
+  /* background: url("../images/piano-wavelengths.jpg"); */
 }
 
 .cardList {
   margin: auto;
+  margin-top: 100px;
 }
 
 .projectPage {
   height: 100%;
+  /* margin-top: 130px; */
 }
 
 .projectSpacer {
@@ -22,6 +33,7 @@
   width: 100%;
   padding-top: 15px;
 }
+
 .projectRightSpacer {
   position: relative;
 }
