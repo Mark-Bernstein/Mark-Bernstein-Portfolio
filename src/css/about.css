@@ -13,12 +13,10 @@
 p {
   color: black;
   font-weight: 600;
-  font-family: "Segoe UI";
   font-family: "Chakra Petch", sans-serif;
 }
 
 .aboutText {
-  font-family: "Darker grotesque", sans-serif;
   font-size: 18pt;
   width: 69%;
   margin: auto;

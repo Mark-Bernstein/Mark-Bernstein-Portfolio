@@ -22,7 +22,7 @@ const NavBar = () => {
       >
         <div className={`base${isOpen ? " close" : ""}`} onClick={handleOpen}>
           <div className="menu">
-            <div className="icon">
+            <div className="middle-line-menu">
               <div className="bar"></div>
             </div>
           </div>

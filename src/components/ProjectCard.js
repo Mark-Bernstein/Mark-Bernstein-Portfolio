@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
 import GithubLogo from "../images/GitHub_32.png";
-import { red } from "@material-ui/core/colors";
 
 const variants = {
   hidden: { opacity: 0 },
