@@ -91,6 +91,7 @@ a {
   font-size: 20px;
   justify-content: left;
   color: white;
+  text-shadow: 2px 2px 7px black;
 }
 
 .resumeText > p {

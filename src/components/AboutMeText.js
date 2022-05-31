@@ -29,9 +29,10 @@ const AboutMeText = () => {
         time with friends and family. He was born in San Diego, California and enjoys traveling to new destinations
         whenever given the chance. No matter the destination, he always yearns for knowledge and new adventures.{" "}
       </p>
-      <span role="img" aria-label="cheers">
-        ...🍻
+      <span id="beer" role="img" aria-label="cheers">
+        🍻
       </span>
+
       <br></br>
       <br></br>
     </div>
