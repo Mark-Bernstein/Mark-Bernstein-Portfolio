@@ -51,7 +51,7 @@ i {
   transition: 0.5s box-shadow;
   text-align: center;
   display: block;
-  font-family: "Oxanium", cursive;
+  font-family: "Oxanium", sans-serif, cursive;
   color: cyan;
   margin-top: 15px;
 }
@@ -64,12 +64,12 @@ i {
 
 .link {
   display: flex;
-  font-family: "Chakra Petch", sans-serif;
+  font-family: "Chakra Petch", sans-serif, cursive;
   font-size: 18px;
 }
 
 li {
-  font-family: "Oxanium", cursive;
+  font-family: "Oxanium", sans-serif, cursive;
   font-weight: bold;
 }
 
@@ -80,7 +80,7 @@ li {
   margin: auto;
   width: auto;
   background: rgb(0, 0, 0, 1);
-  font-family: sans-serif;
+  font-family: "Oxanium", sans-serif, cursive;
   font-weight: bold;
   letter-spacing: 1px;
   transition: 0.5s box-shadow;
@@ -103,90 +103,6 @@ li {
 
 .navButton:hover {
   cursor: pointer;
-}
-
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes clockwise {
-  0% {
-    top: -5px;
-    left: 0;
-  }
-  12% {
-    top: -2px;
-    left: 2px;
-  }
-  25% {
-    top: 0;
-    left: 5px;
-  }
-  37% {
-    top: 2px;
-    left: 2px;
-  }
-  50% {
-    top: 5px;
-    left: 0;
-  }
-  62% {
-    top: 2px;
-    left: -2px;
-  }
-  75% {
-    top: 0;
-    left: -5px;
-  }
-  87% {
-    top: -2px;
-    left: -2px;
-  }
-  100% {
-    top: -5px;
-    left: 0;
-  }
-}
-
-@keyframes counterclockwise {
-  0% {
-    top: -5px;
-    right: 0;
-  }
-  12% {
-    top: -2px;
-    right: 2px;
-  }
-  25% {
-    top: 0;
-    right: 5px;
-  }
-  37% {
-    top: 2px;
-    right: 2px;
-  }
-  50% {
-    top: 5px;
-    right: 0;
-  }
-  62% {
-    top: 2px;
-    right: -2px;
-  }
-  75% {
-    top: 0;
-    right: -5px;
-  }
-  87% {
-    top: -2px;
-    right: -2px;
-  }
-  100% {
-    top: -5px;
-    right: 0;
-  }
 }
 
 .buttons-container {
@@ -223,9 +139,6 @@ li {
   height: 69px;
   width: 95px;
   transition: all 1.5s;
-  /* box-shadow: 0px 30px 10px 30px rgba(0, 0, 0, 0.2); */
-  /* border-top: 5px dotted gold;
-  border-bottom: 5px dotted gold; */
 }
 
 @media only screen and (max-width: 760px) {
@@ -249,18 +162,6 @@ li {
     text-align: right;
   }
 }
-
-/* #aboutTab:hover,
-#projectsTab:hover,
-#resumeTab:hover {
-  border-top: 5px solid blue;
-  border-bottom: 5px solid blue;
-  text-decoration: underline;
-  z-index: 9999;
-  background-color: white;
-  box-shadow: -5px 5px 20px blue;
-  color: blue;
-} */
 
 body {
   overflow-x: hidden;
@@ -346,6 +247,7 @@ body .base .page-option {
 }
 
 body .base .page-option > * {
+  /*font animation*/
   position: absolute;
   font-size: 15px;
   color: black;
@@ -451,12 +353,14 @@ body .base .section-static.bottom {
 }
 
 body .base.close {
+  /*second layer menu transition*/
   width: 300px;
   height: 300px;
   transition: all 1.25s cubic-bezier(0.5, 0, 0.05, 1.75);
 }
 
 body .base.close .menu {
+  /*first layer menu transition*/
   width: 150px;
   height: 150px;
   transition: all 1s cubic-bezier(0.5, 0, 0.05, 1.75), background-color 1s ease;
@@ -495,10 +399,11 @@ body .base.close .page-option {
 }
 
 body .base.close .page-option > * {
+  /*text transition when opening*/
   position: absolute;
   font-size: 26px;
   color: #21264b;
-  transition: 0.3s cubic-bezier(0.5, 0, 0.05, 1.75) 0.7s;
+  transition: 0.4s cubic-bezier(0.5, 0, 0.05, 1.75) 0.7s;
   pointer-events: none;
 }
 
@@ -553,9 +458,7 @@ body .base.close .section .cover1 .cover2 {
 
 body .base.close .section .cover1 .cover2 .content {
   border-radius: 100%;
-  /* background-color: rgb(64, 89, 248); */
   background-color: rgb(0, 34, 255);
-  /* background-color: linear-gradient(to bottom right, red, yellow); */
   top: 100%;
   left: 0%;
   transform: translate(-50%, -50%);

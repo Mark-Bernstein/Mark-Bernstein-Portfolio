@@ -1,9 +1,10 @@
 #closeIcon {
-  font-family: "Oxanium", cursive;
+  font-family: "Oxanium", sans-serif, cursive;
   font-size: 30px;
   padding: 10px 20px;
   font-weight: bold;
   float: right;
+  cursor: pointer;
 }
 
 .cardContainer {
@@ -14,7 +15,7 @@
   box-shadow: 0px 2px 6px -2px;
   font-weight: 400;
   border-radius: 5px;
-  /* background: url("../images/piano-wavelengths.jpg"); */
+  background: url("../images/piano-wavelengths.jpg");
 }
 
 .cardList {
@@ -47,7 +48,7 @@
 }
 
 .projectCard {
-  font-family: "Chakra Petch", cursive;
+  font-family: "Chakra Petch", sans-serif, cursive;
   height: 130px;
   width: 50%;
   border: solid rgb(0, 221, 255);
@@ -109,7 +110,7 @@
 }
 
 .projectInfoText {
-  font-family: "Chakra Petch", cursive;
+  font-family: "Chakra Petch", sans-serif, cursive;
   font-weight: 400;
   text-align: left;
   font-size: 14pt;
@@ -157,7 +158,7 @@
 
 .website-link,
 .github-link {
-  font-family: "Chakra Petch", cursive;
+  font-family: "Chakra Petch", sans-serif, cursive;
   display: flex;
   margin-bottom: 15px;
   font-weight: 600;
