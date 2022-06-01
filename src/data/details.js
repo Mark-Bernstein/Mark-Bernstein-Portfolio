@@ -13,12 +13,12 @@ var details = {
     ],
     websiteLink: "https://slash-roll.vercel.app",
   },
-  drugBud: {
+  druggler: {
     image: drugglerScreenshot,
     paragraphs: [
       "An application that allows users to track when they need to take their medications, as well as allowing users to search for interactions between different drugs. Users are able to sign up and create a unique profile that allows the user to add, edit and delete prescription drugs from their pill tracker dashboard. Drugglers is a MERN application using MongoDB, Express, React and Node.js. Our database uses two collections to establish an association between a user’s profile and the drugs they have added to their pill tracker dashboard. For UI, our team used the Material-UI library to speed up component building.",
     ],
-    github: "https://github.com/Mark-Bernstein/DrugBud",
+    github: "https://github.com/Mark-Bernstein/druggler",
   },
   musicConnoisseurs: {
     image: musicConnoisseursScreenshot,

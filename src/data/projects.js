@@ -3,7 +3,7 @@ var projects = {
     title: "Slash Roll",
     text: "An exciting React project that randomly decides a winner from 2-12 players, all while tracking the number of wins and the average roll of each player.",
   },
-  drugBud: {
+  druggler: {
     title: "Druggler",
     text: "An application that allows users to track when they need to take their medications, as well as allowing users to search for interactions between different drugs.",
   },
