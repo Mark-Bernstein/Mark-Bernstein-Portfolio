@@ -1,0 +1,19 @@
+{
+    "name": "Mark Bernstein's Portfolio",
+    "short_name": "Mark's Portfolio",
+    "icons": [
+      {
+        "src": "/faviconicon-16.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      },
+      {
+        "src": "/faviconicon-32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "display": "standalone"
+  }
