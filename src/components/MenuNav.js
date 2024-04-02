@@ -27,12 +27,12 @@ const NavBar = () => {
             </div>
           </div>
           <div className="page-option">
-            <Link className="about-page link" aria-hidden="true" to="/">
-              <li id="aboutTab"> About </li>
-            </Link>
-
             <Link className="project-page link" aria-hidden="true" to="/projects">
               <li id="projectsTab"> Projects</li>
+            </Link>
+            
+            <Link className="about-page link" aria-hidden="true" to="/">
+              <li id="aboutTab"> About </li>
             </Link>
 
             <Link className="resume-page link" aria-hidden="true" to="/resume">
