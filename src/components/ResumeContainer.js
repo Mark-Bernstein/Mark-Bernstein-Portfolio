@@ -50,6 +50,14 @@ const ResumeContainer = () => {
 
         <hr></hr>
 
+        <div className="resumeSectionHeader">Work Experience</div>
+        <div className="sectionContainer">
+          <div className="resumeSubHeader">Mindera Software Craft | 2020 - present&nbsp;</div>
+          <div className="resumeSectionInfo">Front End Developer</div>
+        </div>
+
+        <hr></hr>
+
         <div className="resumeSectionHeader">Education</div>
         <div className="sectionContainer">
           <div className="resumeSubHeader">UCSD Full Stack Coding Bootcamp&nbsp;</div>
@@ -68,7 +76,7 @@ const ResumeContainer = () => {
           <div className="resumeSectionInfo">&nbsp;</div>
 
           <p className="resumeText">
-            JavaScript | React | React Native | TypeScript | Jest | Enzyme | Node | HTML | CSS | Java | C++/C# | Lisp |
+            JavaScript | React | React Native | TypeScript | HTML | CSS | Jest | Enzyme | Node |  Java | C++/C# | Lisp |
             Visual Basic | Express | Sonic Pi | Handlebars | jQuery | JSON | AJAX | Github | Git Bash | BitBucket |
             Heroku | Photoshop | FL Studio | Final Cut Pro{" "}
           </p>
@@ -83,10 +91,10 @@ const ResumeContainer = () => {
 
         <hr></hr>
 
-        <div className="resumeSectionHeader">Full Stack Web Developer Ready to Bring Impactful Transformations</div>
+        <div className="resumeSectionHeader">Full Stack Web Developer Bringing Impactful Transformations</div>
         <div className="sectionContainer">
           <p className="resumeText">
-            Full Stack Web Developer with a passion for creativity and excited to contribute to the programming world.
+            Full Stack Web Developer with a passion for creativity. Always excited to contribute to the programming world.
             Patient in tackling problems in an exceptionally detail-oriented and methodical nature. Performs well under
             pressure in all circumstances. Organizes and upholds project deadlines by being flexible and dependable.
           </p>

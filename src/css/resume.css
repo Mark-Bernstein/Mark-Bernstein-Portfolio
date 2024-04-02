@@ -33,10 +33,15 @@ a {
   height: 100%;
 }
 
+.sectionContainer {
+  display: block;
+}
+
 .resumeSectionHeader,
 .resumeSubHeader,
 .resumeSectionInfo {
-  text-shadow: 2px 2px 10px rgb(0 0 0);
+  text-shadow: 2px 2px 1px rgb(0 0 0);
+  display: inline-block;
 }
 
 .resumeContainer {
@@ -77,7 +82,7 @@ a {
   font-weight: 400;
   font-size: 24px;
   font-style: italic;
-  color: cyan;
+  color: rgb(255, 255, 255);
 }
 
 .resumeText {
@@ -98,8 +103,8 @@ a {
   font-family: "Chakra Petch", sans-serif, cursive;
   font-weight: 800;
   font-size: 24px;
-  color: cyan;
-  text-shadow: 2px 2px 7px black;
+  color: rgb(2, 0, 100);
+  text-shadow: 2px 2px 2px rgb(255, 0, 0);
   margin: 0;
 }
 

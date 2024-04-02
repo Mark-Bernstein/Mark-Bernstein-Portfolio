@@ -27,11 +27,11 @@ const NavBar = () => {
             </div>
           </div>
           <div className="page-option">
-            <Link className="project-page link" aria-hidden="true" to="/projects">
-              <li id="projectsTab"> Projects</li>
+            <Link className="project-page link" aria-hidden="true" to="/">
+              <li id="projectsTab"> Projects  </li>
             </Link>
-            
-            <Link className="about-page link" aria-hidden="true" to="/">
+
+            <Link className="about-page link" aria-hidden="true" to="/about">
               <li id="aboutTab"> About </li>
             </Link>
 
@@ -42,11 +42,11 @@ const NavBar = () => {
           <div className="section">
             <div className="cover1">
               <div className="cover2">
-                <Link className="content" to="/projects"></Link>
+                <Link className="content" to="/"></Link>
               </div>
             </div>
           </div>
-          <Link className="section-static top" to="/"></Link>
+          <Link className="section-static top" to="/about"></Link>
           <Link className="section-static bottom" to="/resume"></Link>
         </div>
       </motion.div>

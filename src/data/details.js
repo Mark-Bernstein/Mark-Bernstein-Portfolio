@@ -25,8 +25,7 @@ var details = {
     paragraphs: [
       "An application that creates a database of music genres and provides a description to broaden your musical knowledge. The genres are user submitted along with descriptions and comments. Music videos to further illustrate the music genre are provided via a link to YouTube.",
     ],
-    github: "https://github.com/Mark-Bernstein/music-connoisseurs",
-    websiteLink: "https://music-connoisseurs.herokuapp.com/genre",
+    github: "https://github.com/Mark-Bernstein/music-connoisseurs"
   },
   cityScout: {
     image: cityScoutScreenshot,
@@ -41,8 +40,7 @@ var details = {
     paragraphs: [
       "An application uses JavaScript, HTML, CSS, MySql, Node, Express, Handlebars, and a homemade ORM to log out burgers. The MVC design pattern was used along with Node to Query the route data for the app. Handlebars was used to generate all of my HTML.",
     ],
-    github: "https://github.com/Mark-Bernstein/burger",
-    websiteLink: "https://mvc-burger-app.herokuapp.com/burgers",
+    github: "https://github.com/Mark-Bernstein/burger"
   },
   noteTaker: {
     image: noteTakerScreenshot,
