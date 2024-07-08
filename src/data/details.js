@@ -9,7 +9,7 @@ var details = {
   slashRoll: {
     image: slashRollScreenshot,
     paragraphs: [
-      "Slash Roll is an easy and fun way to randomly decides a winner from 2-12 players, all while tracking the number of wins and the average roll of each player.",
+      "Slash Roll is a solo personal project developed using React and enhanced with framer-motion for unique animations. It offers an easy and enjoyable method to randomly select a winner from 2-12 players, while meticulously tracking each player's wins and average rolls. The game features a convenient 1 player mode for quick random rolls. Slash Roll caters to anyone seeking a fair and random selection method, making it ideal for various scenarios where luck determines the outcome.",
     ],
     websiteLink: "https://slash-roll.vercel.app",
   },
@@ -25,7 +25,7 @@ var details = {
     paragraphs: [
       "An application that creates a database of music genres and provides a description to broaden your musical knowledge. The genres are user submitted along with descriptions and comments. Music videos to further illustrate the music genre are provided via a link to YouTube.",
     ],
-    github: "https://github.com/Mark-Bernstein/music-connoisseurs"
+    github: "https://github.com/Mark-Bernstein/music-connoisseurs",
   },
   cityScout: {
     image: cityScoutScreenshot,
@@ -40,7 +40,7 @@ var details = {
     paragraphs: [
       "An application uses JavaScript, HTML, CSS, MySql, Node, Express, Handlebars, and a homemade ORM to log out burgers. The MVC design pattern was used along with Node to Query the route data for the app. Handlebars was used to generate all of my HTML.",
     ],
-    github: "https://github.com/Mark-Bernstein/burger"
+    github: "https://github.com/Mark-Bernstein/burger",
   },
   noteTaker: {
     image: noteTakerScreenshot,
