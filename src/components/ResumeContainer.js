@@ -13,7 +13,12 @@ const variantsY = {
 
 const ResumeContainer = () => {
   return (
-    <motion.div initial="hidden" animate="visible" variants={variantsY} transition={{ ease: "easeOut", duration: 1.5 }}>
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={variantsY}
+      transition={{ ease: "easeOut", duration: 1.5 }}
+    >
       <div className="resumeContainer">
         <div style={{ marginBottom: "10px" }}> </div>
         <div>
@@ -43,7 +48,11 @@ const ResumeContainer = () => {
           </Button>
 
           <p id="eMail">
-            <img src={EmailLogo} alt="gmail logo" style={{ float: "left", margin: "0", display: "inline-block" }}></img>
+            <img
+              src={EmailLogo}
+              alt="gmail logo"
+              style={{ float: "left", margin: "0", display: "inline-block" }}
+            ></img>
             ProgrammingByMark@gmail.com
           </p>
         </div>
@@ -52,7 +61,9 @@ const ResumeContainer = () => {
 
         <div className="resumeSectionHeader">Work Experience</div>
         <div className="sectionContainer">
-          <div className="resumeSubHeader">Mindera Software Craft | 2020 - present&nbsp;</div>
+          <div className="resumeSubHeader">
+            Mindera Software Craft | 2020 - present&nbsp;
+          </div>
           <div className="resumeSectionInfo">Front End Developer</div>
         </div>
 
@@ -60,12 +71,22 @@ const ResumeContainer = () => {
 
         <div className="resumeSectionHeader">Education</div>
         <div className="sectionContainer">
-          <div className="resumeSubHeader">UCSD Full Stack Coding Bootcamp&nbsp;</div>
+          <div className="resumeSubHeader">
+            UCSD Full Stack Coding Bootcamp&nbsp;
+          </div>
           <div className="resumeSectionInfo"> Certificate of Completion</div>
           <div className="resumeSubHeader">San Diego Mesa College&nbsp;</div>
-          <div className="resumeSectionInfo"> Programming Certificate of Performance</div>
-          <div className="resumeSubHeader">Cal State University San Marcos&nbsp;</div>
-          <div className="resumeSectionInfo"> Bachelor of Arts: Arts and Technology</div>
+          <div className="resumeSectionInfo">
+            {" "}
+            Programming Certificate of Performance
+          </div>
+          <div className="resumeSubHeader">
+            Cal State University San Marcos&nbsp;
+          </div>
+          <div className="resumeSectionInfo">
+            {" "}
+            Bachelor of Arts: Arts and Technology
+          </div>
         </div>
 
         <hr></hr>
@@ -76,27 +97,35 @@ const ResumeContainer = () => {
           <div className="resumeSectionInfo">&nbsp;</div>
 
           <p className="resumeText">
-            JavaScript | React | React Native | TypeScript | HTML | CSS | Jest | Enzyme | Node |  Java | C++/C# | Lisp |
-            Visual Basic | Express | Sonic Pi | Handlebars | jQuery | JSON | AJAX | Github | Git Bash | BitBucket |
-            Heroku | Photoshop | FL Studio | Final Cut Pro{" "}
+            JavaScript | React | React Native | TypeScript | HTML | CSS | Jest |
+            Enzyme | Node | Java | C++/C# | Lisp | Visual Basic | Express |
+            Sonic Pi | Handlebars | jQuery | JSON | AJAX | Github | Git Bash |
+            BitBucket | Heroku | Photoshop | FL Studio | Final Cut Pro{" "}
           </p>
 
           <div className="resumeSubHeader">Soft Skills&nbsp;</div>
           <div className="resumeSectionInfo">&nbsp;</div>
 
           <p className="resumeText">
-            Communicator | Detail-oriented | Patient | Team player | Problem Solver | Flexible | Dependable | Creative
+            Communicator | Detail-oriented | Patient | Team player | Problem
+            Solver | Flexible | Dependable | Creative
           </p>
         </div>
 
         <hr></hr>
 
-        <div className="resumeSectionHeader">Full Stack Web Developer Bringing Impactful Transformations</div>
+        <div className="resumeSectionHeader">
+          Full Stack Web Developer Bringing Impactful Transformations
+        </div>
         <div className="sectionContainer">
           <p className="resumeText">
-            Full Stack Web Developer with a passion for creativity. Always excited to contribute to the programming world.
-            Patient in tackling problems in an exceptionally detail-oriented and methodical nature. Performs well under
-            pressure in all circumstances. Organizes and upholds project deadlines by being flexible and dependable.
+            Full Stack Web Developer with a strong passion for creativity and
+            innovation. Committed to contributing to the programming community
+            with meticulous attention to detail and a methodical approach to
+            problem-solving. Demonstrates exceptional performance under
+            pressure, consistently meeting project deadlines with flexibility
+            and reliability. Dedicated to delivering high-quality results and
+            continuously advancing skills in a dynamic and evolving field.
           </p>
         </div>
 
