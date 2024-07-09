@@ -4,9 +4,10 @@
   margin-top: 130px;
   margin-bottom: 25px;
   position: relative;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 1);
+  box-shadow: 10px 10px 20px rgb(0, 0, 0);
   padding: 5px;
-  background: black;
+  background: rgb(0, 0, 0);
+  border: 2px solid rgb(90, 42, 201);
 }
 
 p {

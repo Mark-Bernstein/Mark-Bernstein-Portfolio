@@ -43,10 +43,9 @@ i {
   font-weight: bolder;
   font-size: 40px;
   /* float: center; */
-  text-shadow: 2px 2px 5px rgb(64, 89, 248);
+  box-shadow: 2px 2px 30px rgb(64, 89, 248);
   width: auto;
   padding: 10px;
-  border-radius: 90px;
   letter-spacing: 2px;
   transition: 0.5s box-shadow;
   text-align: center;
@@ -54,7 +53,7 @@ i {
   font-family: "Oxanium", sans-serif, cursive;
   color: cyan;
   margin-top: 15px;
-  text-shadow: rgb(0, 0, 0) 5px 5px 10px;
+  text-shadow: rgb(0, 195, 255) 3px 3px 10px;
 }
 
 @media only screen and (max-width: 344px) {
@@ -392,7 +391,7 @@ body .base.close .menu {
 body .base.close .menu .middle-line-menu .bar,
 body .base.close .menu .middle-line-menu:before,
 body .base.close .menu .middle-line-menu:after {
-  background-color: rgb(255, 0, 0);
+  background: linear-gradient(135deg, rgb(0, 0, 0), rgb(4, 0, 255), black);
 }
 
 body .base.close .menu .middle-line-menu .bar {

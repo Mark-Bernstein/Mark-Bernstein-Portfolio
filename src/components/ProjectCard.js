@@ -18,11 +18,13 @@ const modalVariants = {
 const getModalStyle = () => {
   const top = 50;
   const left = 50;
+  const width = 20;
 
   return {
     top: `${top}%`,
     left: `${left}%`,
     transform: `translate(-${top}%, -${left}%)`,
+    width: `${width}%`,
   };
 };
 
@@ -46,7 +48,11 @@ const ProjectCard = (props) => {
 
   let githubLink = (
     <div className="github-link">
-      <a href={props.projectDetails["github"]} target="_blank" rel="noopener noreferrer">
+      <a
+        href={props.projectDetails["github"]}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img alt="github logo" src={GithubLogo}></img>
         Github
       </a>
@@ -55,15 +61,23 @@ const ProjectCard = (props) => {
 
   let websiteLink = (
     <div className="website-link">
-      <a href={props.projectDetails["websiteLink"]} target="_blank" rel="noopener noreferrer">
+      <a
+        href={props.projectDetails["websiteLink"]}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Live hosted website
       </a>
     </div>
   );
 
-  const retiredWebsite = <p className="retired-project-p">Project has been retired.</p>;
+  const retiredWebsite = (
+    <p className="retired-project-p">Project has been retired.</p>
+  );
 
-  const privateGithub = <p className="private-github">Project code is currently private.</p>;
+  const privateGithub = (
+    <p className="private-github">Project code is currently private.</p>
+  );
 
   const handleOpen = () => {
     setOpen(true);
@@ -84,9 +98,19 @@ const ProjectCard = (props) => {
   }
   return (
     <div>
-      <motion.div whileHover={{ scale: 1.1 }} transition={{ ease: "easeOut", duration: 0.4 }}>
-        <div className="projectCard" style={{ backgroundColor: props.propColor }} onClick={handleOpen}>
-          <div className="projectLogo" style={{ backgroundColor: props.propColor }}>
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ ease: "easeOut", duration: 0.4 }}
+      >
+        <div
+          className="projectCard"
+          style={{ backgroundColor: props.propColor }}
+          onClick={handleOpen}
+        >
+          <div
+            className="projectLogo"
+            style={{ backgroundColor: props.propColor }}
+          >
             <img src={props.projectLogo} alt="logo" className="projectImg" />
           </div>
           <div className="projectInfoHeader">{props.projectData["title"]}</div>
@@ -131,10 +155,18 @@ const ProjectCard = (props) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="websiteScreenshot" src={props.projectDetails.image} alt="project"></img>
+                    <img
+                      className="websiteScreenshot"
+                      src={props.projectDetails.image}
+                      alt="project"
+                    ></img>
                   </a>
                 ) : (
-                  <img className="websiteScreenshot" src={props.projectDetails.image} alt="project"></img>
+                  <img
+                    className="websiteScreenshot"
+                    src={props.projectDetails.image}
+                    alt="project"
+                  ></img>
                 )}
                 {paragraphs}
               </div>
@@ -145,7 +177,9 @@ const ProjectCard = (props) => {
                   variants={modalVariants}
                   transition={{ ease: "easeOut", duration: 0.5, delay: 0.4 }}
                 >
-                  {props.projectDetails["websiteLink"] ? websiteLink : retiredWebsite}
+                  {props.projectDetails["websiteLink"]
+                    ? websiteLink
+                    : retiredWebsite}
                   {props.projectDetails["github"] ? githubLink : privateGithub}
                 </motion.div>
               </div>
