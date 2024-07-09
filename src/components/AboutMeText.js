@@ -29,7 +29,10 @@ const AboutMeText = () => {
       <p>
         He began his professional journey as a Software Engineer at Mindera
         Software Craft, where he had the opportunity to work with prominent
-        clients such as FanDuel and TVG.
+        clients such as FanDuel and TVG. During this time, Mark had the
+        wonderful experience of proposing in Portugal during a work trip, a
+        significant moment that beautifully intertwined his work and personal
+        life.
       </p>
       <p>
         In his free time, Mark enjoys playing guitar, creating electronic music,
@@ -38,10 +41,15 @@ const AboutMeText = () => {
         destinations and always seeks out knowledge and new adventures, no
         matter where he goes.
       </p>
+      <p>
+        Looking ahead, Mark is excited to continue pushing the boundaries of
+        what's possible with technology. He is dedicated to lifelong learning
+        and aims to contribute innovative solutions to the tech industry, always
+        striving to blend creativity with cutting-edge software engineering.
+      </p>
       <span id="beer" role="img" aria-label="cheers">
         🍻
       </span>
-
       <br></br>
       <br></br>
     </div>
