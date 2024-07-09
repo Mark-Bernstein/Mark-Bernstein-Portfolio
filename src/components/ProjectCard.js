@@ -18,7 +18,7 @@ const modalVariants = {
 const getModalStyle = () => {
   const top = 50;
   const left = 50;
-  const width = 20;
+  const width = 80;
 
   return {
     top: `${top}%`,

@@ -5,7 +5,7 @@ import cityScoutScreenshot from "../images/cityScoutScreenshot.jpg";
 import drugglerScreenshot from "../images/drugglerScreenshot.JPG";
 import slashRollScreenshot from "../images/slashRollScreenshot.jpg";
 
-var details = {
+const details = {
   slashRoll: {
     image: slashRollScreenshot,
     paragraphs: [
