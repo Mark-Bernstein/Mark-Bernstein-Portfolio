@@ -28,15 +28,15 @@ const NavBar = () => {
           </div>
           <div className="page-option">
             <Link className="project-page link" aria-hidden="true" to="/">
-              <li id="projectsTab"> Projects  </li>
+              <li id="projectsTab">Projects</li>
             </Link>
 
             <Link className="about-page link" aria-hidden="true" to="/about">
-              <li id="aboutTab"> About </li>
+              <li id="aboutTab">About</li>
             </Link>
 
             <Link className="resume-page link" aria-hidden="true" to="/resume">
-              <li id="resumeTab"> Resume </li>
+              <li id="resumeTab">Resume</li>
             </Link>
           </div>
           <div className="section">

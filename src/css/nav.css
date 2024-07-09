@@ -42,7 +42,6 @@ i {
 .navTitle {
   font-weight: bolder;
   font-size: 40px;
-  /* float: center; */
   box-shadow: 2px 2px 30px rgb(64, 89, 248);
   width: auto;
   padding: 10px;
@@ -172,7 +171,7 @@ body .base {
   position: fixed;
   top: 0px;
   left: 0px;
-  background-color: black; /* for top and bottom menu color*/
+  background-color: rgb(0, 0, 0); /* for top and bottom menu color*/
   width: 98px;
   height: 98px;
   transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1);
@@ -192,7 +191,7 @@ body .base .menu {
   cursor: pointer;
   transition: all 1.5s cubic-bezier(0.5, -0.75, 0.05, 1);
   box-shadow: 0 0 30px 5px rgb(255, 0, 0), 0 0 15px 5px rgb(255, 167, 167);
-  transition: box-shadow 5s ease-in-out;
+  /* transition: box-shadow 5s ease-in-out; */
 }
 
 body .base .menu .middle-line-menu {
@@ -334,7 +333,7 @@ body .base .section .cover1 .cover2 .content {
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: transparent;
   /* background: linear-gradient(to bottom right, red, yellow); */
   top: 100%;
   left: 0%;
@@ -423,9 +422,9 @@ body .base.close .page-option {
 body .base.close .page-option > * {
   /*text transition when opening*/
   position: absolute;
-  font-size: 26px;
+  font-size: 24px;
   color: #21264b;
-  transition: 0.4s cubic-bezier(0.5, 0, 0.05, 1.75) 0.7s;
+  transition: 0.5s cubic-bezier(0.5, 0, 0.05, 1.75) 0.3s;
   pointer-events: none;
 }
 
@@ -480,7 +479,7 @@ body .base.close .section .cover1 .cover2 {
 
 body .base.close .section .cover1 .cover2 .content {
   border-radius: 100%;
-  background-color: black;
+  background-color: transparent;
   top: 100%;
   left: 0%;
   transform: translate(-50%, -50%);
