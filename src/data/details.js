@@ -4,6 +4,7 @@ import noteTakerScreenshot from "../images/noteTakerScreenshot.JPG";
 import cityScoutScreenshot from "../images/cityScoutScreenshot.jpg";
 import drugglerScreenshot from "../images/drugglerScreenshot.JPG";
 import slashRollScreenshot from "../images/slashRollScreenshot.jpg";
+import pokedex from "../images/Pokedex_screenshot_homepage.png";
 
 const details = {
   slashRoll: {
@@ -12,6 +13,14 @@ const details = {
       "Slash Roll is a solo personal project developed using React and enhanced with framer-motion for unique animations. It offers an easy and enjoyable method to randomly select a winner from 2-12 players, while meticulously tracking each player's wins and average rolls. The game features a convenient 1 player mode for quick random rolls. Slash Roll caters to anyone seeking a fair and random selection method, making it ideal for various scenarios where luck determines the outcome.",
     ],
     websiteLink: "https://slash-roll.vercel.app",
+  },
+  pokedex: {
+    image: pokedex,
+    paragraphs: [
+      "This Typescript project fetches data from a pokemon api and transforms the data into a visually appealing website that allows the user to filter through and save their favorite Pokémon.",
+    ],
+    github: "https://github.com/Mark-Bernstein/Pokemon-Pokedex",
+    websiteLink: "https://pokemon-pokedex-kappa.vercel.app/",
   },
   druggler: {
     image: drugglerScreenshot,

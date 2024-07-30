@@ -22,32 +22,39 @@ const ProjectContainer = () => {
       <GrowToLeft
         propColor="black"
         delay={0}
+        projectData={projects["pokedex"]}
+        projectDetails={details["pokedex"]}
+        projectLogo={ReactLogo}
+      />
+      <GrowToRight
+        propColor="black"
+        delay={0}
         projectData={projects["druggler"]}
         projectDetails={details["druggler"]}
         projectLogo={ReactLogo}
       />
-      <GrowToRight
+      <GrowToLeft
         propColor="black"
         delay={0.5}
         projectData={projects["musicConnoisseurs"]}
         projectDetails={details["musicConnoisseurs"]}
         projectLogo={ReactLogo}
       />
-      <GrowToLeft
+      <GrowToRight
         propColor="black"
         delay={1}
         projectData={projects["burger"]}
         projectDetails={details["burger"]}
         projectLogo={MySqlLogo}
       />
-      <GrowToRight
+      <GrowToLeft
         propColor="black"
         delay={1.5}
         projectData={projects["noteTaker"]}
         projectDetails={details["noteTaker"]}
         projectLogo={JSLogo}
       />
-      <GrowToLeft
+      <GrowToRight
         propColor="black"
         delay={2}
         projectData={projects["cityScout"]}
