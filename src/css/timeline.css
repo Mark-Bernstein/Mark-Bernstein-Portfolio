@@ -1,0 +1,81 @@
+.timeline {
+  padding: 20px;
+  background: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin: 20px 0;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline h2 {
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.timeline ul li {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.timeline ul li::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  background: #3498db;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #3498db, 0 0 20px #3498db, 0 0 30px #3498db;
+  z-index: 9999;
+}
+
+.timeline ul li::after {
+  content: "";
+  position: absolute;
+  left: 10.4%;
+  top: 65%;
+  width: 3px;
+  height: 95%;
+  background: #3498db;
+  z-index: 1000;
+  border: 2px solid blue;
+}
+
+.timeline ul li span {
+  display: block;
+  background: #3498db;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+.timeline ul li:last-child::after {
+  display: none;
+}

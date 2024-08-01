@@ -3,6 +3,9 @@ import "../css/nav.css";
 import { motion } from "framer-motion";
 import MarkProfilePicture from "../images/MarkProfilePicture.jpg";
 import AboutMeText from "./AboutMeText";
+import Skills from "./Skills";
+import SocialMediaLinks from "./SocialMediaLinks";
+import Timeline from "./Timeline";
 
 const variants = {
   hidden: { opacity: 0, scale: 0 },
@@ -17,7 +20,12 @@ const variantsY = {
 const AboutContainer = () => {
   return (
     <div className="aboutContainer">
-      <motion.div initial="hidden" animate="visible" variants={variants} transition={{ ease: "easeOut", duration: 1 }}>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        transition={{ ease: "easeOut", duration: 1 }}
+      >
         <img className="aboutImage" alt="" src={MarkProfilePicture}></img>
       </motion.div>
       <motion.div
@@ -27,6 +35,30 @@ const AboutContainer = () => {
         transition={{ ease: "easeOut", duration: 1.5 }}
       >
         <AboutMeText />
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={variantsY}
+        transition={{ ease: "easeOut", duration: 2 }}
+      >
+        <Skills />
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={variantsY}
+        transition={{ ease: "easeOut", duration: 2.5 }}
+      >
+        <Timeline />
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={variantsY}
+        transition={{ ease: "easeOut", duration: 3 }}
+      >
+        <SocialMediaLinks />
       </motion.div>
     </div>
   );

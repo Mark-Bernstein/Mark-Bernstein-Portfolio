@@ -1,0 +1,97 @@
+.skills {
+  padding: 20px;
+  background: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin: 20px 0;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 0.1),
+    rgba(252, 70, 107, 0.1),
+    rgba(252, 176, 69, 0.1)
+  );
+  animation: rotate 10s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.skills h2 {
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  z-index: 1;
+  position: relative;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+}
+
+.skills ul li {
+  background: linear-gradient(135deg, #ff6b6b, #f94d6f, #ff4081);
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 30px;
+  font-family: "Roboto", sans-serif;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.skills ul li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.skills ul li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 0.3),
+    rgba(252, 70, 107, 0.3),
+    rgba(252, 176, 69, 0.3)
+  );
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.skills ul li:hover::before {
+  opacity: 1;
+}
