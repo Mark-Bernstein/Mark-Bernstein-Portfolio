@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/nav.css";
 import { motion } from "framer-motion";
-import MarkProfilePicture from "../images/MarkProfilePicture.jpg";
+import MarkProfilePicture from "../images/my_wedding_profile_pic.jpg";
 import AboutMeText from "./AboutMeText";
 import Skills from "./Skills";
 import SocialMediaLinks from "./SocialMediaLinks";
