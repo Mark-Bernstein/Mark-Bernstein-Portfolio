@@ -333,7 +333,7 @@ body .base .section .cover1 .cover2 .content {
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  background-color: transparent;
+  background-color: blue;
   /* background: linear-gradient(to bottom right, red, yellow); */
   top: 100%;
   left: 0%;
@@ -342,7 +342,6 @@ body .base .section .cover1 .cover2 .content {
     width 1.5s cubic-bezier(0.5, -0.5, 0.05, 1) 0s,
     height 1.5s cubic-bezier(0.5, -0.5, 0.05, 1) 0s;
   pointer-events: auto;
-  /* opacity: 30%; */
 }
 
 body .base .section-static {

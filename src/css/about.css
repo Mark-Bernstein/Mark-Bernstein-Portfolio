@@ -1,13 +1,12 @@
 .aboutImage {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   margin-top: 130px;
   margin-bottom: 25px;
   position: relative;
   box-shadow: 10px 10px 20px rgb(0, 0, 0);
   padding: 5px;
   background: rgb(0, 0, 0);
-  border: 2px solid rgb(90, 42, 201);
 }
 
 p {
@@ -17,33 +16,16 @@ p {
 }
 
 .aboutText {
-  font-size: 18pt;
-  width: 69%;
-  margin: auto;
-  text-align: left;
-  color: gold;
-  text-shadow: 2px 2px 10px rgb(0, 0, 0);
-}
-
-.aboutText > p {
-  color: white;
-  margin: 0 0 20px 0;
-}
-
-@media only screen and (max-width: 700px) {
-  .aboutText {
-    width: 85%;
-  }
-}
-
-.slides {
-  margin: auto;
-  width: 50%;
-}
-
-.contain {
-  max-width: 100%;
-  max-height: 100%;
+  padding: 20px;
+  background: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  margin: 20px 0;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  /* width: 80%; */
+  margin: 20px 20px 50px 20px;
 }
 
 #beer:hover {
@@ -54,4 +36,92 @@ p {
 
 #beer {
   display: block;
+  font-size: 50px;
+}
+
+.toggleButton {
+  background: linear-gradient(45deg, #00567e, #11003f);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.toggleButton::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 50%
+  );
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.toggleButton:hover::before {
+  opacity: 0.8;
+}
+
+.toggleButton:hover {
+  background: linear-gradient(45deg, #003366, #0a003e);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+}
+
+.toggleButton:active {
+  transform: scale(0.98);
+}
+
+.toggleButton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 26, 255, 1);
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.toggleButton:hover {
+  background: linear-gradient(-45deg, #475a00, #000000);
+  transform: scale(1.05);
+}
+
+.expandedContent {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.expandedContent.show {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+.expandedContent p {
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+  text-align: left;
 }
