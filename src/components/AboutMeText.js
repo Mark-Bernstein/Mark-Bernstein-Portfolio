@@ -10,7 +10,11 @@ const AboutMeText = () => {
 
   return (
     <div className="aboutText">
-      <button className="toggleButton" onClick={handleToggle}>
+      <button
+        className="resume-links"
+        id="aboutMeButton"
+        onClick={handleToggle}
+      >
         {isExpanded ? "Show Less" : "Want to know more about me?"}
       </button>
       <div className={`expandedContent ${isExpanded ? "show" : ""}`}>
@@ -61,8 +65,6 @@ const AboutMeText = () => {
         <span id="beer" role="img" aria-label="cheers">
           🍻
         </span>
-        <br />
-        <br />
       </div>
     </div>
   );

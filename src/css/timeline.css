@@ -31,17 +31,17 @@
 
 .timeline h2 {
   text-align: center;
-  color: #fff;
+  color: #000000;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   margin-bottom: 20px;
   position: relative;
   padding: 10px 20px;
-  background: linear-gradient(45deg, #fc466b, #3f5efb);
+  background: linear-gradient(45deg, #960000, #3f5efb);
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 1);
   overflow: hidden;
-  animation: float 5s ease-in-out infinite;
+  animation: float 10s ease-in-out infinite;
 }
 
 .timeline h2::before,
@@ -52,11 +52,7 @@
   left: 50%;
   width: 140%;
   height: 140%;
-  background: radial-gradient(
-    circle,
-    rgba(252, 70, 107, 1),
-    rgba(63, 94, 251, 1)
-  );
+  background: radial-gradient(circle, rgb(239, 61, 255), rgba(63, 94, 251, 1));
   transform: translate(-50%, -50%) rotate(45deg);
   z-index: -1;
   border-radius: 50%;

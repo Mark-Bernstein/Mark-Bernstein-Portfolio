@@ -14,6 +14,7 @@ a {
   padding: 10px;
   font-family: "Chakra Petch", sans-serif, cursive;
   background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 5px rgb(0, 0, 0);
   border-radius: 12px;
   text-transform: none;
   display: inline-block;
@@ -21,13 +22,10 @@ a {
 }
 
 .resume-links:hover {
-  text-shadow: 0 2px 4px black;
+  text-shadow: 0 0 10px black;
   color: gold;
-  box-shadow: 0 0 5px 5px rgba(208, 255, 0, 0.5);
-  border-top: 6px double black;
-  border-bottom: 6px double black;
-  border-left: 6px dotted black;
-  border-right: 6px dotted black;
+  box-shadow: 4px 4px 5px 5px rgba(0, 153, 255, 1);
+  border: 6px double cyan;
 }
 
 .projectPage {
@@ -109,12 +107,7 @@ a {
   margin: 0;
 }
 
-@media only screen and (max-width: 500px) {
-  .resume-links {
-    padding: 6px;
-    border-radius: 50%;
-  }
-
+@media only screen and (max-width: 400px) {
   .resume-links:hover {
     border-top: 4px double black;
     border-bottom: 4px double black;

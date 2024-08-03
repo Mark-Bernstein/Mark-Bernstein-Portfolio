@@ -147,15 +147,15 @@ li {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 520px) {
   .navTitle {
-    font-size: 30px;
+    font-size: 36px;
     text-align: right;
     margin-right: 25px;
   }
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 420px) {
   .navTitle {
     font-size: 28px;
     text-align: right;
