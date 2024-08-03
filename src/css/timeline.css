@@ -35,7 +35,6 @@
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   margin-bottom: 20px;
-  z-index: 9999;
   position: relative;
   padding: 10px 20px;
   background: linear-gradient(45deg, #fc466b, #3f5efb);
@@ -102,7 +101,7 @@
   background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   margin-bottom: 8px;
 }
@@ -141,7 +140,7 @@
   font-weight: bold;
   margin-bottom: 5px;
   font-family: "Roboto", sans-serif;
-  margin: 10px;
+  margin: 0 20px;
 }
 
 .timeline ul li:last-child::after {

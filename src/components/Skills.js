@@ -45,9 +45,9 @@ const skills = [
 ];
 
 const coreSkills = [
-  "JavaScript (TypeScript)",
+  "JavaScript (TypeScript), React, Preact",
   "React Testing Library, Jest, Enzyme",
-  "HTML, CSS, React, Preact, Node.js, Express",
+  "HTML, CSS, Node.js, Express",
   "GitHub, BitBucket, Git Bash",
   "MySQL, MongoDB",
   "GoCD, Cockpit, Jira, Qubit",
