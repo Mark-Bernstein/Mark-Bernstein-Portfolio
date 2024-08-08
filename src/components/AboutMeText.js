@@ -26,7 +26,7 @@ const AboutMeText = () => {
       </button>
       {!isExpanded && (
         <>
-          <h1>or scroll down to see more details</h1>
+          <h3>or scroll down to see more details</h3>
           <div className="arrow-container highlight">
             <span>⬇️</span>
           </div>
