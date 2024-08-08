@@ -18,7 +18,8 @@ const Timeline = () => {
           viewport={{ once: true, amount: 0.1 }}
           variants={variants}
         >
-          <span>2015</span>Graduated from CSU San Marcos
+          <span>2015</span>Graduated from CSU San Marcos majoring in Arts &
+          Technology and minoring in Music Technology
         </motion.li>
         <motion.li
           initial="hidden"
@@ -52,7 +53,7 @@ const Timeline = () => {
           viewport={{ once: true, amount: 0.1 }}
           variants={variants}
         >
-          <span>Today</span>Looking for my next adventure
+          <span>Today</span>Reach out to find out!
         </motion.li>
       </ul>
     </div>
