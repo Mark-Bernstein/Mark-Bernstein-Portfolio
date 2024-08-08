@@ -181,3 +181,58 @@ p {
   transform: scale(1.5);
   transition: transform 0.3s ease;
 }
+
+.highlight {
+  font-weight: bold;
+  color: #ffffff; /* Initial color */
+  display: inline-block;
+  transition: color 0.3s ease;
+  animation: hoverInfinity 4s infinite alternate ease-in-out;
+}
+
+.highlight:hover {
+  color: #a6ff00;
+  animation: hoverInfinity 4s infinite alternate ease-in-out;
+}
+
+@keyframes hoverInfinity {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, 0) scaleY(1.5);
+  }
+  50% {
+    transform: translate(0, 20px) scaleY(1);
+  }
+  75% {
+    transform: translate(-20px, 0) scaleY(1.5);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  font-size: 60px;
+  display: inline-block;
+  animation: squishArrow 5s infinite alternate ease-in-out;
+}
+
+@keyframes squishArrow {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scale(1, 1.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}

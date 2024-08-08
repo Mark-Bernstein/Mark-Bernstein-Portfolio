@@ -15,8 +15,23 @@ const AboutMeText = () => {
         id="aboutMeButton"
         onClick={handleToggle}
       >
-        {isExpanded ? "Show Less" : "Want to know more about me?"}
+        {isExpanded ? (
+          "Show Less"
+        ) : (
+          <>
+            Want to know more about me? <br />
+            <h3 className="highlight">✨Click here✨</h3>
+          </>
+        )}
       </button>
+      {!isExpanded && (
+        <>
+          <h1>or scroll down to see more details</h1>
+          <div className="arrow-container">
+            <span className="arrow">⬇️</span>
+          </div>
+        </>
+      )}
       <div className={`expandedContent ${isExpanded ? "show" : ""}`}>
         <p>
           Mark holds a Bachelor's Degree in Visual and Performing Arts from

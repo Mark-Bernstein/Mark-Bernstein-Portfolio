@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../css/nav.css";
 import { motion } from "framer-motion";
 import MarkProfilePicture from "../images/my_wedding_profile_pic.jpg";
@@ -6,6 +6,7 @@ import AboutMeText from "./AboutMeText";
 import Skills from "./Skills";
 import SocialMediaLinks from "./SocialMediaLinks";
 import Timeline from "./Timeline";
+import useIntersectionObserver from "../utils/useIntersectionObserver";
 
 const variants = {
   hidden: { opacity: 0, scale: 0 },
@@ -18,6 +19,18 @@ const variantsY = {
 };
 
 const AboutContainer = () => {
+  const skillsRef = useRef();
+  const timelineRef = useRef();
+  const socialLinksRef = useRef();
+
+  const skillsVisible = useIntersectionObserver(skillsRef, { threshold: 0.01 });
+  const timelineVisible = useIntersectionObserver(timelineRef, {
+    threshold: 0.01,
+  });
+  const socialLinksVisible = useIntersectionObserver(socialLinksRef, {
+    threshold: 0.01,
+  });
+
   return (
     <div className="aboutContainer">
       <motion.div
@@ -37,24 +50,27 @@ const AboutContainer = () => {
         <AboutMeText />
       </motion.div>
       <motion.div
+        ref={skillsRef}
         initial="hidden"
-        animate="visible"
+        animate={skillsVisible ? "visible" : "hidden"}
         variants={variantsY}
         transition={{ ease: "easeOut", duration: 2 }}
       >
         <Skills />
       </motion.div>
       <motion.div
+        ref={timelineRef}
         initial="hidden"
-        animate="visible"
+        animate={timelineVisible ? "visible" : "hidden"}
         variants={variantsY}
         transition={{ ease: "easeOut", duration: 2.5 }}
       >
         <Timeline />
       </motion.div>
       <motion.div
+        ref={socialLinksRef}
         initial="hidden"
-        animate="visible"
+        animate={socialLinksVisible ? "visible" : "hidden"}
         variants={variantsY}
         transition={{ ease: "easeOut", duration: 3 }}
       >
