@@ -214,25 +214,6 @@ p {
 }
 
 .arrow-container {
-  display: flex;
-  justify-content: center;
   margin-bottom: 20px;
-}
-
-.arrow {
   font-size: 60px;
-  display: inline-block;
-  animation: squishArrow 5s infinite alternate ease-in-out;
-}
-
-@keyframes squishArrow {
-  0% {
-    transform: scaleY(1);
-  }
-  50% {
-    transform: scale(1, 1.5);
-  }
-  100% {
-    transform: scaleY(1);
-  }
 }

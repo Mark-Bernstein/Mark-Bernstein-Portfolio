@@ -19,16 +19,16 @@ const AboutMeText = () => {
           "Show Less"
         ) : (
           <>
-            Want to know more about me? <br />
-            <h3 className="highlight">✨Click here✨</h3>
+            Get to know me
+            <br />
           </>
         )}
       </button>
       {!isExpanded && (
         <>
           <h1>or scroll down to see more details</h1>
-          <div className="arrow-container">
-            <span className="arrow">⬇️</span>
+          <div className="arrow-container highlight">
+            <span>⬇️</span>
           </div>
         </>
       )}
