@@ -195,24 +195,6 @@ p {
   animation: hoverInfinity 4s infinite alternate ease-in-out;
 }
 
-@keyframes hoverInfinity {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(20px, 0) scaleY(1.5);
-  }
-  50% {
-    transform: translate(0, 20px) scaleY(1);
-  }
-  75% {
-    transform: translate(-20px, 0) scaleY(1.5);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
 .arrow-container {
   margin-bottom: 20px;
   font-size: 60px;

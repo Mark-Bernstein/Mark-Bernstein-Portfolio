@@ -35,8 +35,8 @@ const Timeline = () => {
           viewport={{ once: true, amount: 0.1 }}
           variants={variants}
         >
-          <span>March 2020</span>Earned Certificate of Completion from the UCSD
-          Coding Bootcamp
+          <span>2020</span>Earned Certificate of Completion from the UCSD Coding
+          Bootcamp
         </motion.li>
         <motion.li
           initial="hidden"
@@ -44,8 +44,8 @@ const Timeline = () => {
           viewport={{ once: true, amount: 0.1 }}
           variants={variants}
         >
-          <span>June 2020</span>Started as a Software Engineer at Mindera
-          Software Craft
+          <span>2020</span>Started as a Software Engineer at Mindera Software
+          Craft
         </motion.li>
         <motion.li
           initial="hidden"

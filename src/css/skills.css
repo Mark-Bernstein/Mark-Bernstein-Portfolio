@@ -129,6 +129,26 @@
   margin: 8px;
 }
 
+@media (min-width: 1024px) {
+  .skills h2 {
+    font-size: 30px;
+  }
+
+  .skills ul li {
+    font-size: 22px;
+  }
+
+  .skills .core-skills li {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+  }
+
+  .skills .core-skills li span {
+    font-size: 30px;
+  }
+}
+
 @keyframes glow {
   0% {
     text-shadow: 0 0 100px rgba(0, 255, 204, 0.8),
