@@ -99,10 +99,12 @@ const ResumeContainer = () => {
           <div className="resumeSectionInfo">&nbsp;</div>
 
           <p className="resumeText">
-            JavaScript | React | React Native | TypeScript | HTML | CSS | Jest |
-            Enzyme | Node | Java | C++/C# | Lisp | Visual Basic | Express |
-            Sonic Pi | Handlebars | jQuery | JSON | AJAX | Github | Git Bash |
-            BitBucket | Heroku | Photoshop | FL Studio | Final Cut Pro{" "}
+            JavaScript | React | React Native | Preact | TypeScript | HTML | CSS
+            | Jest | Enzyme | React Testing Library | Node.js | Java | C++/C# |
+            Lisp | Visual Basic | Express | Sonic Pi | Handlebars | jQuery |
+            JSON | AJAX | Github | Git Bash | BitBucket | Admin console | Redux
+            | GoCD | Cockpit | Jira | Qubit | Vercel | Heroku | Photoshop | FL
+            Studio | Final Cut Pro{" "}
           </p>
 
           <div className="resumeSubHeader">Soft Skills&nbsp;</div>

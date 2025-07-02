@@ -44,8 +44,17 @@ const Timeline = () => {
           viewport={{ once: true, amount: 0.1 }}
           variants={variants}
         >
-          <span>2020</span>Started as a Software Development Engineer at Mindera
-          Software Craft
+          <span>2020</span>
+          <div>
+            Started as a Software Development Engineer at{" "}
+            <a
+              target="blank"
+              href="https://mindera.com/"
+              style={{ color: "yellow" }}
+            >
+              Mindera Software Craft
+            </a>
+          </div>
         </motion.li>
         <motion.li
           initial="hidden"
@@ -54,7 +63,10 @@ const Timeline = () => {
           variants={variants}
         >
           <span>Today</span>
-          <a href="https://www.linkedin.com/in/mark-bernstein-b287948a/">
+          <a
+            href="https://www.linkedin.com/in/mark-bernstein-b287948a/"
+            style={{ color: "violet" }}
+          >
             {" "}
             Reach out to find out!{" "}
           </a>
