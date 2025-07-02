@@ -25,18 +25,6 @@ const ResumeContainer = () => {
           <Button>
             <a
               className="resume-links"
-              href="https://github.com/Mark-Bernstein"
-              style={{ float: "left", margin: "0", display: "inline-block" }}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img alt="github logo" src={GithubLogo}></img>
-              GitHub
-            </a>
-          </Button>
-          <Button>
-            <a
-              className="resume-links"
               href="https://www.linkedin.com/in/mark-bernstein-b287948a/"
               style={{ float: "left", margin: "0", display: "inline-block" }}
               target="_blank"
@@ -44,6 +32,18 @@ const ResumeContainer = () => {
             >
               <img alt="linkedin logo" src={LinkedinLogo}></img>
               LinkedIn
+            </a>
+          </Button>
+          <Button>
+            <a
+              className="resume-links"
+              href="https://github.com/Mark-Bernstein"
+              style={{ float: "left", margin: "0", display: "inline-block" }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img alt="github logo" src={GithubLogo}></img>
+              GitHub
             </a>
           </Button>
 
@@ -64,7 +64,7 @@ const ResumeContainer = () => {
           <div className="resumeSubHeader">
             Mindera Software Craft | 2020 - present&nbsp;
           </div>
-          <div className="resumeSectionInfo">Front End Developer</div>
+          <div className="resumeSectionInfo">Software Development Engineer</div>
         </div>
 
         <hr></hr>
@@ -75,11 +75,13 @@ const ResumeContainer = () => {
             UCSD Full Stack Coding Bootcamp&nbsp;
           </div>
           <div className="resumeSectionInfo"> Certificate of Completion</div>
+          <br />
           <div className="resumeSubHeader">San Diego Mesa College&nbsp;</div>
           <div className="resumeSectionInfo">
             {" "}
             Programming Certificate of Performance
           </div>
+          <br />
           <div className="resumeSubHeader">
             Cal State University San Marcos&nbsp;
           </div>
