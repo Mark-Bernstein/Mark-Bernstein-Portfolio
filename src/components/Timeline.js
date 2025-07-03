@@ -48,9 +48,10 @@ const Timeline = () => {
           <div>
             Started as a Software Development Engineer at{" "}
             <a
-              target="blank"
+              target="_blank"
               href="https://mindera.com/"
               style={{ color: "yellow" }}
+              rel="noreferrer"
             >
               Mindera Software Craft
             </a>
@@ -66,6 +67,8 @@ const Timeline = () => {
           <a
             href="https://www.linkedin.com/in/mark-bernstein-b287948a/"
             style={{ color: "violet" }}
+            target="_blank"
+            rel="noreferrer"
           >
             {" "}
             Reach out to find out!{" "}
