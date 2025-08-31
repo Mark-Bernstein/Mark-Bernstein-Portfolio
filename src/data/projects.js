@@ -19,14 +19,6 @@ var projects = {
     title: "City Scout",
     text: "An application that allows a user to get basic information about a city.",
   },
-  burger: {
-    title: "MVC Burger",
-    text: "An application that uses JavaScript, HTML, CSS, MySql, Node, Express, Handlebars, and a homemade ORM to log out burgers.",
-  },
-  noteTaker: {
-    title: "Note Taker",
-    text: "An application that can be used to write, save, and delete notes.",
-  },
 };
 
 export default projects;

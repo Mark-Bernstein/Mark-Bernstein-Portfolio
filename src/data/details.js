@@ -1,6 +1,4 @@
 import musicConnoisseursScreenshot from "../images/musicConnoisseursScreenshot.JPG";
-import burgerScreenshot from "../images/burgerScreenshot.JPG";
-import noteTakerScreenshot from "../images/noteTakerScreenshot.JPG";
 import cityScoutScreenshot from "../images/cityScoutScreenshot.jpg";
 import drugglerScreenshot from "../images/drugglerScreenshot.JPG";
 import slashRollScreenshot from "../images/slashRollScreenshot.jpg";
@@ -42,20 +40,6 @@ const details = {
       "An application that allows a user to get basic information about a city. The user first chooses a continent they are interested in and then they can choose from a list of countries. When the user selects a country, a list of the ten most populour cities from that country. When they choose a city, a page is rendered that displays basic information about the city such as: population, currency exchange, an image of the city, and 8 charts indicating how the city ranks in various categories like education and cost of living.",
     ],
     github: "https://github.com/Mark-Bernstein/cityScout",
-  },
-  burger: {
-    image: burgerScreenshot,
-    paragraphs: [
-      "An application uses JavaScript, HTML, CSS, MySql, Node, Express, Handlebars, and a homemade ORM to log out burgers. The MVC design pattern was used along with Node to Query the route data for the app. Handlebars was used to generate all of my HTML.",
-    ],
-    github: "https://github.com/Mark-Bernstein/burger",
-  },
-  noteTaker: {
-    image: noteTakerScreenshot,
-    paragraphs: [
-      "An application that can be used to write, save, and delete notes. This application uses an express backend and saves and retrieves note data from a JSON file.",
-    ],
-    github: "https://github.com/Mark-Bernstein/note-taker",
   },
 };
 
