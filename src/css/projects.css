@@ -1,18 +1,20 @@
 #closeIcon {
   font-family: "Oxanium", sans-serif, cursive;
-  font-size: 30px;
-  padding: 10px 20px;
+  font-size: 40px;
+  padding: 20px 30px;
   font-weight: bold;
   float: right;
   cursor: pointer;
   transition: transform 0.5s ease, background-color 0.3s ease,
     border-radius 0.3s ease;
+  color: cyan;
+  background-color: black;
 }
 
 #closeIcon:hover {
-  background-color: white;
-  border-radius: 20%;
-  transform: rotate(180deg) scale(1.2);
+  background-color: cyan;
+  color: black;
+  transform: rotate(180deg);
 }
 
 .cardContainer {
@@ -132,6 +134,7 @@
 
 .detailsImage {
   display: block;
+  background-image: url("../images/blue-space.jpg");
 }
 
 .detailsImage > img {
@@ -141,9 +144,9 @@
 }
 
 .websiteScreenshot {
+  max-width: 250px;
   max-height: 400px;
   max-width: 100%;
-  display: block;
   margin-bottom: 10px;
 }
 
@@ -174,7 +177,8 @@
 }
 
 .project-details-paragraph {
-  background-color: whitesmoke;
+  color: cyan;
+  background-color: transparent;
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 20px;

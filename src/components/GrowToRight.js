@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
 const infoVariants = {
-  hidden: { y: 169, opacity: 0 },
+  hidden: { y: 200, opacity: 0 },
   visible: { y: 0, opacity: 1 },
 };
 
@@ -15,7 +15,7 @@ const GrowToRight = (props) => {
       animate={{ scaleX: 1, x: 0 }}
       transition={{ ease: "easeOut", duration: 1, delay: props.delay / 2 }}
     >
-      <div className="projectRightSpacer projectSpacer" style={{ backgroundColor: props.propColor }}>
+      <div className="projectRightSpacer projectSpacer">
         <motion.div
           initial="hidden"
           animate="visible"

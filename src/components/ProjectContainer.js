@@ -23,28 +23,28 @@ const ProjectContainer = () => {
       />
       <GrowToLeft
         propColor="black"
-        delay={0}
+        delay={0.15}
         projectData={projects["nextJsDashboard"]}
         projectDetails={details["nextJsDashboard"]}
         projectLogo={Next_js_Icon}
       />
       <GrowToRight
         propColor="black"
-        delay={0}
+        delay={0.3}
         projectData={projects["pokedex"]}
         projectDetails={details["pokedex"]}
         projectLogo={typescript_logo}
       />
       <GrowToLeft
         propColor="black"
-        delay={0}
+        delay={0.45}
         projectData={projects["druggler"]}
         projectDetails={details["druggler"]}
         projectLogo={ReactLogo}
       />
       <GrowToRight
         propColor="black"
-        delay={0.5}
+        delay={0.6}
         projectData={projects["musicConnoisseurs"]}
         projectDetails={details["musicConnoisseurs"]}
         projectLogo={MySqlLogo}
