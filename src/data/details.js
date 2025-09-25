@@ -18,6 +18,7 @@ const details = {
     paragraphs: [
       "This is a modern, professional customer management dashboard built with Next.js 14+, TypeScript, and Tailwind CSS, featuring secure authentication, customer directory management, and real-time financial metrics tracking. The application provides a clean, responsive interface for managing customer relationships with dynamic data processing that links customers to their invoice history and transaction analytics.",
     ],
+    github: "https://github.com/Mark-Bernstein/NextJS-Dashboard",
     websiteLink: "https://next-js-dashboard-orpin-phi.vercel.app/",
   },
   pokedex: {
