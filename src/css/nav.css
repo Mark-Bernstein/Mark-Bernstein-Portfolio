@@ -262,7 +262,7 @@ body .base .page-option .about-page {
   border-right: 2px dotted lime;
   border-left: 2px dotted lime;
   border-radius: 20%;
-  box-shadow: 1px 5px 5px rgb(248, 64, 64);
+  box-shadow: 1px 5px 5px rgb(0, 225, 255);
 }
 
 body .base .page-option .project-page {

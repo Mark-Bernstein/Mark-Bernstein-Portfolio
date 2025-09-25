@@ -3,6 +3,7 @@ import cityScoutScreenshot from "../images/cityScoutScreenshot.jpg";
 import drugglerScreenshot from "../images/drugglerScreenshot.JPG";
 import slashRollScreenshot from "../images/slashRollScreenshot.jpg";
 import pokedex from "../images/Pokedex_screenshot_homepage.png";
+import nextJsDashboardImage from "../images/nextJsDashboardImage.png";
 
 const details = {
   slashRoll: {
@@ -11,6 +12,13 @@ const details = {
       "Slash Roll is a solo personal project developed using React and enhanced with framer-motion for unique animations. It offers an easy and enjoyable method to randomly select a winner from 2-12 players, while meticulously tracking each player's wins and average rolls. The game features a convenient 1 player mode for quick random rolls. Slash Roll caters to anyone seeking a fair and random selection method, making it ideal for various scenarios where luck determines the outcome.",
     ],
     websiteLink: "https://slash-roll.vercel.app",
+  },
+  nextJsDashboard: {
+    image: nextJsDashboardImage,
+    paragraphs: [
+      "This is a modern, professional customer management dashboard built with Next.js 14+, TypeScript, and Tailwind CSS, featuring secure authentication, customer directory management, and real-time financial metrics tracking. The application provides a clean, responsive interface for managing customer relationships with dynamic data processing that links customers to their invoice history and transaction analytics.",
+    ],
+    websiteLink: "https://next-js-dashboard-orpin-phi.vercel.app/",
   },
   pokedex: {
     image: pokedex,

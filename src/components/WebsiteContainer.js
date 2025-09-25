@@ -15,12 +15,11 @@ const WebsiteContainer = () => {
         <div>
           <Switch>
             <Route exact path="/">
-            <Projects />
+              <About />
             </Route>
 
-            <Route path="/about">
-              <About />
-             
+            <Route path="/projects">
+              <Projects />
             </Route>
 
             <Route path="/resume">
