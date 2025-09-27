@@ -21,12 +21,12 @@ const ResumeContainer = () => {
     >
       <div className="resumeContainer">
         <div style={{ marginBottom: "10px" }}> </div>
-        <div>
+        <div className="resume-links-container">
           <Button>
             <a
               className="resume-links"
               href="https://www.linkedin.com/in/mark-bernstein-b287948a/"
-              style={{ float: "left", margin: "0", display: "inline-block" }}
+              style={{ display: "flex", alignItems: "center", gap: "5px" }}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -38,99 +38,111 @@ const ResumeContainer = () => {
             <a
               className="resume-links"
               href="https://github.com/Mark-Bernstein"
-              style={{ float: "left", margin: "0", display: "inline-block" }}
+              style={{ display: "flex", alignItems: "center", gap: "5px" }}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img alt="github logo" src={GithubLogo}></img>
+              <img
+                alt="github logo"
+                src={GithubLogo}
+                className="resume-links-icon"
+                style={{ backgroundColor: "cyan" }}
+              ></img>
               GitHub
             </a>
           </Button>
-
-          <p id="eMail">
-            <img
-              src={EmailLogo}
-              alt="gmail logo"
-              style={{ float: "left", margin: "0", display: "inline-block" }}
-            ></img>
-            ProgrammingByMark@gmail.com
-          </p>
         </div>
 
-        <hr></hr>
+        <p id="eMail" className="resume-section-block">
+          <img
+            src={EmailLogo}
+            alt="gmail logo"
+            style={{
+              float: "left",
+              margin: "0",
+              display: "inline-block",
+            }}
+            className="resume-links-icon"
+          ></img>
+          ProgrammingByMark@gmail.com
+        </p>
 
-        <div className="resumeSectionHeader">Work Experience</div>
-        <div className="sectionContainer">
-          <div className="resumeSubHeader">
-            Mindera Software Craft | 2020 - present&nbsp;
-          </div>
-          <div className="resumeSectionInfo">Software Development Engineer</div>
-        </div>
-
-        <hr></hr>
-
-        <div className="resumeSectionHeader">Education</div>
-        <div className="sectionContainer">
-          <div className="resumeSubHeader">
-            UCSD Full Stack Coding Bootcamp&nbsp;
-          </div>
-          <div className="resumeSectionInfo"> Certificate of Completion</div>
-          <br />
-          <div className="resumeSubHeader">San Diego Mesa College&nbsp;</div>
-          <div className="resumeSectionInfo">
-            {" "}
-            Programming Certificate of Performance
-          </div>
-          <br />
-          <div className="resumeSubHeader">
-            Cal State University San Marcos&nbsp;
-          </div>
-          <div className="resumeSectionInfo">
-            {" "}
-            Bachelor of Arts: Arts and Technology
+        <div className="resume-section-block">
+          <div className="resumeSectionHeader">Work Experience</div>
+          <div className="sectionContainer">
+            <div className="resumeSubHeader">
+              Mindera Software Craft | 2020 - present&nbsp;
+            </div>
+            <div className="resumeSectionInfo">
+              Software Development Engineer
+            </div>
           </div>
         </div>
 
-        <hr></hr>
-
-        <div className="resumeSectionHeader">Skills</div>
-        <div className="sectionContainer">
-          <div className="resumeSubHeader">Technical Skills&nbsp;</div>
-          <div className="resumeSectionInfo">&nbsp;</div>
-
-          <p className="resumeText">
-            JavaScript | React | React Native | Preact | TypeScript | HTML | CSS
-            | Jest | Enzyme | React Testing Library | Node.js | Java | C++/C# |
-            Lisp | Visual Basic | Express | Sonic Pi | Handlebars | jQuery |
-            JSON | AJAX | Github | Git Bash | BitBucket | Admin console | Redux
-            | GoCD | Cockpit | Jira | Qubit | Vercel | Heroku | Photoshop | FL
-            Studio | Final Cut Pro{" "}
-          </p>
-
-          <div className="resumeSubHeader">Soft Skills&nbsp;</div>
-          <div className="resumeSectionInfo">&nbsp;</div>
-
-          <p className="resumeText">
-            Communicator | Detail-oriented | Patient | Team player | Problem
-            Solver | Flexible | Dependable | Creative
-          </p>
+        <div className="resume-section-block">
+          <div className="resumeSectionHeader">Education</div>
+          <div className="sectionContainer">
+            <div className="resumeSubHeader">
+              UCSD Full Stack Coding Bootcamp&nbsp;
+            </div>
+            <div className="resumeSectionInfo"> Certificate of Completion</div>
+            <br />
+            <div className="resumeSubHeader">San Diego Mesa College&nbsp;</div>
+            <div className="resumeSectionInfo">
+              {" "}
+              Programming Certificate of Performance
+            </div>
+            <br />
+            <div className="resumeSubHeader">
+              Cal State University San Marcos&nbsp;
+            </div>
+            <div className="resumeSectionInfo">
+              {" "}
+              Bachelor of Arts: Arts and Technology
+            </div>
+          </div>
         </div>
 
-        <hr></hr>
+        <div className="resume-section-block">
+          <div className="resumeSectionHeader">Skills</div>
+          <div className="sectionContainer">
+            <div className="resumeSubHeader">Technical Skills&nbsp;</div>
+            <div className="resumeSectionInfo">&nbsp;</div>
 
-        <div className="resumeSectionHeader">
-          Full Stack Web Developer Bringing Impactful Transformations
+            <p className="resumeText">
+              JavaScript | React | React Native | Preact | TypeScript | HTML |
+              CSS | Jest | Enzyme | React Testing Library | Node.js | Java |
+              C++/C# | Lisp | Visual Basic | Express | Sonic Pi | Handlebars |
+              jQuery | JSON | AJAX | Github | Git Bash | BitBucket | Admin
+              console | Redux | GoCD | Cockpit | Jira | Qubit | Vercel | Heroku
+              | Photoshop | FL Studio | Final Cut Pro{" "}
+            </p>
+
+            <div className="resumeSubHeader">Soft Skills&nbsp;</div>
+            <div className="resumeSectionInfo">&nbsp;</div>
+
+            <p className="resumeText">
+              Communicator | Detail-oriented | Patient | Team player | Problem
+              Solver | Flexible | Dependable | Creative
+            </p>
+          </div>
         </div>
-        <div className="sectionContainer">
-          <p className="resumeText">
-            Full Stack Web Developer with a strong passion for creativity and
-            innovation. Committed to contributing to the programming community
-            with meticulous attention to detail and a methodical approach to
-            problem-solving. Demonstrates exceptional performance under
-            pressure, consistently meeting project deadlines with flexibility
-            and reliability. Dedicated to delivering high-quality results and
-            continuously advancing skills in a dynamic and evolving field.
-          </p>
+
+        <div className="resume-section-block">
+          <div className="resumeSectionHeader">
+            Full Stack Web Developer Bringing Impactful Transformations
+          </div>
+          <div className="sectionContainer">
+            <p className="resumeText">
+              Full Stack Web Developer with a strong passion for creativity and
+              innovation. Committed to contributing to the programming community
+              with meticulous attention to detail and a methodical approach to
+              problem-solving. Demonstrates exceptional performance under
+              pressure, consistently meeting project deadlines with flexibility
+              and reliability. Dedicated to delivering high-quality results and
+              continuously advancing skills in a dynamic and evolving field.
+            </p>
+          </div>
         </div>
 
         <br></br>

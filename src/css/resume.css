@@ -13,12 +13,19 @@ a {
   border: 6px solid rgba(0, 0, 0, 0);
   padding: 10px;
   font-family: "Chakra Petch", sans-serif, cursive;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgb(13, 57, 87);
   box-shadow: 4px 4px 5px rgb(0, 0, 0);
   border-radius: 12px;
   text-transform: none;
   display: inline-block;
   transition: all 1s;
+}
+
+.resume-links-container {
+  display: flex;
+  justify-content: center;
+  /* gap: 10px; */
+  margin-bottom: 20px;
 }
 
 .resume-links:hover {
@@ -28,8 +35,20 @@ a {
   border: 6px double cyan;
 }
 
+.resume-links-icon {
+  margin-top: 5px;
+}
+
 .projectPage {
   height: 100%;
+}
+
+.resume-section-block {
+  background-color: rgba(0, 38, 88, 0.5);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(2px); /* Optional: adds subtle blur effect */
 }
 
 .sectionContainer {
@@ -65,9 +84,10 @@ a {
 }
 
 .resumeSectionHeader {
-  color: cyan;
+  color: rgb(40, 255, 255);
   font-weight: 800;
   font-size: 24pt;
+  margin-bottom: 12px;
 }
 
 .resumeSubHeader {
@@ -82,6 +102,7 @@ a {
   font-size: 24px;
   font-style: italic;
   color: rgb(255, 255, 255);
+  margin-bottom: 6px;
 }
 
 .resumeText {
@@ -92,6 +113,7 @@ a {
   justify-content: left;
   color: white;
   text-shadow: 2px 2px 7px black;
+  margin-bottom: 6px;
 }
 
 .resumeText > p {
@@ -101,10 +123,10 @@ a {
 #eMail {
   font-family: "Chakra Petch", sans-serif, cursive;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 24px;
   color: rgb(94, 255, 0);
-  text-shadow: 1px 1px 1px rgb(0, 0, 0);
-  margin: 0;
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+  margin: 10px 0;
 }
 
 @media only screen and (max-width: 400px) {
@@ -132,5 +154,11 @@ a {
   .resumeText {
     font-size: 16px;
     margin-bottom: 20px;
+  }
+
+  /* Responsive adjustments for section blocks */
+  .resume-section-block {
+    padding: 15px;
+    margin-bottom: 15px;
   }
 }
