@@ -8,6 +8,7 @@ a {
 }
 
 .resume-links {
+  width: 150px;
   box-sizing: border-box;
   text-shadow: 0 2px 7px black;
   border: 6px solid rgba(0, 0, 0, 0);
@@ -24,7 +25,6 @@ a {
 .resume-links-container {
   display: flex;
   justify-content: center;
-  /* gap: 10px; */
   margin-bottom: 20px;
 }
 
@@ -33,10 +33,6 @@ a {
   color: gold;
   box-shadow: 4px 4px 5px 5px rgba(0, 153, 255, 1);
   border: 6px double cyan;
-}
-
-.resume-links-icon {
-  margin-top: 5px;
 }
 
 .projectPage {
@@ -48,7 +44,7 @@ a {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
-  backdrop-filter: blur(2px); /* Optional: adds subtle blur effect */
+  backdrop-filter: blur(2px);
 }
 
 .sectionContainer {
@@ -127,9 +123,30 @@ a {
   color: rgb(94, 255, 0);
   text-shadow: 0px 0px 5px rgb(0, 0, 0);
   margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resume-links-icon {
+  margin-top: 0;
+  vertical-align: middle;
+  background: cyan;
+  border-radius: 20%;
+  padding: 2px;
+}
+
+@media (max-width: 554px) {
+  #eMail {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
+  #email {
+    font-size: 18px;
+  }
+
   .resume-links:hover {
     border-top: 4px double black;
     border-bottom: 4px double black;

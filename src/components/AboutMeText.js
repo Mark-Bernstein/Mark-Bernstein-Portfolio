@@ -19,7 +19,7 @@ const AboutMeText = () => {
           "Show Less"
         ) : (
           <>
-            Tap to get to know me
+            About me
             <br />
           </>
         )}

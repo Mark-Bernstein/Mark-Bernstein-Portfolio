@@ -27,7 +27,7 @@ const Timeline = () => {
           viewport={{ once: true, amount: 0.1 }}
           variants={variants}
         >
-          <span>2019</span>Earned Programming Certificate of Performance at SDMC
+          <span>2019</span>Programming Certificate of Performance at SDMC
         </motion.li>
         <motion.li
           initial="hidden"
@@ -35,7 +35,7 @@ const Timeline = () => {
           viewport={{ once: true, amount: 0.1 }}
           variants={variants}
         >
-          <span>2020</span>Earned Certificate of Completion from the UCSD Coding
+          <span>2020</span>Certificate of Completion from the UCSD Coding
           Bootcamp
         </motion.li>
         <motion.li
@@ -46,7 +46,7 @@ const Timeline = () => {
         >
           <span>2020</span>
           <div>
-            Started as a Software Development Engineer at{" "}
+            Software Development Engineer at{" "}
             <a
               target="_blank"
               href="https://mindera.com/"
@@ -64,15 +64,7 @@ const Timeline = () => {
           variants={variants}
         >
           <span>Today</span>
-          <a
-            href="https://www.linkedin.com/in/mark-bernstein-b287948a/"
-            style={{ color: "violet" }}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {" "}
-            Reach out to find out!{" "}
-          </a>
+          <div>More to come soon!</div>
         </motion.li>
       </ul>
     </div>

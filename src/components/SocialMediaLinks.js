@@ -15,11 +15,7 @@ const SocialMediaLinks = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            alt="linkedin logo"
-            src={LinkedinLogo}
-            style={{ marginRight: "8px" }}
-          ></img>
+          <img alt="linkedin logo" src={LinkedinLogo}></img>
           LinkedIn
         </a>
       </Button>
@@ -30,11 +26,7 @@ const SocialMediaLinks = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            alt="github logo"
-            src={GithubLogo}
-            style={{ marginRight: "8px" }}
-          ></img>
+          <img alt="github logo" src={GithubLogo}></img>
           GitHub
         </a>
       </Button>

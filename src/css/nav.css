@@ -58,20 +58,20 @@ i {
 }
 
 /* Responsive Navigation */
-@media (max-width: 520px) {
+@media (max-width: 560px) {
   .navTitle {
     font-size: 36px;
     text-align: right;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 440px) {
   .navTitle {
     font-size: 28px;
   }
 }
 
-@media (max-width: 344px) {
+@media (max-width: 395px) {
   .navTitle {
     font-size: 16pt;
   }

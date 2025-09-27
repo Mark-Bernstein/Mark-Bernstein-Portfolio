@@ -28,13 +28,21 @@ const NavBar = () => {
           </div>
 
           <div className="menu-items">
-            <Link className="menu-item about" to="/">
+            <Link className="menu-item about" to="/" onClick={handleOpen}>
               About
             </Link>
-            <Link className="menu-item projects" to="/projects">
+            <Link
+              className="menu-item projects"
+              to="/projects"
+              onClick={handleOpen}
+            >
               Projects
             </Link>
-            <Link className="menu-item resume" to="/resume">
+            <Link
+              className="menu-item resume"
+              to="/resume"
+              onClick={handleOpen}
+            >
               Resume
             </Link>
           </div>
