@@ -26,7 +26,7 @@ const ResumeContainer = () => {
             <a
               className="resume-links"
               href="https://www.linkedin.com/in/mark-bernstein-b287948a/"
-              style={{ display: "flex", alignItems: "center", gap: "5px" }}
+              style={{ display: "flex", gap: "15px" }}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -38,7 +38,7 @@ const ResumeContainer = () => {
             <a
               className="resume-links"
               href="https://github.com/Mark-Bernstein"
-              style={{ display: "flex", alignItems: "center", gap: "5px" }}
+              style={{ display: "flex", gap: "15px" }}
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -19,7 +19,7 @@ const AboutMeText = () => {
           "Show Less"
         ) : (
           <>
-            About me
+            About Me
             <br />
           </>
         )}
