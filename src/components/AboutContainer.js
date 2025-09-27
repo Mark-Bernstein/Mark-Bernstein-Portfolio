@@ -14,7 +14,7 @@ const variants = {
 };
 
 const variantsY = {
-  hidden: { opacity: 0, y: 500 },
+  hidden: { opacity: 0, y: 100 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -23,12 +23,12 @@ const AboutContainer = () => {
   const timelineRef = useRef();
   const socialLinksRef = useRef();
 
-  const skillsVisible = useIntersectionObserver(skillsRef, { threshold: 0.01 });
+  const skillsVisible = useIntersectionObserver(skillsRef, { threshold: 0.1 });
   const timelineVisible = useIntersectionObserver(timelineRef, {
-    threshold: 0.01,
+    threshold: 0.1,
   });
   const socialLinksVisible = useIntersectionObserver(socialLinksRef, {
-    threshold: 0.01,
+    threshold: 0.1,
   });
 
   return (

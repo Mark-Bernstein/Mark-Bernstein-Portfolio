@@ -20,38 +20,27 @@ const NavBar = () => {
         variants={variants}
         transition={{ ease: "easeOut", duration: 1.5 }}
       >
-        <div className={`base${isOpen ? " close" : ""}`} onClick={handleOpen}>
-          <div className="menu">
-            <div className="middle-line-menu">
-              <div className="bar"></div>
+        <div className={`menu-container${isOpen ? " expanded" : ""}`}>
+          <div className="menu-btn" onClick={handleOpen}>
+            <div className="hamburger">
+              <span></span>
             </div>
           </div>
-          <div className="page-option">
-            <Link
-              className="project-page link"
-              aria-hidden="true"
-              to="/projects"
-            >
-              <li id="projectsTab">Projects</li>
-            </Link>
 
-            <Link className="about-page link" aria-hidden="true" to="/">
-              <li id="aboutTab">About</li>
+          <div className="menu-items">
+            <Link className="menu-item about" to="/">
+              About
             </Link>
-
-            <Link className="resume-page link" aria-hidden="true" to="/resume">
-              <li id="resumeTab">Resume</li>
+            <Link className="menu-item projects" to="/projects">
+              Projects
+            </Link>
+            <Link className="menu-item resume" to="/resume">
+              Resume
             </Link>
           </div>
-          <div className="section">
-            <div className="cover1">
-              <div className="cover2">
-                <Link className="content" to="/projects"></Link>
-              </div>
-            </div>
-          </div>
-          <Link className="section-static top" to="/"></Link>
-          <Link className="section-static bottom" to="/resume"></Link>
+
+          <div className="menu-background top"></div>
+          <div className="menu-background bottom"></div>
         </div>
       </motion.div>
     </nav>

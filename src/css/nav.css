@@ -1,6 +1,11 @@
+/* Global Styles */
 html {
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 p {
@@ -8,6 +13,7 @@ p {
   font-weight: 400;
 }
 
+/* Arrow Icons */
 i {
   border: solid rgb(31, 34, 16);
   border-width: 0 3px 3px 0;
@@ -17,14 +23,12 @@ i {
 
 .left {
   transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
 }
-
 .right {
   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
 }
 
+/* Navigation Styles */
 .nav-bar {
   position: absolute;
   width: 100%;
@@ -43,47 +47,313 @@ i {
   font-weight: bolder;
   font-size: 40px;
   box-shadow: 2px 2px 30px rgb(64, 89, 248);
-  width: auto;
   padding: 10px;
   letter-spacing: 4px;
   transition: 0.5s box-shadow;
   text-align: center;
-  display: block;
   font-family: "Oxanium", sans-serif, cursive;
   color: cyan;
   margin-top: 15px;
   text-shadow: rgb(0, 195, 255) 3px 3px 10px;
 }
 
-@media only screen and (max-width: 344px) {
+/* Responsive Navigation */
+@media (max-width: 520px) {
+  .navTitle {
+    font-size: 36px;
+    text-align: right;
+  }
+}
+
+@media (max-width: 420px) {
+  .navTitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 344px) {
   .navTitle {
     font-size: 16pt;
   }
+}
+
+/* Menu Button Container */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  width: 98px;
+  height: 98px;
+  transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1);
+}
+
+/* Base Menu Button */
+.menu-btn {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(to bottom right, red, rgb(38, 0, 255));
+  border-bottom-right-radius: 100%;
+  cursor: pointer;
+  transition: all 1.5s cubic-bezier(0.5, -0.75, 0.05, 1);
+  box-shadow: 0 0 30px 5px rgb(255, 0, 0), 0 0 15px 5px rgb(255, 167, 167);
+  z-index: 9001;
+}
+
+/* Hamburger Lines */
+.hamburger {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  margin-top: 30px;
+  margin-left: 20px;
+  /* top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%); */
+  pointer-events: none; /* Ensures clicks go through to parent */
+  z-index: 9002;
+}
+
+.hamburger span,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 25px;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  transition: all 0.5s ease;
+}
+
+.hamburger span {
+  top: 10px;
+  opacity: 1;
+}
+
+.hamburger::before {
+  top: 0;
+}
+
+.hamburger::after {
+  top: 20px;
+}
+
+/* Menu Items */
+.menu-items {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu-item {
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  border: 2px dotted lime;
+  border-radius: 20%;
+  padding: 0 6px;
+  transition: all 0.3s cubic-bezier(0.5, -0.25, 0.05, 1);
+  opacity: 0;
+  transform: translateX(-150px);
+}
+
+.menu-item.about {
+  top: 35px;
+  box-shadow: 1px 5px 5px rgb(0, 225, 255);
+}
+
+.menu-item.projects {
+  top: 0px;
+  box-shadow: 1px 5px 5px rgb(30, 71, 255);
+}
+
+.menu-item.resume {
+  top: 70px;
+  box-shadow: 1px 5px 5px rgb(253, 122, 0);
+}
+
+/* Background Sections */
+.menu-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  transform-origin: 0% 0%;
+  transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1);
+  z-index: 8999;
+  pointer-events: none;
+}
+
+.menu-background.top {
+  transform: rotate(-45deg);
+  border-bottom-right-radius: 400px;
+  border: 2px solid rgba(255, 165, 0, 0.8);
+  border-left: none;
+  background: rgb(33, 0, 122);
+  z-index: -100;
+  box-shadow: 5px 10px 15px rgb(255, 0, 0);
+}
+
+.menu-background.bottom {
+  transform: rotate(45deg);
+  border-bottom-right-radius: 400px;
+  border: 2px solid rgba(255, 165, 0, 0.8);
+  border-top: none;
+  background: black;
+  z-index: -100;
+  box-shadow: 10px 10px 15px rgb(255, 0, 0);
+}
+
+/* EXPANDED STATE */
+.menu-container.expanded {
+  width: 300px;
+  height: 300px;
+}
+
+.menu-container.expanded .menu-btn {
+  width: 150px;
+  height: 150px;
+  background-color: gold;
+}
+
+.menu-container.expanded .hamburger span {
+  opacity: 0;
+}
+
+.menu-container.expanded .hamburger::before {
+  top: 10px;
+  transform: rotate(-45deg);
+  background: linear-gradient(135deg, rgb(0, 0, 0), rgb(4, 0, 255), black);
+}
+
+.menu-container.expanded .hamburger::after {
+  top: 10px;
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, rgb(0, 0, 0), rgb(4, 0, 255), black);
+}
+
+.menu-container.expanded .menu-item {
+  font-size: 32px;
+  color: cyan;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-container.expanded .menu-item.about {
+  top: 25px;
+  left: 170px;
+  transform: rotate(12deg) scale(1);
+  transition-delay: 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.6), 0 0 25px rgba(0, 255, 204, 0.3),
+    inset 0 0 10px rgba(0, 255, 204, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 204, 0.1),
+    rgba(0, 255, 204, 0.05)
+  );
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(0, 255, 204, 0.8);
+  text-shadow: 0 0 8px rgba(0, 255, 204, 0.8);
+}
+
+.menu-container.expanded .menu-item.projects {
+  top: 134px;
+  left: 100px;
+  transform: rotate(45deg) scale(1);
+  transition-delay: 0.65s;
+  box-shadow: 0 0 15px rgba(255, 0, 204, 0.6), 0 0 25px rgba(255, 0, 204, 0.3),
+    inset 0 0 10px rgba(255, 0, 204, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 204, 0.1),
+    rgba(255, 0, 204, 0.05)
+  );
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+  text-shadow: 0 0 8px rgba(255, 0, 204, 0.8);
+}
+
+.menu-container.expanded .menu-item.resume {
+  top: 192px;
+  left: 0px;
+  transform: rotate(70deg) scale(1);
+  transition-delay: 0.8s;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 25px rgba(255, 215, 0, 0.3),
+    inset 0 0 10px rgba(255, 215, 0, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.1),
+    rgba(255, 215, 0, 0.05)
+  );
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 215, 0, 0.8);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+}
+
+/* Hover effects with cool interactions */
+.menu-container.expanded .menu-item:hover {
+  transform: rotate(var(--rotation)) scale(1.1) translateY(-3px);
+  transition: all 0.5s ease;
+  filter: brightness(1.2) saturate(1.3);
+}
+
+.menu-container.expanded .menu-item.about:hover {
+  --rotation: 5deg;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 35px rgba(0, 255, 204, 0.5),
+    0 5px 15px rgba(0, 255, 204, 0.3);
+  text-shadow: 0 0 12px rgba(0, 255, 204, 1);
+}
+
+.menu-container.expanded .menu-item.projects:hover {
+  --rotation: 42deg;
+  box-shadow: 0 0 20px rgba(255, 0, 204, 0.8), 0 0 35px rgba(255, 0, 204, 0.5),
+    0 5px 15px rgba(255, 0, 204, 0.3);
+  text-shadow: 0 0 12px rgba(255, 0, 204, 1);
+}
+
+.menu-container.expanded .menu-item.resume:hover {
+  --rotation: 70deg;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 35px rgba(255, 215, 0, 0.5),
+    0 5px 15px rgba(255, 215, 0, 0.3);
+  text-shadow: 0 0 12px rgba(255, 215, 0, 1);
+}
+
+/* Subtle pulsing animation for extra flair */
+.menu-container.expanded .menu-item {
+  animation: subtlePulse 3s ease-in-out infinite;
+}
+
+.menu-container.expanded .menu-item.projects {
+  animation-delay: 0.5s;
+}
+
+.menu-container.expanded .menu-item.resume {
+  animation-delay: 1s;
+}
+
+@keyframes subtlePulse {
+  0%,
+  100% {
+    filter: brightness(1) saturate(1);
+  }
+  50% {
+    filter: brightness(1.05) saturate(1.1);
+  }
+}
+
+.menu-container.expanded .menu-background {
+  width: 300px;
+  height: 300px;
 }
 
 .link {
   display: flex;
   font-family: "Chakra Petch", sans-serif, cursive;
   font-size: 16px;
-}
-
-li {
-  font-family: "Oxanium", sans-serif, cursive;
-  font-weight: bold;
-}
-
-.navLinks {
-  display: inline-block;
-  align-items: center;
-  position: relative;
-  margin: auto;
-  width: auto;
-  background: rgb(0, 0, 0, 1);
-  font-family: "Oxanium", sans-serif, cursive;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: 0.5s box-shadow;
-  text-align: center;
 }
 
 .link:hover {
@@ -100,17 +370,9 @@ li {
   box-shadow: 1px 5px 5px rgb(64, 89, 248);
 }
 
-.navButton:hover {
-  cursor: pointer;
-}
-
 .buttons-container {
   display: inline-block;
   margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   width: 300px;
   height: 100px;
   border-radius: 45px;
@@ -137,362 +399,7 @@ li {
   padding: 0px;
   height: 69px;
   width: 95px;
+  font-family: "Oxanium", sans-serif, cursive;
+  font-weight: bold;
   transition: all 1.5s;
-}
-
-@media only screen and (max-width: 760px) {
-  .navTitle {
-    height: 50px;
-    justify-content: center;
-  }
-}
-
-@media only screen and (max-width: 520px) {
-  .navTitle {
-    font-size: 36px;
-    text-align: right;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  .navTitle {
-    font-size: 28px;
-    text-align: right;
-  }
-}
-
-body {
-  overflow-x: hidden;
-}
-
-body .base {
-  z-index: 90;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background-color: rgb(0, 0, 0); /* for top and bottom menu color*/
-  width: 98px;
-  height: 98px;
-  transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1);
-  border-bottom-right-radius: 100%;
-  box-shadow: 3px 3px 10px gold;
-}
-
-body .base .menu {
-  z-index: 100;
-  background-image: linear-gradient(to bottom right, red, rgb(38, 0, 255));
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100px;
-  height: 100px;
-  border-bottom-right-radius: 200px;
-  cursor: pointer;
-  transition: all 1.5s cubic-bezier(0.5, -0.75, 0.05, 1);
-  box-shadow: 0 0 30px 5px rgb(255, 0, 0), 0 0 15px 5px rgb(255, 167, 167);
-  /* transition: box-shadow 5s ease-in-out; */
-}
-
-body .base .menu .middle-line-menu {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-100%, -100%);
-}
-
-body .base .menu .middle-line-menu:before,
-body .base .menu .middle-line-menu:after {
-  content: "";
-  transform: rotate(0deg);
-  transition: top 0.5s ease 0.5s, transform 0.5s ease,
-    background-color 0.75s ease 0.25s;
-}
-
-body .base .menu .middle-line-menu .bar,
-body .base .menu .middle-line-menu:before,
-body .base .menu .middle-line-menu:after {
-  position: absolute;
-  height: 4px;
-  left: -10px;
-  right: 5px;
-  border-radius: 5px;
-  background-color: black;
-  transform: rotate(-360deg);
-  transition: 1s all;
-}
-
-body .base .menu .middle-line-menu .bar {
-  transition: opacity 0s linear 0.5s, background-color 0.75s ease 0.25s;
-  opacity: 1;
-  top: 10px;
-}
-
-body .base .menu .middle-line-menu:before {
-  top: 0px;
-}
-
-body .base .menu .middle-line-menu:after {
-  top: initial;
-  top: 20px;
-}
-
-body .base .page-option {
-  z-index: 98;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-body .base .page-option > * {
-  /*font animation*/
-  position: absolute;
-  font-size: 15px;
-  color: black;
-  transition: 0.3s cubic-bezier(0.5, -0.25, 0.05, 1);
-}
-
-body .base .page-option .about-page {
-  top: 35px;
-  left: -150px;
-  color: #fff;
-  transition-delay: 0.2s;
-  text-decoration: none;
-  border-right: 2px dotted lime;
-  border-left: 2px dotted lime;
-  border-radius: 20%;
-  box-shadow: 1px 5px 5px rgb(0, 225, 255);
-}
-
-body .base .page-option .project-page {
-  top: 0px;
-  left: -150px;
-  color: #fff;
-  transition-delay: 0.1s;
-  text-decoration: none;
-  border-right: 2px dotted lime;
-  border-left: 2px dotted lime;
-  padding: 0 6px;
-  border-radius: 20%;
-  box-shadow: 1px 5px 5px rgb(30, 71, 255);
-}
-
-body .base .page-option .resume-page {
-  top: 0px;
-  left: -150px;
-  color: #fff;
-  text-decoration: none;
-  border-right: 2px dotted lime;
-  border-left: 2px dotted lime;
-  padding: 0 6px;
-  border-radius: 20%;
-  box-shadow: 1px 5px 5px rgb(253, 122, 0);
-}
-
-body .base .section {
-  z-index: 96;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 0px;
-  width: 0px;
-  transform-origin: 100% 100%;
-  transform: rotate(135deg);
-}
-
-body .base .section .cover1 {
-  transform-origin: 100% 100%;
-}
-
-body .base .section .cover1,
-body .base .section .cover1 .cover2,
-body .base .section .cover1 .cover2 .content {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-}
-
-body .base .section .cover1,
-body .base .section .cover1 .cover2 {
-  top: 50%;
-  left: 50%;
-  transform: translate(-100%, -100%) rotate(4deg);
-  overflow: hidden;
-  pointer-events: none;
-  transition: transform 0.5s ease-in;
-}
-
-body .base .section .cover1 .cover2 {
-  transform: translate(50%, -50%) rotate(-8deg);
-  transform-origin: 0% 100%;
-}
-
-body .base .section .cover1 .cover2 .content {
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  background-color: blue;
-  /* background: linear-gradient(to bottom right, red, yellow); */
-  top: 100%;
-  left: 0%;
-  transform: translate(-50%, -50%);
-  transition: background-color 0s,
-    width 1.5s cubic-bezier(0.5, -0.5, 0.05, 1) 0s,
-    height 1.5s cubic-bezier(0.5, -0.5, 0.05, 1) 0s;
-  pointer-events: auto;
-}
-
-body .base .section-static {
-  z-index: 94;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  transform-origin: 0% 0%;
-  transition: width 1s cubic-bezier(0.5, -0.75, 0.05, 1),
-    height 1s cubic-bezier(0.5, -0.75, 0.05, 1);
-}
-
-body .base .section-static:hover {
-  background-color: rgb(0, 0, 0);
-  color: gold;
-}
-
-body .base .section-static.top {
-  transform: rotate(-45deg);
-  border-bottom-right-radius: 400px;
-}
-
-body .base .section-static.bottom {
-  transform: rotate(45deg);
-  border-bottom-right-radius: 400px;
-}
-
-body .base.close {
-  /*second layer menu transition*/
-  width: 300px;
-  height: 300px;
-  transition: all 1.25s cubic-bezier(0.5, 0, 0.05, 1.75);
-}
-
-body .base.close .menu {
-  /*first layer menu transition*/
-  width: 150px;
-  height: 150px;
-  transition: all 1s cubic-bezier(0.5, 0, 0.05, 1.75), background-color 1s ease;
-  background-color: gold;
-}
-
-body .base.close .menu .middle-line-menu .bar,
-body .base.close .menu .middle-line-menu:before,
-body .base.close .menu .middle-line-menu:after {
-  background: linear-gradient(135deg, rgb(0, 0, 0), rgb(4, 0, 255), black);
-}
-
-body .base.close .menu .middle-line-menu .bar {
-  opacity: 0;
-}
-
-body .base.close .menu .middle-line-menu:before,
-body .base.close .menu .middle-line-menu:after {
-  transition: top 0.5s linear, transform 0.5s ease 0.5s,
-    background-color 0.75s ease 0.25s;
-}
-
-body .base.close .menu .middle-line-menu:before {
-  top: 5px;
-  transform: rotate(-45deg);
-}
-
-body .base.close .menu .middle-line-menu:after {
-  top: 5px;
-  transform: rotate(45deg);
-}
-
-body .base.close .page-option {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-body .base.close .page-option > * {
-  /*text transition when opening*/
-  position: absolute;
-  font-size: 24px;
-  color: #21264b;
-  transition: 0.5s cubic-bezier(0.5, 0, 0.05, 1.75) 0.3s;
-  pointer-events: none;
-}
-
-body .base.close .page-option .about-page {
-  top: 8px;
-  left: 177px;
-  color: cyan;
-  transform: rotate(12deg);
-}
-
-body .base.close .page-option .project-page {
-  top: 120px;
-  left: 115px;
-  color: cyan;
-  transition-delay: 0.65s;
-  transform: rotate(42deg);
-}
-
-body .base.close .page-option .resume-page {
-  top: 185px;
-  left: 0px;
-  color: cyan;
-  transition-delay: 0.8s;
-  transform: rotate(72deg);
-}
-
-body .base.close .section .cover1 {
-  transform-origin: 100% 100%;
-}
-
-body .base.close .section .cover1,
-body .base.close .section .cover1 .cover2,
-body .base.close .section .cover1 .cover2 .content {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-}
-
-body .base.close .section .cover1,
-body .base.close .section .cover1 .cover2 {
-  top: 50%;
-  left: 50%;
-  transform: translate(-100%, -100%) rotate(16deg);
-  overflow: hidden;
-  transition: transform 0.5s ease-in 0.5s;
-}
-
-body .base.close .section .cover1 .cover2 {
-  transform: translate(50%, -50%) rotate(-32deg);
-  transform-origin: 0% 100%;
-}
-
-body .base.close .section .cover1 .cover2 .content {
-  border-radius: 100%;
-  background-color: transparent;
-  top: 100%;
-  left: 0%;
-  transform: translate(-50%, -50%);
-  transition: background-color 0s,
-    width 1.1s cubic-bezier(0.5, 0, 0.05, 1.75) 0.25s,
-    height 1.1s cubic-bezier(0.5, 0, 0.05, 2) 0.25s;
-}
-
-body .base .close .section .cover1 .cover2 .content:hover {
-  background-color: rgb(0, 0, 0);
-}
-
-body .base.close .section-static {
-  width: 300px;
-  height: 300px;
-  transition: width 1.25s cubic-bezier(0.5, 0, 0.05, 2),
-    height 1.25s cubic-bezier(0.5, 0, 0.05, 2);
 }
