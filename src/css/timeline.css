@@ -22,9 +22,9 @@
   height: 100%;
   background: radial-gradient(
     circle,
-    rgba(31, 68, 255, 0.1),
-    rgba(252, 70, 107, 0.1),
-    rgba(252, 176, 69, 0.1)
+    rgba(0, 42, 255, 0.1),
+    rgba(112, 157, 255, 0.1),
+    rgba(101, 181, 255, 0.1)
   );
   animation: rotate 10s linear infinite;
   z-index: 0;
@@ -38,7 +38,7 @@
   margin-bottom: 20px;
   position: relative;
   padding: 10px 20px;
-  background: linear-gradient(45deg, #960000, #3f5efb);
+  background: linear-gradient(45deg, #00ffcc, #ff00cc);
   border-radius: 10px;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 1);
   overflow: hidden;
@@ -53,7 +53,11 @@
   left: 50%;
   width: 140%;
   height: 140%;
-  background: radial-gradient(circle, rgb(239, 61, 255), rgba(63, 94, 251, 1));
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 204, 0.3),
+    rgba(255, 0, 204, 0.3)
+  );
   transform: translate(-50%, -50%) rotate(45deg);
   z-index: -1;
   border-radius: 50%;

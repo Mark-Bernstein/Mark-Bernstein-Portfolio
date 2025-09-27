@@ -86,7 +86,8 @@
   font-weight: 800;
   text-align: left;
   font-size: 20pt;
-  color: rgb(255, 0, 0);
+  color: rgb(58, 231, 58);
+  text-shadow: purple 3px 3px 5px;
 }
 
 @media only screen and (max-width: 500px) {

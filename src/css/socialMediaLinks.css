@@ -19,9 +19,9 @@
   height: 220%;
   background: radial-gradient(
     circle,
-    rgba(63, 94, 251, 0.5),
-    rgba(252, 70, 107, 0.5),
-    rgba(252, 176, 69, 0.5)
+    rgba(0, 42, 255, 0.1),
+    rgba(112, 157, 255, 0.1),
+    rgba(101, 181, 255, 0.1)
   );
   animation: rotate 10s linear infinite;
   z-index: 0;
