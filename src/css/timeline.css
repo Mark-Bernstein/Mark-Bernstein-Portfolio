@@ -107,6 +107,12 @@
   margin-bottom: 8px;
 }
 
+@media (max-width: 509px) {
+  .timeline ul {
+    font-size: 18px;
+  }
+}
+
 .timeline ul li::before {
   content: "";
   position: absolute;

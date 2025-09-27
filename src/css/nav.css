@@ -45,7 +45,7 @@ i {
   box-shadow: 2px 2px 30px rgb(64, 89, 248);
   width: auto;
   padding: 10px;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   transition: 0.5s box-shadow;
   text-align: center;
   display: block;

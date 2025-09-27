@@ -90,7 +90,7 @@
   text-shadow: purple 3px 3px 5px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 455px) {
   .projectInfoHeader {
     position: relative;
     top: 50%;
@@ -122,7 +122,13 @@
   }
 }
 
-@media only screen and (max-width: 525px) {
+@media only screen and (max-width: 550px) {
+  .projectInfoText {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 455px) {
   .projectInfoText {
     display: none;
   }
