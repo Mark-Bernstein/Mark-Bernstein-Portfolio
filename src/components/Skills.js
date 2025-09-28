@@ -11,7 +11,6 @@ const skills = [
   // Web Technologies
   "AJAX",
   "JSON",
-  "Express",
   "Handlebars",
   "jQuery",
   "Redux",
