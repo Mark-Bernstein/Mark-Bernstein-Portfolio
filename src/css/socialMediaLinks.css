@@ -57,12 +57,9 @@
 .socialMediaLinks a {
   display: inline-block;
   width: 110px;
-  /* margin: 15px; */
-  /* padding: 15px 30px; */
   background: linear-gradient(135deg, #240046, #0099ff);
   color: #fff;
   text-decoration: none;
-  /* border-radius: 50px; */
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
   font-family: "Roboto", sans-serif;
   z-index: 1;
