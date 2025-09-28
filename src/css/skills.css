@@ -143,7 +143,7 @@
 .skills ul li span {
   display: block;
   font-size: 16px;
-  color: #7aafff;
+  color: #4bff5a;
   text-shadow: 0 0 5px rgba(0, 255, 204, 0.8), 0 0 10px rgba(0, 255, 204, 0.6),
     0 0 15px rgba(0, 255, 204, 0.4);
   animation: glow 3s ease-in-out infinite; /* Slower glow */

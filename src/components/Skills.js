@@ -16,9 +16,6 @@ const skills = [
   "jQuery",
   "Redux",
 
-  // Frontend Frameworks & Libraries
-  "React",
-
   // Styling & Design
   "Sass",
   "LESS",
