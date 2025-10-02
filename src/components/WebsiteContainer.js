@@ -14,11 +14,11 @@ const WebsiteContainer = () => {
         <NavBar />
         <div>
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/about">
               <About />
             </Route>
 
-            <Route path="/projects">
+            <Route path="/">
               <Projects />
             </Route>
 
