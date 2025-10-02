@@ -57,7 +57,7 @@
 .projectCard {
   font-family: "Chakra Petch", sans-serif, cursive;
   height: 130px;
-  width: 50%;
+  width: min(50%, 800px);
   border: 2px solid rgb(0, 221, 255);
   margin: auto;
   border-radius: 10px;

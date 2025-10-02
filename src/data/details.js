@@ -2,10 +2,19 @@ import musicConnoisseursScreenshot from "../images/musicConnoisseursScreenshot.J
 import cityScoutScreenshot from "../images/cityScoutScreenshot.jpg";
 import drugglerScreenshot from "../images/drugglerScreenshot.JPG";
 import slashRollScreenshot from "../images/slashRollScreenshot.jpg";
+import typingTestGameScreenshot from "../images/typingTestGameScreenshot.png";
 import pokedex from "../images/Pokedex_screenshot_homepage.png";
 import nextJsDashboardImage from "../images/nextJsDashboardImage.png";
 
 const details = {
+  typingPractice: {
+    image: typingTestGameScreenshot,
+    paragraphs: [
+      "Typing Practice Test is an interactive and visually engaging game designed to help you improve your typing speed and accuracy. Letters fall dynamically from the top of the screen, and your challenge is to type them before they hit the bottom. The game adapts to your performance, increasing speed as your score grows, and tracking accuracy, and levels as you progress.",
+    ],
+    websiteLink: "https://typing-practice-game-six.vercel.app/",
+    github: "https://github.com/Mark-Bernstein/typing-practice-game",
+  },
   slashRoll: {
     image: slashRollScreenshot,
     paragraphs: [

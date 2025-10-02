@@ -1,4 +1,8 @@
 var projects = {
+  typingPractice: {
+    title: "Typing Practice",
+    text: "A fast-paced game where falling letters challenge you to type quickly and accurately before they hit the bottom.",
+  },
   slashRoll: {
     title: "Slash Roll",
     text: "An exciting React project that randomly decides a winner from 2-12 players, all while tracking the number of wins and the average roll of each player.",
