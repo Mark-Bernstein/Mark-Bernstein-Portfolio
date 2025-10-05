@@ -18,7 +18,7 @@ const WebsiteContainer = () => {
               <About />
             </Route>
 
-            <Route path="/">
+            <Route exact path="/">
               <Projects />
             </Route>
 
