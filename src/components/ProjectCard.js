@@ -31,13 +31,11 @@ const getModalStyle = () => {
 const useStyles = makeStyles(() => ({
   paper: {
     position: "absolute",
-    marginTop: "30px",
-    height: "75%",
-    width: "80%",
-    background: "lightblue",
-    border: "2px solid #FFF",
-    padding: "15px",
-    overflowY: "scroll",
+    height: "82%",
+    border: "4px solid cyan",
+    backgroundColor: "black",
+    marginTop: "20px",
+    overflow: "auto",
   },
 }));
 
@@ -53,8 +51,8 @@ const ProjectCard = (props) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img alt="github logo" src={GithubLogo}></img>
         Github
+        <img alt="github logo" src={GithubLogo}></img>
       </a>
     </div>
   );
@@ -123,6 +121,12 @@ const ProjectCard = (props) => {
         aria-describedby="simple-modal-description"
         open={open}
         onClose={handleClose}
+        BackdropProps={{
+          style: {
+            backgroundColor: "rgba(0, 0, 0, 0.5)", // black with 50% opacity
+            backdropFilter: "blur(2px)", // optional: adds blur to background
+          },
+        }}
       >
         <motion.div
           initial="hidden"

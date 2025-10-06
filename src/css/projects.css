@@ -1,10 +1,12 @@
 #closeIcon {
   font-family: "Oxanium", sans-serif, cursive;
   font-size: 40px;
-  padding: 20px 29px;
+  padding: 10px 20px;
   height: 40px;
   font-weight: bold;
-  position: relative;
+  position: sticky;
+  top: 0;
+  right: 0;
   float: right;
   cursor: pointer;
   transition: transform 0.5s ease, background-color 0.3s ease,
@@ -13,7 +15,7 @@
 }
 
 #closeIcon:hover {
-  color: limegreen;
+  color: white;
   text-shadow: 2px 2px 10px rgb(0, 217, 255);
 }
 
@@ -51,7 +53,11 @@
 
 .detailsParagraph {
   font-size: 20px;
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
 }
 
 .projectCard {
@@ -153,40 +159,92 @@
 .websiteScreenshot {
   max-width: 250px;
   max-height: 400px;
-  max-width: 100%;
-  margin-bottom: 10px;
-}
-
-.retired-project-p,
-.private-github {
-  color: red;
-}
-
-.website-link,
-.github-link {
-  font-family: "Chakra Petch", sans-serif, cursive;
-  display: flex;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.website-link > a,
-.github-link > a {
-  text-shadow: 0 0 18px blue;
-}
-
-.website-link > a {
-  color: blue;
-}
-
-.github-link > a {
-  color: rgb(35, 0, 190);
+  max-width: 76%;
+  padding-left: 10px;
+  padding-top: 20px;
 }
 
 .project-details-paragraph {
   color: cyan;
   background-color: transparent;
   padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
+.retired-project-p,
+.private-github {
+  margin: 12px 10px;
+  color: red;
+}
+
+/* Shared base styles for both links */
+.website-link,
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px 10px;
+  font-family: "Chakra Petch", sans-serif, cursive;
+  font-size: 32px;
+  font-weight: 600;
+  color: cyan;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 1);
+  border-radius: 8px;
+  background: transparent;
+  transition: background 1s ease, transform 0.4s ease, text-shadow 0.6s ease;
+  cursor: pointer;
+}
+
+/* Link text */
+.website-link a,
+.github-link a {
+  font-size: 28px;
+  color: cyan;
+  text-decoration: none;
+  text-shadow: inherit;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 200, 255, 0.4),
+    rgba(180, 0, 255, 0.4)
+  );
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.website-link a:hover,
+.github-link a:hover {
+  box-shadow: 0px 4px 5px cyan;
+}
+
+/* Hover effect: animated gradient */
+.website-link:hover,
+.github-link:hover {
+  text-shadow: 0 0 18px rgba(180, 0, 255, 1);
+  transform: translateY(-2px);
+}
+
+/* GitHub icon styling */
+.github-link img {
+  height: 28px;
+  width: 28px;
+  background: cyan;
+  border-radius: 50%;
+  margin-left: 8px;
+  transition: transform 0.3s ease, background 1s ease;
+}
+
+/* Logo hover animation */
+.github-link:hover img {
+  transform: rotate(10deg) scale(1.15);
+  background: linear-gradient(135deg, rgb(29, 29, 29), rgb(217, 255, 0));
+}
+
+/* Optional subtle focus feedback */
+.website-link:active,
+.github-link:active {
+  transform: scale(0.97);
+  filter: brightness(1.2);
 }
