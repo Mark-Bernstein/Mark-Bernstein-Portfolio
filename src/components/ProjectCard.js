@@ -31,11 +31,13 @@ const getModalStyle = () => {
 const useStyles = makeStyles(() => ({
   paper: {
     position: "absolute",
-    height: "82%",
+    height: "1200px",
+    maxHeight: "80%",
     border: "4px solid cyan",
     backgroundColor: "black",
-    marginTop: "20px",
+    marginTop: "32px",
     overflow: "auto",
+    maxWidth: "500px",
   },
 }));
 
@@ -123,8 +125,8 @@ const ProjectCard = (props) => {
         onClose={handleClose}
         BackdropProps={{
           style: {
-            backgroundColor: "rgba(0, 0, 0, 0.5)", // black with 50% opacity
-            backdropFilter: "blur(2px)", // optional: adds blur to background
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
+            backdropFilter: "blur(4px)",
           },
         }}
       >
