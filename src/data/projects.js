@@ -1,6 +1,6 @@
 var projects = {
-  typingPractice: {
-    title: "Typing Practice",
+  typingProdigy: {
+    title: "Typing Prodigy",
     text: "A fast-paced game where falling letters challenge you to type quickly and accurately before they hit the bottom.",
   },
   slashRoll: {
@@ -22,10 +22,6 @@ var projects = {
   musicConnoisseurs: {
     title: "Music Connoisseur",
     text: "An application that creates a database of music genres and provides a description to broaden your musical knowledge.",
-  },
-  cityScout: {
-    title: "City Scout",
-    text: "An application that allows a user to get basic information about a city.",
   },
 };
 

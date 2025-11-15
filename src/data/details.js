@@ -1,18 +1,17 @@
 import musicConnoisseursScreenshot from "../images/musicConnoisseursScreenshot.JPG";
-import cityScoutScreenshot from "../images/cityScoutScreenshot.jpg";
 import drugglerScreenshot from "../images/drugglerScreenshot.JPG";
 import slashRollScreenshot from "../images/slashRollScreenshot.jpg";
-import typingTestGameScreenshot from "../images/typingTestGameScreenshot.png";
+import typingProdigyScreenshot from "../images/typingProdigyScreenshot.png";
 import pokedex from "../images/Pokedex_screenshot_homepage.png";
 import nextJsDashboardImage from "../images/nextJsDashboardImage.png";
 
 const details = {
-  typingPractice: {
-    image: typingTestGameScreenshot,
+  typingProdigy: {
+    image: typingProdigyScreenshot,
     paragraphs: [
-      "Typing Practice Test is an interactive and visually engaging game designed to help you improve your typing speed and accuracy. Letters fall dynamically from the top of the screen, and your challenge is to type them before they hit the bottom. The game adapts to your performance, increasing speed as your score grows, and tracking accuracy, and levels as you progress.",
+      "Typing Prodigy is an interactive and visually engaging game designed to help you improve your typing speed and accuracy. Letters fall dynamically from the top of the screen, and your challenge is to type them before they hit the bottom. The game adapts to your performance, increasing speed as your score grows, and tracking accuracy, and levels as you progress.",
     ],
-    websiteLink: "https://typing-practice-game-six.vercel.app/",
+    websiteLink: "https://typing-prodigy.vercel.app/",
     github: "https://github.com/Mark-Bernstein/typing-practice-game",
   },
   slashRoll: {
@@ -51,13 +50,6 @@ const details = {
       "An application that creates a database of music genres and provides a description to broaden your musical knowledge. The genres are user submitted along with descriptions and comments. Music videos to further illustrate the music genre are provided via a link to YouTube.",
     ],
     github: "https://github.com/Mark-Bernstein/music-connoisseurs",
-  },
-  cityScout: {
-    image: cityScoutScreenshot,
-    paragraphs: [
-      "An application that allows a user to get basic information about a city. The user first chooses a continent they are interested in and then they can choose from a list of countries. When the user selects a country, a list of the ten most populour cities from that country. When they choose a city, a page is rendered that displays basic information about the city such as: population, currency exchange, an image of the city, and 8 charts indicating how the city ranks in various categories like education and cost of living.",
-    ],
-    github: "https://github.com/Mark-Bernstein/cityScout",
   },
 };
 

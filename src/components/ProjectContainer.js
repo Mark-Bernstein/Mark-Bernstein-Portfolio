@@ -17,8 +17,8 @@ const ProjectContainer = () => {
       <GrowToLeft
         propColor="black"
         delay={0}
-        projectData={projects["typingPractice"]}
-        projectDetails={details["typingPractice"]}
+        projectData={projects["typingProdigy"]}
+        projectDetails={details["typingProdigy"]}
         projectLogo={Next_js_Icon}
       />
       <GrowToRight
