@@ -19,10 +19,6 @@ var projects = {
     title: "Druggler",
     text: "A React app that allows users to track when they need to take their medications and ability to search for interactions between different drugs.",
   },
-  musicConnoisseurs: {
-    title: "Music Connoisseur",
-    text: "An application that creates a database of music genres and provides a description to broaden your musical knowledge.",
-  },
 };
 
 export default projects;

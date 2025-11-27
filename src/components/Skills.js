@@ -1,21 +1,41 @@
 import React from "react";
 import "../css/skills.css";
 
-const skills = [
-  // Programming Languages
+const coreSkills = [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "React Testing Library",
+  "Jest",
+  "Enzyme",
+  "HTML",
+  "CSS",
+  "Node.js",
+  "Express",
+  "GitHub",
+  "BitBucket",
+  "Git Bash",
+  "MySQL",
+  "MongoDB",
+  "Postgres",
+  "GoCD",
+  "ArgoCD",
+  "Cockpit",
+  "Jira",
+  "Qubit",
+];
+
+const additionalSkills = [
   "Java",
   "C++/C#",
   "Lisp",
   "Visual Basic",
-
-  // Web Technologies
+  "Preact",
   "AJAX",
   "JSON",
   "Handlebars",
   "jQuery",
   "Redux",
-
-  // Styling & Design
   "Sass",
   "LESS",
   "Responsive Design",
@@ -23,30 +43,15 @@ const skills = [
   "Design Systems",
   "Figma",
   "Photoshop",
-
-  // Development Tools & Platforms
   "Dev Tools",
   "Postman",
   "Heroku",
   "Vercel",
-
-  // Multimedia & Other Tools
   "Final Cut Pro",
   "FL Studio",
   "Sonic Pi",
-
-  // Administration & Accessibility
   "Admin console",
   "Accessibility",
-];
-
-const coreSkills = [
-  "JavaScript (TypeScript), React, Preact",
-  "React Testing Library, Jest, Enzyme",
-  "HTML, CSS, Node.js, Express",
-  "GitHub, BitBucket, Git Bash",
-  "MySQL, MongoDB",
-  "GoCD, Cockpit, Jira, Qubit",
 ];
 
 const Skills = () => {
@@ -54,21 +59,18 @@ const Skills = () => {
     <div className="skills">
       <h2>Core Technical Skills</h2>
       <ul className="core-skills">
-        {coreSkills.map((skill, index) => {
-          return (
-            <>
-              <li key={index} style={{ animationDelay: `${0.2 * index}s` }}>
-                <span>{skill}</span>
-              </li>
-            </>
-          );
-        })}
-      </ul>
-      <h2>Additional Skills</h2>
-      <ul>
-        {skills.map((skill, index) => (
+        {coreSkills.map((skill, index) => (
           <li key={index} style={{ animationDelay: `${0.2 * index}s` }}>
-            {skill}
+            <span>{skill}</span>
+          </li>
+        ))}
+      </ul>
+
+      <h2>Additional Skills</h2>
+      <ul className="additional-skills">
+        {additionalSkills.map((skill, index) => (
+          <li key={index} style={{ animationDelay: `${0.2 * index}s` }}>
+            <span>{skill}</span>
           </li>
         ))}
       </ul>

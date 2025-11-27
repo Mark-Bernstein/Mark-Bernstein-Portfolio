@@ -1,4 +1,3 @@
-import musicConnoisseursScreenshot from "../images/musicConnoisseursScreenshot.JPG";
 import drugglerScreenshot from "../images/drugglerScreenshot.JPG";
 import slashRollScreenshot from "../images/slashRollScreenshot.jpg";
 import typingProdigyScreenshot from "../images/typing_prodigy_screenshot.png";
@@ -43,13 +42,6 @@ const details = {
       "An application that allows users to track when they need to take their medications, as well as allowing users to search for interactions between different drugs. Users are able to sign up and create a unique profile that allows the user to add, edit and delete prescription drugs from their pill tracker dashboard. Drugglers is a MERN application using MongoDB, Express, React and Node.js. Our database uses two collections to establish an association between a user’s profile and the drugs they have added to their pill tracker dashboard. For UI, our team used the Material-UI library to speed up component building.",
     ],
     github: "https://github.com/Mark-Bernstein/druggler",
-  },
-  musicConnoisseurs: {
-    image: musicConnoisseursScreenshot,
-    paragraphs: [
-      "An application that creates a database of music genres and provides a description to broaden your musical knowledge. The genres are user submitted along with descriptions and comments. Music videos to further illustrate the music genre are provided via a link to YouTube.",
-    ],
-    github: "https://github.com/Mark-Bernstein/music-connoisseurs",
   },
 };
 

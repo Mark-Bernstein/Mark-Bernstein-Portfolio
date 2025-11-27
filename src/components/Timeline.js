@@ -44,7 +44,7 @@ const Timeline = () => {
           viewport={{ once: true, amount: 0.1 }}
           variants={variants}
         >
-          <span>2020</span>
+          <span>2020 - 2025</span>
           <div>
             Software Development Engineer at{" "}
             <a

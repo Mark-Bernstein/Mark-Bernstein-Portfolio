@@ -403,3 +403,7 @@ li {
   font-weight: bold;
   transition: all 1.5s;
 }
+
+.projectsTitle {
+  color: black;
+}

@@ -66,7 +66,7 @@ const ProjectCard = (props) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Live hosted website
+        Go to website
       </a>
     </div>
   );

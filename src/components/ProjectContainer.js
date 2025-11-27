@@ -13,50 +13,46 @@ import MySqlLogo from "../images/MySQL_512.png";
 
 const ProjectContainer = () => {
   return (
-    <div className="cardList">
-      <GrowToLeft
-        propColor="black"
-        delay={0}
-        projectData={projects["typingProdigy"]}
-        projectDetails={details["typingProdigy"]}
-        projectLogo={Next_js_Icon}
-      />
-      <GrowToRight
-        propColor="black"
-        delay={0.15}
-        projectData={projects["slashRoll"]}
-        projectDetails={details["slashRoll"]}
-        projectLogo={ReactLogo}
-      />
-      <GrowToLeft
-        propColor="black"
-        delay={0.3}
-        projectData={projects["nextJsDashboard"]}
-        projectDetails={details["nextJsDashboard"]}
-        projectLogo={Next_js_Icon}
-      />
-      <GrowToRight
-        propColor="black"
-        delay={0.45}
-        projectData={projects["pokedex"]}
-        projectDetails={details["pokedex"]}
-        projectLogo={typescript_logo}
-      />
-      <GrowToLeft
-        propColor="black"
-        delay={0.6}
-        projectData={projects["druggler"]}
-        projectDetails={details["druggler"]}
-        projectLogo={ReactLogo}
-      />
-      <GrowToRight
-        propColor="black"
-        delay={0.75}
-        projectData={projects["musicConnoisseurs"]}
-        projectDetails={details["musicConnoisseurs"]}
-        projectLogo={MySqlLogo}
-      />
-    </div>
+    <>
+      <h1 className="projectsTitle">Projects</h1>
+      <div className="cardList">
+        <GrowToLeft
+          propColor="black"
+          delay={0}
+          projectData={projects["typingProdigy"]}
+          projectDetails={details["typingProdigy"]}
+          projectLogo={Next_js_Icon}
+        />
+        <GrowToRight
+          propColor="black"
+          delay={0.15}
+          projectData={projects["slashRoll"]}
+          projectDetails={details["slashRoll"]}
+          projectLogo={ReactLogo}
+        />
+        <GrowToLeft
+          propColor="black"
+          delay={0.3}
+          projectData={projects["nextJsDashboard"]}
+          projectDetails={details["nextJsDashboard"]}
+          projectLogo={Next_js_Icon}
+        />
+        <GrowToRight
+          propColor="black"
+          delay={0.45}
+          projectData={projects["pokedex"]}
+          projectDetails={details["pokedex"]}
+          projectLogo={typescript_logo}
+        />
+        <GrowToLeft
+          propColor="black"
+          delay={0.6}
+          projectData={projects["druggler"]}
+          projectDetails={details["druggler"]}
+          projectLogo={ReactLogo}
+        />
+      </div>
+    </>
   );
 };
 
