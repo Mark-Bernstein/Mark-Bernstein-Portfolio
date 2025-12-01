@@ -4,7 +4,7 @@ body.home-background {
   background-size: cover;
 }
 
-closeIcon {
+#closeIcon {
   font-family: "Oxanium", sans-serif, cursive;
   font-size: 40px;
   padding: 10px 20px;
@@ -38,7 +38,7 @@ closeIcon {
 
 .cardList {
   margin: auto;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .projectPage {
@@ -97,8 +97,8 @@ closeIcon {
 .projectInfoHeader {
   font-weight: 800;
   text-align: left;
-  font-size: 20pt;
-  color: rgb(58, 231, 58);
+  font-size: 28px;
+  color: rgb(51, 255, 0);
   text-shadow: purple 3px 3px 5px;
 }
 
@@ -107,7 +107,7 @@ closeIcon {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 18pt;
+    font-size: 18px;
     margin-top: -5px;
     margin-right: 5px;
     text-align: center;

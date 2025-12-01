@@ -32,7 +32,7 @@ const useStyles = makeStyles(() => ({
   paper: {
     position: "absolute",
     height: "1200px",
-    maxHeight: "80%",
+    maxHeight: "60%",
     border: "4px solid cyan",
     backgroundColor: "black",
     marginTop: "32px",

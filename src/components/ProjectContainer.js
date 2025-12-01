@@ -7,14 +7,13 @@ import details from "../data/details";
 import ReactLogo from "../images/reactlogo.png";
 import Next_js_Icon from "../images/Next_js_Icon.jpeg";
 import typescript_logo from "../images/typescript_logo.png";
-import MySqlLogo from "../images/MySQL_512.png";
+// import MySqlLogo from "../images/MySQL_512.png";
 // import HTMLLogo from "../images/HTML5_Logo_512.png";
 // import JSLogo from "../images/JavaScript_512.png";
 
 const ProjectContainer = () => {
   return (
     <>
-      <h1 className="projectsTitle">Projects</h1>
       <div className="cardList">
         <GrowToLeft
           propColor="black"
