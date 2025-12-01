@@ -51,7 +51,7 @@ a {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
 }
 
 .sectionContainer {

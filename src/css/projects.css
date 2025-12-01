@@ -36,6 +36,68 @@ body.home-background {
   background: url("../images/piano-wavelengths.jpg");
 }
 
+/* Projects Page Title */
+.projectsTitle {
+  position: relative;
+  font-family: "Oxanium", sans-serif, cursive;
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+  margin: 40px auto 30px auto;
+  letter-spacing: 3px;
+  background: black;
+  width: min(50%, 300px);
+  border: 2px solid rgb(157, 0, 255);
+  border-radius: 20px;
+  color: cyan;
+
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.8), 0 0 25px rgba(0, 255, 255, 0.6),
+    0 0 40px rgba(0, 255, 255, 0.4);
+
+  overflow: hidden;
+  padding: 0px 10px;
+  transition: transform 0.4s ease, text-shadow 0.4s ease;
+}
+
+/* Neon animated background (GPU accelerated) */
+.projectsTitle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 255, 0) 0%,
+    rgba(0, 255, 255, 0.5) 50%,
+    rgba(0, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%);
+  opacity: 0.8;
+  pointer-events: none;
+
+  /* Smooth hardware-accelerated animation */
+  animation: titleGlowSweep 4s linear infinite;
+}
+
+@keyframes titleGlowSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 500px) {
+  .projectsTitle {
+    font-size: 34px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+  }
+}
+
 .cardList {
   margin: auto;
   margin-top: 120px;

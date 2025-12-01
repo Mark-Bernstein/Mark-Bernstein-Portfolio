@@ -1,4 +1,6 @@
-/* Global Styles */
+/* --------------------------------------------------
+   Global Styles
+-------------------------------------------------- */
 html {
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
@@ -24,11 +26,14 @@ i {
 .left {
   transform: rotate(135deg);
 }
+
 .right {
   transform: rotate(-45deg);
 }
 
-/* Navigation Styles */
+/* --------------------------------------------------
+   Navigation Containers
+-------------------------------------------------- */
 .nav-bar {
   position: absolute;
   width: 100%;
@@ -57,27 +62,27 @@ i {
   text-shadow: rgb(0, 195, 255) 3px 3px 10px;
 }
 
-/* Responsive Navigation */
+/* Responsive Navigation Title */
 @media (max-width: 560px) {
   .navTitle {
     font-size: 36px;
     text-align: right;
   }
 }
-
 @media (max-width: 440px) {
   .navTitle {
     font-size: 28px;
   }
 }
-
 @media (max-width: 395px) {
   .navTitle {
     font-size: 16pt;
   }
 }
 
-/* Menu Button Container */
+/* --------------------------------------------------
+   Menu Container
+-------------------------------------------------- */
 .menu-container {
   position: fixed;
   top: 0;
@@ -88,7 +93,9 @@ i {
   transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1);
 }
 
-/* Base Menu Button */
+/* --------------------------------------------------
+   Menu Button
+-------------------------------------------------- */
 .menu-btn {
   position: relative;
   width: 120px;
@@ -101,17 +108,16 @@ i {
   z-index: 9001;
 }
 
-/* Hamburger Lines */
+/* --------------------------------------------------
+   Hamburger Icon
+-------------------------------------------------- */
 .hamburger {
   position: absolute;
   width: 25px;
   height: 25px;
   margin-top: 30px;
   margin-left: 20px;
-  /* top: 40%;
-  left: 40%;
-  transform: translate(-50%, -50%); */
-  pointer-events: none; /* Ensures clicks go through to parent */
+  pointer-events: none;
   z-index: 9002;
 }
 
@@ -131,16 +137,16 @@ i {
   top: 10px;
   opacity: 1;
 }
-
 .hamburger::before {
   top: 0;
 }
-
 .hamburger::after {
   top: 20px;
 }
 
-/* Menu Items */
+/* --------------------------------------------------
+   Menu Items (Closed State)
+-------------------------------------------------- */
 .menu-items {
   position: absolute;
   top: 0;
@@ -164,18 +170,18 @@ i {
   top: 35px;
   box-shadow: 1px 5px 5px rgb(0, 225, 255);
 }
-
 .menu-item.projects {
   top: 0px;
   box-shadow: 1px 5px 5px rgb(30, 71, 255);
 }
-
 .menu-item.resume {
   top: 70px;
   box-shadow: 1px 5px 5px rgb(253, 122, 0);
 }
 
-/* Background Sections */
+/* --------------------------------------------------
+   Rotating Background Panels ("Top" and "Bottom")
+-------------------------------------------------- */
 .menu-background {
   position: absolute;
   top: 0;
@@ -184,7 +190,7 @@ i {
   height: 100px;
   transform-origin: 0% 0%;
   transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1);
-  z-index: 8999;
+  z-index: -100;
   pointer-events: none;
 }
 
@@ -194,7 +200,6 @@ i {
   border: 2px solid rgba(255, 165, 0, 0.8);
   border-left: none;
   background: rgb(33, 0, 122);
-  z-index: -100;
   box-shadow: 5px 10px 15px rgb(255, 0, 0);
 }
 
@@ -204,11 +209,12 @@ i {
   border: 2px solid rgba(255, 165, 0, 0.8);
   border-top: none;
   background: black;
-  z-index: -100;
   box-shadow: 10px 10px 15px rgb(255, 0, 0);
 }
 
-/* EXPANDED STATE */
+/* --------------------------------------------------
+   EXPANDED STATE — Menu Open
+-------------------------------------------------- */
 .menu-container.expanded {
   width: 300px;
   height: 300px;
@@ -220,6 +226,7 @@ i {
   background-color: gold;
 }
 
+/* Hamburger transforms into "X" */
 .menu-container.expanded .hamburger span {
   opacity: 0;
 }
@@ -227,29 +234,32 @@ i {
 .menu-container.expanded .hamburger::before {
   top: 10px;
   transform: rotate(-45deg);
-  background: linear-gradient(135deg, rgb(0, 0, 0), rgb(4, 0, 255), black);
+  background: linear-gradient(135deg, black, rgb(4, 0, 255), black);
 }
 
 .menu-container.expanded .hamburger::after {
   top: 10px;
   transform: rotate(45deg);
-  background: linear-gradient(135deg, rgb(0, 0, 0), rgb(4, 0, 255), black);
+  background: linear-gradient(135deg, black, rgb(4, 0, 255), black);
 }
 
+/* --------------------------------------------------
+   EXPANDED — Menu Items
+-------------------------------------------------- */
 .menu-container.expanded .menu-item {
   font-size: 32px;
   color: cyan;
   opacity: 1;
   pointer-events: auto;
+  animation: subtlePulse 3s ease-in-out infinite;
 }
 
+/* Item Positions + Glow Effects */
 .menu-container.expanded .menu-item.about {
   top: 25px;
   left: 170px;
-  transform: rotate(12deg) scale(1);
+  transform: rotate(12deg);
   transition-delay: 0.3s;
-  box-shadow: 0 0 15px rgba(0, 255, 204, 0.6), 0 0 25px rgba(0, 255, 204, 0.3),
-    inset 0 0 10px rgba(0, 255, 204, 0.1);
   background: linear-gradient(
     135deg,
     rgba(0, 255, 204, 0.1),
@@ -258,15 +268,15 @@ i {
   backdrop-filter: blur(5px);
   border: 2px solid rgba(0, 255, 204, 0.8);
   text-shadow: 0 0 8px rgba(0, 255, 204, 0.8);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.6), 0 0 25px rgba(0, 255, 204, 0.3),
+    inset 0 0 10px rgba(0, 255, 204, 0.1);
 }
 
 .menu-container.expanded .menu-item.projects {
   top: 134px;
   left: 100px;
-  transform: rotate(45deg) scale(1);
+  transform: rotate(45deg);
   transition-delay: 0.65s;
-  box-shadow: 0 0 15px rgba(255, 0, 204, 0.6), 0 0 25px rgba(255, 0, 204, 0.3),
-    inset 0 0 10px rgba(255, 0, 204, 0.1);
   background: linear-gradient(
     135deg,
     rgba(255, 0, 204, 0.1),
@@ -275,15 +285,16 @@ i {
   backdrop-filter: blur(5px);
   border: 2px solid rgba(255, 0, 204, 0.8);
   text-shadow: 0 0 8px rgba(255, 0, 204, 0.8);
+  box-shadow: 0 0 15px rgba(255, 0, 204, 0.6), 0 0 25px rgba(255, 0, 204, 0.3),
+    inset 0 0 10px rgba(255, 0, 204, 0.1);
+  animation-delay: 0.5s;
 }
 
 .menu-container.expanded .menu-item.resume {
   top: 192px;
   left: 0px;
-  transform: rotate(70deg) scale(1);
+  transform: rotate(70deg);
   transition-delay: 0.8s;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 25px rgba(255, 215, 0, 0.3),
-    inset 0 0 10px rgba(255, 215, 0, 0.1);
   background: linear-gradient(
     135deg,
     rgba(255, 215, 0, 0.1),
@@ -292,9 +303,14 @@ i {
   backdrop-filter: blur(5px);
   border: 2px solid rgba(255, 215, 0, 0.8);
   text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 25px rgba(255, 215, 0, 0.3),
+    inset 0 0 10px rgba(255, 215, 0, 0.1);
+  animation-delay: 1s;
 }
 
-/* Hover effects with cool interactions */
+/* --------------------------------------------------
+   Item Hover Effects
+-------------------------------------------------- */
 .menu-container.expanded .menu-item:hover {
   transform: rotate(var(--rotation)) scale(1.1) translateY(-3px);
   transition: all 0.5s ease;
@@ -322,19 +338,9 @@ i {
   text-shadow: 0 0 12px rgba(255, 215, 0, 1);
 }
 
-/* Subtle pulsing animation for extra flair */
-.menu-container.expanded .menu-item {
-  animation: subtlePulse 3s ease-in-out infinite;
-}
-
-.menu-container.expanded .menu-item.projects {
-  animation-delay: 0.5s;
-}
-
-.menu-container.expanded .menu-item.resume {
-  animation-delay: 1s;
-}
-
+/* --------------------------------------------------
+   Pulse Animation
+-------------------------------------------------- */
 @keyframes subtlePulse {
   0%,
   100% {
@@ -345,11 +351,17 @@ i {
   }
 }
 
+/* --------------------------------------------------
+   Expanded Background Panel Size
+-------------------------------------------------- */
 .menu-container.expanded .menu-background {
   width: 300px;
   height: 300px;
 }
 
+/* --------------------------------------------------
+   Miscellaneous Styles
+-------------------------------------------------- */
 .link {
   display: flex;
   font-family: "Chakra Petch", sans-serif, cursive;
@@ -396,7 +408,7 @@ li {
   align-items: center;
   justify-content: center;
   margin: 1px;
-  padding: 0px;
+  padding: 0;
   height: 69px;
   width: 95px;
   font-family: "Oxanium", sans-serif, cursive;

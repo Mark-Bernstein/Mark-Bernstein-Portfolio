@@ -1,13 +1,16 @@
 .socialMediaLinks {
-  padding: 5px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  background: #1c1c1c;
+  background-color: rgba(0, 0, 0, 0.9);
   margin: 20px 0;
   text-align: center;
   position: relative;
   overflow: hidden;
   margin: 20px 20px 50px 20px;
+  min-width: 365px;
+  max-width: 60%;
+  margin: 24px auto;
 }
 
 .socialMediaLinks::before {
@@ -20,6 +23,7 @@
   background: url("https://www.transparenttextures.com/patterns/stardust.png");
   animation: rotate 10s linear infinite;
   z-index: 0;
+  margin: 24px auto;
 }
 
 .socialMediaLinks h2 {

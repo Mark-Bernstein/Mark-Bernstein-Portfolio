@@ -71,7 +71,7 @@ const ResumeContainer = () => {
           <div className="resumeSectionHeader">Work Experience</div>
           <div className="sectionContainer">
             <div className="resumeSubHeader">
-              Mindera Software Craft | 2020 - present&nbsp;
+              Mindera Software Craft | June 2020 - Sept. 2025 &nbsp;
             </div>
             <div className="resumeSectionInfo">
               Software Development Engineer
@@ -110,12 +110,10 @@ const ResumeContainer = () => {
             <div className="resumeSectionInfo">&nbsp;</div>
 
             <p className="resumeText">
-              JavaScript | React | React Native | Preact | TypeScript | HTML |
-              CSS | Jest | Enzyme | React Testing Library | Node.js | Java |
-              C++/C# | Lisp | Visual Basic | Express | Sonic Pi | Handlebars |
-              jQuery | JSON | AJAX | Github | Git Bash | BitBucket | Admin
-              console | Redux | GoCD | Cockpit | Jira | Qubit | Vercel | Heroku
-              | Photoshop | FL Studio | Final Cut Pro{" "}
+              JavaScript | React | Preact | TypeScript | HTML | CSS | Jest |
+              Enzyme | React Testing Library | Node.js | Visual Basic | Express
+              | Github | BitBucket | Admin console | Redux | GoCD | Cockpit |
+              Jira | Qubit
             </p>
 
             <div className="resumeSubHeader">Soft Skills&nbsp;</div>

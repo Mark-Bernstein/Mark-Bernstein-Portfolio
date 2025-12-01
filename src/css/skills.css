@@ -1,6 +1,6 @@
 .skills {
   padding: 20px;
-  background: #1c1c1c;
+  background-color: rgba(0, 0, 0, 0.9);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -9,6 +9,9 @@
   margin: 20px 20px 50px;
   will-change: transform;
   transform: translateZ(0);
+  min-width: 365px;
+  max-width: 60%;
+  margin: auto;
 }
 
 .skills::before {
@@ -43,8 +46,8 @@
   inset: -50%;
   background: radial-gradient(
     circle,
-    rgba(0, 255, 204, 0.3),
-    rgba(255, 0, 204, 0.3)
+    rgba(0, 255, 204, 0.6),
+    rgba(255, 0, 204, 0.6)
   );
   border-radius: 50%;
   animation: spin 15s linear infinite;
