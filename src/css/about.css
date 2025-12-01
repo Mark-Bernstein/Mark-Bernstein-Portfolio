@@ -1,3 +1,9 @@
+body.about-background {
+  background: url("../images/Mark_Portfolio_Background.jpg") no-repeat center
+    center fixed;
+  background-size: cover;
+}
+
 .aboutImage {
   width: 100%; /* Allow the image to scale with the container */
   min-width: 365px;

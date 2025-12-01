@@ -5,16 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("./images/planet-background.jpg") no-repeat center center
-    fixed;
-  /* background: url("./images/planet-background.jpg") no-repeat center center fixed; */
-  /* background-image: url("./images/hexagonBackground.png"), url("./images/hexagonBackground.png"); */
-  background-blend-mode: lighten;
-  background-repeat: no-repeat, repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 code {

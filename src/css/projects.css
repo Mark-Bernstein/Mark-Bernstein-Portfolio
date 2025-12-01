@@ -1,4 +1,10 @@
-#closeIcon {
+body.home-background {
+  background: url("../images/Mark_Portfolio_Background_2.jpg") no-repeat center
+    center fixed;
+  background-size: cover;
+}
+
+closeIcon {
   font-family: "Oxanium", sans-serif, cursive;
   font-size: 40px;
   padding: 10px 20px;

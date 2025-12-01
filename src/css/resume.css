@@ -1,3 +1,9 @@
+body.resume-background {
+  background: url("../images/Mark_Portfolio_Background_3.jpg") no-repeat center
+    center fixed;
+  background-size: cover;
+}
+
 a {
   font-size: 20px;
   color: cyan;
@@ -41,11 +47,11 @@ a {
 }
 
 .resume-section-block {
-  background-color: rgba(0, 38, 88, 0.5);
+  background-color: rgba(50, 0, 88, 0.7);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(10px);
 }
 
 .sectionContainer {
@@ -62,15 +68,15 @@ a {
 .resumeContainer {
   margin: auto;
   height: 250px;
-  width: 80%;
+  width: 50%;
   font-family: "Chakra Petch", sans-serif, cursive;
   text-align: left;
   padding-bottom: 25px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1024px) {
   .resumeContainer {
-    width: 80%;
+    width: 90%;
   }
 }
 

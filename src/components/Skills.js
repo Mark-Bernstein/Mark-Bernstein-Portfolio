@@ -2,56 +2,32 @@ import React from "react";
 import "../css/skills.css";
 
 const coreSkills = [
-  "JavaScript",
-  "TypeScript",
+  "JavaScript (ES6)",
+  "HTML5",
+  "CSS3",
   "React",
-  "React Testing Library",
-  "Jest",
-  "Enzyme",
-  "HTML",
-  "CSS",
+  "TypeScript",
+  "Next.js",
   "Node.js",
-  "Express",
+  "Redux",
+  "Context API",
+  "REST APIs",
+  "A/B Testing (Qubit)",
+  "Unit Testing",
   "GitHub",
-  "BitBucket",
-  "Git Bash",
-  "MySQL",
-  "MongoDB",
-  "Postgres",
-  "GoCD",
-  "ArgoCD",
-  "Cockpit",
-  "Jira",
-  "Qubit",
+  "CI/CD",
 ];
 
 const additionalSkills = [
-  "Java",
-  "C++/C#",
-  "Lisp",
-  "Visual Basic",
-  "Preact",
-  "AJAX",
-  "JSON",
-  "Handlebars",
-  "jQuery",
-  "Redux",
-  "Sass",
-  "LESS",
-  "Responsive Design",
-  "Mobile-First Design",
-  "Design Systems",
-  "Figma",
-  "Photoshop",
-  "Dev Tools",
-  "Postman",
-  "Heroku",
-  "Vercel",
-  "Final Cut Pro",
-  "FL Studio",
-  "Sonic Pi",
-  "Admin console",
-  "Accessibility",
+  "Figma with Dev Mode",
+  "Storyblok CMS",
+  "CAPI / Admin Console",
+  "SEO Collaboration",
+  "Engagement Tracking",
+  "Feature Flagging",
+  "Agile / Scrum",
+  "Cross-Functional Collaboration",
+  "Design System Implementation",
 ];
 
 const Skills = () => {
@@ -67,9 +43,9 @@ const Skills = () => {
       </ul>
 
       <h2>Additional Skills</h2>
-      <ul className="additional-skills">
+      <ul>
         {additionalSkills.map((skill, index) => (
-          <li key={index} style={{ animationDelay: `${0.2 * index}s` }}>
+          <li key={index} style={{ animationDelay: `${0.5 * index}s` }}>
             <span>{skill}</span>
           </li>
         ))}
