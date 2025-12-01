@@ -25,9 +25,8 @@ p {
 
 .aboutText {
   padding: 20px;
-  background: #1c1c1c;
+  background-color: #1c1c1c;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0);
   color: #fff;
   position: relative;
   overflow: hidden;

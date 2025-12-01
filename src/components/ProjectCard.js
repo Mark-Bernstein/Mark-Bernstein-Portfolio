@@ -99,7 +99,7 @@ const ProjectCard = (props) => {
   return (
     <div>
       <motion.div
-        whileHover={{ scale: 1.1 }}
+        whileHover={{ scale: 1.15 }}
         transition={{ ease: "easeOut", duration: 0.4 }}
       >
         <div
