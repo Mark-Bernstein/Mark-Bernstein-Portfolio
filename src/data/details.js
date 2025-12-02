@@ -1,5 +1,5 @@
 import drugglerScreenshot from "../images/drugglerScreenshot.JPG";
-import slashRollScreenshot from "../images/slashRollScreenshot.jpg";
+import slashRollScreenshot from "../images/slashRollScreenshot.png";
 import typingProdigyScreenshot from "../images/typing_prodigy_screenshot.png";
 import pokedex from "../images/Pokedex_screenshot_homepage.png";
 import nextJsDashboardImage from "../images/nextJsDashboardImage.png";

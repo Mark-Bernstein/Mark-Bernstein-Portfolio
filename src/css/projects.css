@@ -1,42 +1,11 @@
+/* ---------- Projects Page Base ---------- */
 body.home-background {
   background: url("../images/Mark_Portfolio_Background_2.jpg") no-repeat center
     center fixed;
   background-size: cover;
 }
 
-#closeIcon {
-  font-family: "Oxanium", sans-serif, cursive;
-  font-size: 40px;
-  padding: 10px 20px;
-  height: 40px;
-  font-weight: bold;
-  position: sticky;
-  top: 0;
-  right: 0;
-  float: right;
-  cursor: pointer;
-  transition: transform 0.5s ease, background-color 0.3s ease,
-    border-radius 0.3s ease;
-  color: cyan;
-}
-
-#closeIcon:hover {
-  color: white;
-  text-shadow: 2px 2px 10px rgb(0, 217, 255);
-}
-
-.cardContainer {
-  margin: auto;
-  height: 250px;
-  width: 50%;
-  border-width: 1px;
-  box-shadow: 0px 2px 6px -2px;
-  font-weight: 400;
-  border-radius: 5px;
-  background: url("../images/piano-wavelengths.jpg");
-}
-
-/* Projects Page Title */
+/* ---------- Projects Page Title ---------- */
 .projectsTitle {
   position: relative;
   font-family: "Oxanium", sans-serif, cursive;
@@ -50,16 +19,13 @@ body.home-background {
   border: 2px solid rgb(157, 0, 255);
   border-radius: 20px;
   color: cyan;
-
   text-shadow: 0 0 12px rgba(0, 255, 255, 0.8), 0 0 25px rgba(0, 255, 255, 0.6),
     0 0 40px rgba(0, 255, 255, 0.4);
-
   overflow: hidden;
   padding: 0px 10px;
   transition: transform 0.4s ease, text-shadow 0.4s ease;
 }
 
-/* Neon animated background (GPU accelerated) */
 .projectsTitle::before {
   content: "";
   position: absolute;
@@ -73,8 +39,6 @@ body.home-background {
   transform: translateX(-100%);
   opacity: 0.8;
   pointer-events: none;
-
-  /* Smooth hardware-accelerated animation */
   animation: titleGlowSweep 4s linear infinite;
 }
 
@@ -98,46 +62,22 @@ body.home-background {
   }
 }
 
+/* ---------- Card List ---------- */
 .cardList {
   margin: auto;
   margin-top: 120px;
 }
 
-.projectPage {
-  height: 100%;
-}
-
-.projectSpacer,
-.projectRightSpacer,
-.projectLeftSpacer {
-  position: relative;
-}
-
-.projectSpacer {
-  height: 150px;
-  width: 100%;
-  padding-top: 20px;
-}
-
-.detailsParagraph {
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-}
-
+/* ---------- Project Card ---------- */
 .projectCard {
   font-family: "Chakra Petch", sans-serif;
   height: 130px;
   width: min(50%, 800px);
+  margin: 16px auto;
   border: 2px solid rgb(0, 221, 255);
-  margin: auto;
   border-radius: 10px;
   box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.6);
-
-  background-color: rgb(0, 0, 0) !important;
+  background-color: rgb(0, 0, 0);
   position: relative;
   overflow: hidden;
   transition: background-color 450ms ease, box-shadow 450ms ease,
@@ -145,7 +85,6 @@ body.home-background {
   will-change: background-color, box-shadow, transform;
 }
 
-/* Shiny overlay */
 .projectCard::after {
   content: "";
   position: absolute;
@@ -164,30 +103,33 @@ body.home-background {
   will-change: transform;
 }
 
+.projectCard:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(183, 0, 255, 0.45);
+  background-color: rgb(74, 0, 158);
+}
+
+.projectCard:hover::after {
+  transform: translateX(420%) skewX(-45deg);
+}
+
 @media only screen and (max-width: 1048px) {
   .projectCard {
     width: 80%;
   }
 }
 
-.projectCard:hover {
-  cursor: pointer;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(183, 0, 255, 0.45);
-  background-color: rgb(185, 124, 255) !important;
-}
-
-/* Shiny animation on hover */
-.projectCard:hover::after {
-  transform: translateX(420%) skewX(-45deg);
-}
-
 .projectLogo {
   margin: 5px 10px 5px 5px;
   width: 120px;
   height: 120px;
-  background-color: rgb(255, 255, 255);
   float: left;
+}
+
+.projectImg {
+  max-width: 120px;
+  max-height: 120px;
 }
 
 .projectInfoHeader {
@@ -198,30 +140,19 @@ body.home-background {
   text-shadow: purple 3px 3px 5px;
 }
 
-@media only screen and (max-width: 455px) {
-  .projectInfoHeader {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 18px;
-    margin-top: -5px;
-    margin-right: 5px;
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: 356px) {
-  .projectInfoHeader {
-    font-size: 12pt;
-  }
-}
-
 .projectInfoText {
-  font-family: "Chakra Petch", sans-serif, cursive;
+  font-family: "Chakra Petch", sans-serif;
   font-weight: 400;
   text-align: left;
   font-size: 14pt;
   color: rgb(255, 255, 255);
+}
+
+/* ---------- Responsive Font Sizes ---------- */
+@media only screen and (min-width: 1555px) {
+  .projectInfoHeader {
+    font-size: 36px;
+  }
 }
 
 @media only screen and (max-width: 657px) {
@@ -237,116 +168,179 @@ body.home-background {
 }
 
 @media only screen and (max-width: 455px) {
+  .projectInfoHeader {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    margin-top: -5px;
+    margin-right: 5px;
+    text-align: center;
+  }
   .projectInfoText {
     display: none;
   }
 }
 
-.projectImg {
-  max-width: 120px;
-  max-height: 120px;
+@media only screen and (max-width: 356px) {
+  .projectInfoHeader {
+    font-size: 18px;
+  }
 }
 
-.detailsImage {
-  display: block;
-  background-image: url("../images/blue-space.jpg");
+/* ---------- Modal Styles ---------- */
+.modalBackdrop {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(4px);
 }
 
-.detailsImage > img {
-  border-radius: 50px;
-  margin-top: 0;
+.modalContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  border-radius: 20px;
+  border: 4px solid cyan;
+}
+
+.modalContent {
+  background-color: black;
+  border: none;
+  border-radius: 20px;
+  max-height: 80vh;
+  overflow: auto;
+  padding: 20px;
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+  .modalContainer {
+    width: 70%;
+  }
+}
+@media (max-width: 480px) {
+  .modalContainer {
+    width: 90%;
+  }
+}
+
+/* ---------- Modal Inner Content ---------- */
+#closeIcon {
+  font-family: "Oxanium", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+  color: cyan;
+  padding: 0 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#closeIcon:hover {
+  color: white;
+  text-shadow: 2px 2px 10px rgb(0, 217, 255);
+}
+
+.detailsImage img {
+  max-height: 700px;
+  border-radius: 16px;
   max-width: 100%;
+  margin-top: 0;
+  border: 2px solid cyan;
 }
 
-.websiteScreenshot {
-  max-width: 250px;
-  max-height: 400px;
-  max-width: 76%;
-  padding-left: 10px;
-  padding-top: 20px;
+.detailsParagraph {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 8px;
 }
 
+/* ---------- Project Paragraphs ---------- */
 .project-details-paragraph {
   color: cyan;
-  background-color: transparent;
   padding: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .retired-project-p,
 .private-github {
-  margin: 12px 10px;
   color: red;
 }
 
-/* Shared base styles for both links */
+/* ---------- Links ---------- */
 .website-link,
 .github-link {
+  border: 2px solid cyan;
+  margin-bottom: 8px;
+  padding: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin: 12px 10px;
-  font-family: "Chakra Petch", sans-serif, cursive;
+  font-family: "Chakra Petch", sans-serif;
   font-size: 32px;
   font-weight: 600;
   color: cyan;
   text-decoration: none;
   text-shadow: 0 0 10px rgba(0, 255, 255, 1);
   border-radius: 8px;
-  background: transparent;
-  transition: background 1s ease, transform 0.4s ease, text-shadow 0.6s ease;
-  cursor: pointer;
+  background: linear-gradient(90deg, #002a2a, #9d00ff);
+  transition: all 0.4s ease;
 }
 
-/* Link text */
 .website-link a,
 .github-link a {
-  font-size: 28px;
+  font-size: 32px;
   color: cyan;
   text-decoration: none;
+  background-color: linear-gradient(90deg, #00ffff, #9d00ff);
   text-shadow: inherit;
+  padding: 8px;
+  border-radius: 10px;
   background: linear-gradient(
     90deg,
     rgba(0, 200, 255, 0.4),
     rgba(180, 0, 255, 0.4)
   );
-  padding: 8px;
-  border-radius: 10px;
 }
 
-.website-link a:hover,
-.github-link a:hover {
-  box-shadow: 0px 4px 5px cyan;
-}
-
-/* Hover effect: animated gradient */
 .website-link:hover,
 .github-link:hover {
-  text-shadow: 0 0 18px rgba(180, 0, 255, 1);
   transform: translateY(-2px);
+  text-shadow: 0 0 18px rgba(180, 0, 255, 1);
 }
 
-/* GitHub icon styling */
 .github-link img {
-  height: 28px;
-  width: 28px;
-  background: cyan;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   margin-left: 8px;
-  transition: transform 0.3s ease, background 1s ease;
+  transition: transform 0.3s ease;
 }
 
-/* Logo hover animation */
 .github-link:hover img {
   transform: rotate(10deg) scale(1.15);
   background: linear-gradient(135deg, rgb(29, 29, 29), rgb(217, 255, 0));
 }
 
-/* Optional subtle focus feedback */
-.website-link:active,
-.github-link:active {
-  transform: scale(0.97);
-  filter: brightness(1.2);
+@media (max-width: 788px) {
+  .website-link,
+  .github-link {
+    font-size: 20px;
+  }
+
+  .github-link img {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media (max-width: 510px) {
+  .website-link,
+  .github-link {
+    font-size: 18px;
+  }
 }

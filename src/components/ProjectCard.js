@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import "../css/nav.css";
+import "../css/projects.css";
 import { motion } from "framer-motion";
 import Modal from "@material-ui/core/Modal";
-import { makeStyles } from "@material-ui/core/styles";
 import GithubLogo from "../images/GitHub_32.png";
 
 const variants = {
@@ -15,87 +14,30 @@ const modalVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const getModalStyle = () => {
-  const top = 50;
-  const left = 50;
-  const width = 80;
+const getModalStyle = () => ({
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+});
 
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
-    width: `${width}%`,
-  };
-};
-
-const useStyles = makeStyles(() => ({
-  paper: {
-    position: "absolute",
-    height: "1200px",
-    maxHeight: "60%",
-    border: "4px solid cyan",
-    backgroundColor: "black",
-    marginTop: "32px",
-    overflow: "auto",
-    maxWidth: "500px",
-  },
-}));
-
-const ProjectCard = (props) => {
-  const classes = useStyles();
+const ProjectCard = ({
+  projectData,
+  projectDetails,
+  projectLogo,
+  propColor,
+}) => {
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
 
-  let githubLink = (
-    <div className="github-link">
-      <a
-        href={props.projectDetails["github"]}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Github
-        <img alt="github logo" src={GithubLogo}></img>
-      </a>
-    </div>
-  );
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
-  let websiteLink = (
-    <div className="website-link">
-      <a
-        href={props.projectDetails["websiteLink"]}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Go to website
-      </a>
-    </div>
-  );
+  const paragraphs = projectDetails.paragraphs.map((text, index) => (
+    <p className="project-details-paragraph" key={index}>
+      {text}
+    </p>
+  ));
 
-  const retiredWebsite = (
-    <p className="retired-project-p">Project has been retired.</p>
-  );
-
-  const privateGithub = (
-    <p className="private-github">Project code is currently private.</p>
-  );
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const paragraphs = [];
-  for (const [index, paragraph] of props.projectDetails.paragraphs.entries()) {
-    paragraphs.push(
-      <p className="project-details-paragraph" key={index}>
-        {paragraph}
-        <br />
-      </p>
-    );
-  }
   return (
     <div>
       <motion.div
@@ -104,93 +46,92 @@ const ProjectCard = (props) => {
       >
         <div
           className="projectCard"
-          style={{ backgroundColor: props.propColor }}
+          style={{ backgroundColor: propColor }}
           onClick={handleOpen}
         >
-          <div
-            className="projectLogo"
-            style={{ backgroundColor: props.propColor }}
-          >
-            <img src={props.projectLogo} alt="logo" className="projectImg" />
+          <div className="projectLogo">
+            <img src={projectLogo} alt="logo" className="projectImg" />
           </div>
-          <div className="projectInfoHeader">{props.projectData["title"]}</div>
-          <div className="projectInfoText">{props.projectData["text"]}</div>
+          <div className="projectInfoHeader">{projectData.title}</div>
+          <div className="projectInfoText">{projectData.text}</div>
         </div>
       </motion.div>
 
       <Modal
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
         open={open}
         onClose={handleClose}
-        BackdropProps={{
-          style: {
-            backgroundColor: "rgba(0, 0, 0, 0.6)",
-            backdropFilter: "blur(4px)",
-          },
-        }}
+        BackdropProps={{ className: "modalBackdrop" }}
       >
         <motion.div
+          className="modalContainer"
+          style={modalStyle}
           initial="hidden"
           animate="visible"
           variants={variants}
           transition={{ ease: "easeOut", duration: 0.2 }}
         >
-          <div style={modalStyle} className={classes.paper}>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={modalVariants}
-              transition={{ ease: "easeOut", duration: 0.5, delay: 0.2 }}
-            ></motion.div>
-
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={modalVariants}
-              transition={{ ease: "easeOut", duration: 0.5, delay: 0.4 }}
-            >
-              <div id="closeIcon" onClick={handleClose}>
-                x
-              </div>
-              <div className="detailsImage">
-                {props.projectDetails["websiteLink"] ? (
-                  <a
-                    className="websiteScreenshot"
-                    href={props.projectDetails["websiteLink"]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="websiteScreenshot"
-                      src={props.projectDetails.image}
-                      alt="project"
-                    ></img>
-                  </a>
-                ) : (
+          <motion.div
+            className="modalContent"
+            initial="hidden"
+            animate="visible"
+            variants={modalVariants}
+            transition={{ ease: "easeOut", duration: 0.5, delay: 0.2 }}
+          >
+            <div id="closeIcon" onClick={handleClose}>
+              ×
+            </div>
+            <div className="detailsParagraph">
+              {projectDetails.websiteLink ? (
+                <a
+                  className="website-link"
+                  href={projectDetails.websiteLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Go to website
+                </a>
+              ) : (
+                <p className="retired-project-p">Project has been retired.</p>
+              )}
+              {projectDetails.github ? (
+                <a
+                  className="github-link"
+                  href={projectDetails.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github
+                  <img alt="github logo" src={GithubLogo} />
+                </a>
+              ) : (
+                <p className="private-github">
+                  Project code is currently private.
+                </p>
+              )}
+            </div>
+            <div className="detailsImage">
+              {projectDetails.websiteLink ? (
+                <a
+                  href={projectDetails.websiteLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     className="websiteScreenshot"
-                    src={props.projectDetails.image}
+                    src={projectDetails.image}
                     alt="project"
-                  ></img>
-                )}
-                {paragraphs}
-              </div>
-              <div className="detailsParagraph">
-                <motion.div
-                  initial="hidden"
-                  animate="visible"
-                  variants={modalVariants}
-                  transition={{ ease: "easeOut", duration: 0.5, delay: 0.4 }}
-                >
-                  {props.projectDetails["websiteLink"]
-                    ? websiteLink
-                    : retiredWebsite}
-                  {props.projectDetails["github"] ? githubLink : privateGithub}
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
+                  />
+                </a>
+              ) : (
+                <img
+                  className="websiteScreenshot"
+                  src={projectDetails.image}
+                  alt="project"
+                />
+              )}
+              {paragraphs}
+            </div>
+          </motion.div>
         </motion.div>
       </Modal>
     </div>
