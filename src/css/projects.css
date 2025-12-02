@@ -218,10 +218,9 @@ body.home-background {
   .modalContainer {
     width: 70%;
   }
-}
-@media (max-width: 480px) {
-  .modalContainer {
-    width: 90%;
+
+  .modalContent {
+    max-height: 60vh;
   }
 }
 
@@ -282,6 +281,7 @@ body.home-background {
 /* ---------- Links ---------- */
 .website-link,
 .github-link {
+  position: relative; /* needed for pseudo-element */
   border: 2px solid cyan;
   margin-bottom: 8px;
   padding: 8px;
@@ -297,7 +297,8 @@ body.home-background {
   text-shadow: 0 0 10px rgba(0, 255, 255, 1);
   border-radius: 8px;
   background: linear-gradient(90deg, #002a2a, #9d00ff);
-  transition: all 0.4s ease;
+  overflow: hidden; /* clip the shine */
+  transition: transform 0.4s ease, box-shadow 0.4s ease, text-shadow 0.4s ease;
 }
 
 .website-link a,
@@ -314,12 +315,36 @@ body.home-background {
     rgba(0, 200, 255, 0.4),
     rgba(180, 0, 255, 0.4)
   );
+  transition: transform 0.4s ease, box-shadow 0.4s ease, text-shadow 0.4s ease;
+}
+
+.website-link::after,
+.github-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  transition: transform 0.6s ease;
+}
+
+.website-link:hover::after,
+.github-link:hover::after {
+  transform: translateX(250%) skewX(-20deg);
 }
 
 .website-link:hover,
 .github-link:hover {
-  transform: translateY(-2px);
-  text-shadow: 0 0 18px rgba(180, 0, 255, 1);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(183, 0, 255, 0.45);
 }
 
 .github-link img {

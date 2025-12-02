@@ -23,6 +23,13 @@ i {
   padding: 3px;
 }
 
+.menu-item.disabled {
+  pointer-events: none !important;
+  color: grey !important;
+  opacity: 0.2 !important;
+  cursor: default;
+}
+
 .left {
   transform: rotate(135deg);
 }
@@ -209,8 +216,8 @@ i {
   border-bottom-right-radius: 400px;
   border: 2px solid rgb(255, 165, 0);
   border-left: none;
-  background: rgb(68, 0, 255);
-  box-shadow: 10px 20px 20px rgb(255, 213, 0);
+  background: rgb(82, 0, 155);
+  box-shadow: 40px 20px 20px rgb(255, 213, 0);
   animation-name: rotateTop;
 }
 
@@ -221,7 +228,7 @@ i {
   border: 2px solid rgb(255, 165, 0);
   border-top: 4px solid rgb(255, 255, 255);
   background: black;
-  box-shadow: 20px 0px 20px rgb(0, 255, 17);
+  box-shadow: 30px 4px 20px rgb(0, 255, 119);
   animation-name: rotateBottom;
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../css/nav.css";
 
 const fadeInVariants = {
@@ -10,9 +10,17 @@ const fadeInVariants = {
 
 const NavBar = () => {
   const [menuIsExpanded, setMenuIsExpanded] = useState(false);
+  const location = useLocation(); // get current path
 
   const toggleMenuExpandedState = () => {
-    setMenuIsExpanded((previousState) => !previousState);
+    setMenuIsExpanded((prev) => !prev);
+  };
+
+  // helper function to disable click if already on that page
+  const handleLinkClick = (path) => {
+    if (location.pathname !== path) {
+      toggleMenuExpandedState();
+    }
   };
 
   return (
@@ -34,25 +42,31 @@ const NavBar = () => {
           {/* Menu Items */}
           <div className="menu-items">
             <Link
-              className="menu-item about"
+              className={`menu-item about${
+                location.pathname === "/about" ? " disabled" : ""
+              }`}
               to="/about"
-              onClick={toggleMenuExpandedState}
+              onClick={() => handleLinkClick("/about")}
             >
               About
             </Link>
 
             <Link
-              className="menu-item projects"
+              className={`menu-item projects${
+                location.pathname === "/" ? " disabled" : ""
+              }`}
               to="/"
-              onClick={toggleMenuExpandedState}
+              onClick={() => handleLinkClick("/")}
             >
               Projects
             </Link>
 
             <Link
-              className="menu-item resume"
+              className={`menu-item resume${
+                location.pathname === "/resume" ? " disabled" : ""
+              }`}
               to="/resume"
-              onClick={toggleMenuExpandedState}
+              onClick={() => handleLinkClick("/resume")}
             >
               Resume
             </Link>
