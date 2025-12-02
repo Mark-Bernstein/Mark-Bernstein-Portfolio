@@ -13,26 +13,38 @@ const infoVariants = {
   visible: { y: 0, opacity: 1 },
 };
 
-const GrowtoLeft = (props) => {
+const GrowToLeft = ({
+  projectData,
+  projectDetails,
+  projectLogo,
+  propColor,
+  delay,
+  allProjects,
+  projectIndex,
+  setActiveProject,
+}) => {
   return (
     <motion.div
       initial="hidden"
       animate="visible"
       variants={variants}
-      transition={{ ease: "easeOut", duration: 1, delay: props.delay / 2 }}
+      transition={{ ease: "easeOut", duration: 1, delay: delay / 2 }}
     >
       <div className="projectLeftSpacer projectSpacer">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={infoVariants}
-          transition={{ ease: "easeOut", duration: 2, delay: props.delay / 2 }}
+          transition={{ ease: "easeOut", duration: 2, delay: delay / 2 }}
         >
           <ProjectCard
-            projectData={props.projectData}
-            projectDetails={props.projectDetails}
-            propColor={props.propColor}
-            projectLogo={props.projectLogo}
+            projectData={projectData}
+            projectDetails={projectDetails}
+            propColor={propColor}
+            projectLogo={projectLogo}
+            allProjects={allProjects}
+            projectIndex={projectIndex}
+            setActiveProject={setActiveProject}
           />
         </motion.div>
       </div>
@@ -40,4 +52,4 @@ const GrowtoLeft = (props) => {
   );
 };
 
-export default GrowtoLeft;
+export default GrowToLeft;

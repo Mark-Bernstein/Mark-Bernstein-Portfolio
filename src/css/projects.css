@@ -344,3 +344,30 @@ body.home-background {
     font-size: 18px;
   }
 }
+
+.modal-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 100px;
+  color: white;
+  cursor: pointer;
+  padding: 0px;
+  user-select: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 20;
+}
+
+.modal-arrow:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.3);
+  color: cyan;
+}
+
+.modal-arrow-left {
+  left: -50px;
+}
+
+.modal-arrow-right {
+  right: -50px;
+}
