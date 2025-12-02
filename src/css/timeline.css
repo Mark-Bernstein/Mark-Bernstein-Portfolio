@@ -10,10 +10,29 @@
   flex-direction: column;
   align-items: center;
   margin: 20px 20px 50px 20px;
-  font-size: 21px;
+  font-size: 24px;
   min-width: 365px;
   max-width: 60%;
   margin: 24px auto;
+}
+
+#minderaLink {
+  color: yellow;
+  font-size: 24px;
+}
+
+@media (max-width: 955px) {
+  .timeline,
+  #minderaLink {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 675px) {
+  .timeline,
+  #minderaLink {
+    font-size: 16px;
+  }
 }
 
 .timeline::before {
@@ -90,12 +109,6 @@
   margin: 0 auto 8px auto;
   display: flex;
   align-items: center;
-}
-
-@media (max-width: 509px) {
-  .timeline ul {
-    font-size: 18px;
-  }
 }
 
 .timeline ul li::before {

@@ -48,9 +48,9 @@ const Timeline = () => {
           <div>
             Software Development Engineer at{" "}
             <a
+              id="minderaLink"
               target="_blank"
               href="https://mindera.com/"
-              style={{ color: "yellow" }}
               rel="noreferrer"
             >
               Mindera Software Craft

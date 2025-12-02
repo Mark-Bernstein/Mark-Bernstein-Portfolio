@@ -2,6 +2,7 @@ import React from "react";
 import "../css/socialMediaLinks.css";
 import GithubLogo from "../images/GitHub_32.png";
 import LinkedinLogo from "../images/linkedin_32.png";
+import InstagramLogo from "../images/Instagram_logo.png";
 import Button from "@material-ui/core/Button";
 
 const SocialMediaLinks = () => {
@@ -28,6 +29,18 @@ const SocialMediaLinks = () => {
         >
           <img alt="github logo" src={GithubLogo}></img>
           GitHub
+        </a>
+      </Button>
+      <Button>
+        <a
+          className="resume-links"
+          id="instagramLogo"
+          href="https://www.instagram.com/n0thingiznormal"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img alt="github logo" src={InstagramLogo}></img>
+          Instagram
         </a>
       </Button>
     </div>

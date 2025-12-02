@@ -55,12 +55,11 @@
 
 .socialMediaLinks a {
   display: inline-block;
-  width: 110px;
+  width: 125px;
   background: linear-gradient(135deg, #240046, #0099ff);
   color: #fff;
   text-decoration: none;
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-  font-family: "Roboto", sans-serif;
   z-index: 1;
   position: relative;
   overflow: hidden;
@@ -93,4 +92,14 @@
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
   background: linear-gradient(135deg, #2980b9, #3498db);
+}
+
+#instagramLogo img {
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+
+#instagramLogo {
+  font-size: 20px;
 }
