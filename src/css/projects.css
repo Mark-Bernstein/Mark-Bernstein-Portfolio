@@ -71,7 +71,7 @@ body.home-background {
 /* ---------- Project Card ---------- */
 .projectCard {
   font-family: "Chakra Petch", sans-serif;
-  height: 130px;
+  height: 140px;
   width: min(50%, 800px);
   margin: 16px auto;
   border: 2px solid rgb(0, 221, 255);
