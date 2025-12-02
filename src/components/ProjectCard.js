@@ -148,11 +148,14 @@ const ProjectCard = ({
                     />
                   </a>
                 ) : (
-                  <img
-                    className="websiteScreenshot"
-                    src={projectDetails.image}
-                    alt="project"
-                  />
+                  <>
+                    <img
+                      className="websiteScreenshot"
+                      id="noLinkAdded"
+                      src={projectDetails.image}
+                      alt="project"
+                    />
+                  </>
                 )}
                 {paragraphs}
               </div>

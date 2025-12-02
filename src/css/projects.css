@@ -242,12 +242,21 @@ body.home-background {
   text-shadow: 2px 2px 10px rgb(0, 217, 255);
 }
 
+.detailsImage a {
+  display: flex;
+  justify-content: center;
+}
+
 .detailsImage img {
   max-height: 700px;
-  border-radius: 16px;
   max-width: 100%;
-  margin-top: 0;
+  border-radius: 16px;
   border: 2px solid cyan;
+}
+
+#noLinkAdded {
+  display: flex;
+  justify-self: center;
 }
 
 .detailsParagraph {
@@ -261,7 +270,7 @@ body.home-background {
 /* ---------- Project Paragraphs ---------- */
 .project-details-paragraph {
   color: cyan;
-  padding: 20px;
+  padding-top: 8px;
   margin: 0;
 }
 
