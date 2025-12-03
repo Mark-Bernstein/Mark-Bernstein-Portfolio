@@ -34,8 +34,8 @@ const MatrixBackground = () => {
     };
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Precompute font sizes for different depths
-    const fontSizes = [8, 12, 16, 20];
+    // Precompute font sizes
+    const fontSizes = [8, 10, 12, 14, 16, 24];
 
     const particles = Array.from({ length: maxParticles }, (_, i) => {
       const columnX = (i % numberOfColumns) * columnSpacing;
@@ -43,60 +43,100 @@ const MatrixBackground = () => {
       const depth = Math.random();
       const speed =
         Math.random() < 0.5 ? 5 + Math.random() * 20 : 1 + Math.random() * 0.5;
-      const character = binaryCharacters[Math.floor(Math.random() * 2)];
-      const depthIndex = Math.floor(depth * fontSizes.length);
-      return { x: columnX, y: startY, depth, speed, character, depthIndex };
+
+      return {
+        x: columnX,
+        y: startY,
+        depth,
+        speed,
+        character: binaryCharacters[Math.floor(Math.random() * 2)],
+        depthIndex: Math.floor(depth * fontSizes.length),
+      };
     });
 
-    let animationId;
+    let animationId = null;
+    let energyPulse = 0;
 
     const renderMatrix = () => {
-      // Semi-transparent background for trailing effect
       ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
       ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
-      particles.forEach((particle) => {
-        // Determine size and alpha based on depth
-        const sizeScale = 1 + 0.5 * particle.depth;
-        const alpha = Math.min(1, 0.5 + 0.5 * particle.depth);
+      // -----------------------------------------------------
+      // 🔥 DRAW ENERGY ORB AROUND MOUSE
+      // -----------------------------------------------------
+      if (mousePosition.x !== null && mousePosition.y !== null) {
+        // Pulsing effect
+        energyPulse += 0.05;
+        const baseRadius = 90; // main radius
+        const pulseRadius = 10 * Math.sin(energyPulse);
+        const orbRadius = baseRadius + pulseRadius;
+
+        // Outer glow
+        const gradient = ctx.createRadialGradient(
+          mousePosition.x,
+          mousePosition.y,
+          orbRadius * 0.2,
+          mousePosition.x,
+          mousePosition.y,
+          orbRadius
+        );
+
+        gradient.addColorStop(0, "rgba(0, 255, 255, 1)");
+        gradient.addColorStop(0.5, "rgba(128, 0, 255, 1)");
+        gradient.addColorStop(1, "rgba(255, 255, 0, 0.7)");
+
+        ctx.beginPath();
+        ctx.fillStyle = gradient;
+        ctx.arc(mousePosition.x, mousePosition.y, orbRadius, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Bright core
+        ctx.beginPath();
+        ctx.fillStyle = "rgba(0, 255, 255, 0.6)";
+        ctx.arc(mousePosition.x, mousePosition.y, 10, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // -----------------------------------------------------
+      // 🔢 DRAW MATRIX PARTICLES
+      // -----------------------------------------------------
+      particles.forEach((p) => {
+        const sizeScale = 1 + 0.5 * p.depth;
+        const alpha = 0.5 + 0.5 * p.depth;
+
         ctx.fillStyle = `rgba(0, 255, 0, ${alpha})`;
-        ctx.font = `${fontSizes[particle.depthIndex] * sizeScale}px monospace`;
+        ctx.font = `${fontSizes[p.depthIndex] * sizeScale}px monospace`;
 
-        let drawX = particle.x;
-        let drawY = particle.y;
+        let drawX = p.x;
+        let drawY = p.y;
 
-        // Mouse repulsion - only if close
-        if (
-          mousePosition.x !== null &&
-          mousePosition.y !== null &&
-          Math.abs(drawX - mousePosition.x) < 100 &&
-          Math.abs(drawY - mousePosition.y) < 100
-        ) {
+        // Repulsion from energy orb
+        if (mousePosition.x !== null && mousePosition.y !== null) {
           const dx = drawX - mousePosition.x;
           const dy = drawY - mousePosition.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < 100) {
-            const repulsionForce = (300 - distance) / 2;
-            drawX += (dx / distance) * repulsionForce;
-            drawY += (dy / distance) * repulsionForce;
+
+          if (distance < 120) {
+            const force = (120 - distance) * 0.35;
+            drawX += (dx / distance) * force;
+            drawY += (dy / distance) * force;
           }
         }
 
-        ctx.fillText(particle.character, drawX, drawY);
+        ctx.fillText(p.character, drawX, drawY);
 
-        // Move particle
-        particle.y += particle.speed;
+        // Movement
+        p.y += p.speed;
 
-        // Reset if out of view
-        if (particle.y > canvasHeight) {
-          particle.y = Math.random() * -100;
-          particle.depth = Math.random();
-          particle.speed =
+        if (p.y > canvasHeight) {
+          p.y = Math.random() * -100;
+          p.depth = Math.random();
+          p.speed =
             Math.random() < 0.2
               ? 5 + Math.random() * 10
               : 0.5 + Math.random() * 2;
-          particle.character = binaryCharacters[Math.floor(Math.random() * 2)];
-          particle.depthIndex = Math.floor(particle.depth * fontSizes.length);
+          p.character = binaryCharacters[Math.floor(Math.random() * 2)];
+          p.depthIndex = Math.floor(p.depth * fontSizes.length);
         }
       });
 
