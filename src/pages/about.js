@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import AboutContainer from "../components/AboutContainer";
+import AboutGalaxy from "../components/AboutGalaxy";
 import "../css/about.css";
 
 const About = () => {
@@ -9,7 +10,10 @@ const About = () => {
 
   return (
     <div className="aboutPage">
-      <AboutContainer />
+      <AboutGalaxy />
+      <div style={{ position: "relative", zIndex: 1 }}>
+        <AboutContainer />
+      </div>
     </div>
   );
 };

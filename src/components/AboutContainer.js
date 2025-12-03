@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "../css/nav.css";
 import { motion } from "framer-motion";
-import MarkProfilePicture from "../images/my_wedding_profile_pic.jpg";
+import MarkProfilePicture from "../images/Mark_Profile_Picture.jpg";
 import AboutMeText from "./AboutMeText";
 import Skills from "./Skills";
 import SocialMediaLinks from "./SocialMediaLinks";

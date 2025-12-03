@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 import "../css/nav.css";
 import GrowToRight from "./GrowToRight";
 import GrowToLeft from "./GrowToLeft";
-import ProjectCard from "./ProjectCard"; // ⭐ NEW: you will render 1 modal ProjectCard here
+import ProjectCard from "./ProjectCard";
 import projects from "../data/projects";
 import details from "../data/details";
 import ReactLogo from "../images/reactlogo.png";
 import Next_js_Icon from "../images/Next_js_Icon.jpeg";
 import typescript_logo from "../images/typescript_logo.png";
+import MatrixBackground from "../components/MatrixBackground";
 
 const title = "Projects";
 
@@ -19,9 +20,7 @@ const letterVariants = {
 
 const containerVariants = {
   hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.2 },
-  },
+  visible: { transition: { staggerChildren: 0.2 } },
 };
 
 const ProjectContainer = () => {
@@ -37,6 +36,16 @@ const ProjectContainer = () => {
 
   return (
     <>
+      {/* -------------------------------
+          MATRIX RAIN BACKGROUND
+      -------------------------------- */}
+      <div className="matrix-background">
+        <MatrixBackground />
+      </div>
+
+      {/* -------------------------------
+          PROJECT CARD LIST
+      -------------------------------- */}
       <div className="cardList">
         <motion.h1
           className="projectsTitle"
@@ -51,9 +60,6 @@ const ProjectContainer = () => {
           ))}
         </motion.h1>
 
-        {/* ---------------------------------------------
-            PROJECT CARD LIST (STATIC)
-        ---------------------------------------------- */}
         {projectList.map((proj, index) => {
           const Component = index % 2 === 0 ? GrowToLeft : GrowToRight;
 
@@ -72,9 +78,6 @@ const ProjectContainer = () => {
           );
         })}
 
-        {/* ---------------------------------------------
-            SINGLE MODAL PROJECT CARD (DYNAMIC)
-        ---------------------------------------------- */}
         {activeProject !== null && (
           <ProjectCard
             projectData={projects[projectList[activeProject].key]}
@@ -84,7 +87,7 @@ const ProjectContainer = () => {
             allProjects={projectList}
             projectIndex={activeProject}
             setActiveProject={setActiveProject}
-            modalOnly={true} // tells ProjectCard it's the modal-only version
+            modalOnly={true}
           />
         )}
       </div>

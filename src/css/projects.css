@@ -1,8 +1,70 @@
 /* ---------- Projects Page Base ---------- */
 body.home-background {
-  background: url("../images/Mark_Portfolio_Background_2.jpg") no-repeat center
-    center fixed;
-  background-size: cover;
+  background: #000000;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated Starfield Background */
+body.home-background::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(2px 2px at 60% 70%, white, transparent),
+    radial-gradient(1px 1px at 50% 50%, white, transparent),
+    radial-gradient(1px 1px at 80% 10%, white, transparent),
+    radial-gradient(2px 2px at 90% 60%, white, transparent),
+    radial-gradient(1px 1px at 33% 80%, white, transparent),
+    radial-gradient(1px 1px at 15% 55%, white, transparent);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  animation: starfieldMove 120s linear infinite;
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Nebula gradient overlay */
+body.home-background::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      ellipse at 20% 30%,
+      rgba(157, 0, 255, 0.15),
+      transparent 50%
+    ),
+    radial-gradient(ellipse at 80% 70%, rgba(0, 255, 255, 0.1), transparent 50%);
+  z-index: 0;
+  pointer-events: none;
+  animation: nebulaShift 30s ease-in-out infinite alternate;
+}
+
+@keyframes starfieldMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes nebulaShift {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
 }
 
 /* ---------- Projects Page Title ---------- */
@@ -14,7 +76,7 @@ body.home-background {
   text-align: center;
   margin: 40px auto 30px auto;
   letter-spacing: 3px;
-  background: black;
+  background: rgba(0, 0, 0, 0.9);
   width: min(50%, 300px);
   border: 2px solid rgb(157, 0, 255);
   border-radius: 20px;
@@ -24,6 +86,9 @@ body.home-background {
   overflow: hidden;
   padding: 0px 10px;
   transition: transform 0.4s ease, text-shadow 0.4s ease;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3),
+    inset 0 0 20px rgba(157, 0, 255, 0.2);
 }
 
 .projectsTitle::before {
@@ -66,25 +131,53 @@ body.home-background {
 .cardList {
   margin: auto;
   margin-top: 120px;
+  position: relative;
+  z-index: 1;
 }
 
 /* ---------- Project Card ---------- */
 .projectCard {
+  /* background: rgba(19, 0, 77, 0.8) !important; */
+  background: url("https://www.transparenttextures.com/patterns/stardust.png");
+  backdrop-filter: blur(20px);
   font-family: "Chakra Petch", sans-serif;
   height: 140px;
   width: min(50%, 800px);
   margin: 16px auto;
-  border: 2px solid rgb(0, 221, 255);
+  border: 3px solid rgb(0, 221, 255);
   border-radius: 10px;
-  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.6);
-  background-color: rgb(0, 0, 0);
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 221, 255, 0.2), inset 0 0 20px rgba(157, 0, 255, 0.1);
   position: relative;
   overflow: hidden;
   transition: background-color 450ms ease, box-shadow 450ms ease,
     transform 450ms ease;
   will-change: background-color, box-shadow, transform;
+  transform-style: preserve-3d;
+  animation: cardFloat 6s ease-in-out infinite;
 }
 
+/* Holographic scanlines effect */
+.projectCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 255, 0.03) 0px,
+    transparent 1px,
+    transparent 2px,
+    rgba(0, 255, 255, 0.03) 3px
+  );
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Shine effect */
 .projectCard::after {
   content: "";
   position: absolute;
@@ -101,17 +194,53 @@ body.home-background {
   transform: skewX(-20deg);
   transition: transform 0.6s ease;
   will-change: transform;
+  z-index: 2;
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0px) translateZ(0px);
+  }
+  50% {
+    transform: translateY(-8px) translateZ(10px);
+  }
 }
 
 .projectCard:hover {
   cursor: pointer;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(183, 0, 255, 0.45);
-  background-color: rgb(74, 0, 158);
+  transform: translateY(-8px) translateZ(20px) rotateX(2deg);
+  box-shadow: 0 12px 40px rgba(183, 0, 255, 0.5),
+    0 0 40px rgba(0, 255, 255, 0.3), inset 0 0 30px rgba(157, 0, 255, 0.2);
+  background: linear-gradient(
+      135deg,
+      rgba(74, 0, 158, 0.95),
+      rgba(40, 0, 80, 0.9)
+    ),
+    rgb(74, 0, 158);
+  animation: cardFloat 6s ease-in-out infinite,
+    cardPulse 2s ease-in-out infinite;
+}
+
+@keyframes cardPulse {
+  0%,
+  100% {
+    box-shadow: 0 12px 40px rgba(183, 0, 255, 0.5),
+      0 0 40px rgba(0, 255, 255, 0.3), inset 0 0 30px rgba(157, 0, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 12px 40px rgba(183, 0, 255, 0.7),
+      0 0 60px rgba(0, 255, 255, 0.5), inset 0 0 40px rgba(157, 0, 255, 0.3);
+  }
 }
 
 .projectCard:hover::after {
   transform: translateX(420%) skewX(-45deg);
+}
+
+/* Corner accents for holographic feel */
+.projectCard:hover::before {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1048px) {
@@ -125,11 +254,20 @@ body.home-background {
   width: 120px;
   height: 120px;
   float: left;
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.projectCard:hover .projectLogo {
+  filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.6));
 }
 
 .projectImg {
   max-width: 120px;
   max-height: 120px;
+  border-radius: 8px;
 }
 
 .projectInfoHeader {
@@ -137,7 +275,15 @@ body.home-background {
   text-align: left;
   font-size: 28px;
   color: rgb(51, 255, 0);
-  text-shadow: purple 3px 3px 5px;
+  text-shadow: 0 0 10px rgba(51, 255, 0, 0.8), 3px 3px 5px purple;
+  position: relative;
+  z-index: 3;
+  transition: text-shadow 0.3s ease;
+}
+
+.projectCard:hover .projectInfoHeader {
+  text-shadow: 0 0 20px rgba(51, 255, 0, 1), 0 0 30px rgba(51, 255, 0, 0.5),
+    3px 3px 8px purple;
 }
 
 .projectInfoText {
@@ -146,6 +292,9 @@ body.home-background {
   text-align: left;
   font-size: 14pt;
   color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 3;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
 /* ---------- Responsive Font Sizes ---------- */
@@ -190,8 +339,9 @@ body.home-background {
 
 /* ---------- Modal Styles ---------- */
 .modalBackdrop {
-  background-color: rgba(0, 0, 0, 0.6) !important;
-  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(8px);
+  z-index: 100;
 }
 
 .modalContainer {
@@ -201,16 +351,51 @@ body.home-background {
   transform: translate(-50%, -50%);
   width: 50%;
   border-radius: 20px;
-  border: 4px solid cyan;
+  border: 3px solid cyan;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.5), 0 0 80px rgba(157, 0, 255, 0.3),
+    inset 0 0 40px rgba(0, 255, 255, 0.1);
+  z-index: 101;
 }
 
 .modalContent {
-  background-color: black;
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.98),
+      rgba(20, 0, 40, 0.95)
+    ),
+    rgba(0, 0, 0, 0.95);
   border: none;
   border-radius: 20px;
   max-height: 80vh;
   overflow: auto;
   padding: 20px;
+  position: relative;
+}
+
+/* Holographic grid overlay on modal */
+.modalContent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 255, 0.02) 0px,
+    transparent 1px,
+    transparent 2px,
+    rgba(0, 255, 255, 0.02) 3px
+  );
+  pointer-events: none;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+/* All modal content above the grid */
+.modalContent > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* Responsive Modal */
@@ -233,12 +418,14 @@ body.home-background {
   cursor: pointer;
   color: cyan;
   padding: 0 10px;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
 #closeIcon:hover {
   color: white;
-  text-shadow: 2px 2px 10px rgb(0, 217, 255);
+  text-shadow: 0 0 20px rgb(0, 217, 255), 0 0 40px rgba(0, 217, 255, 0.5);
+  transform: rotate(90deg);
 }
 
 .detailsImage a {
@@ -251,6 +438,13 @@ body.home-background {
   max-width: 100%;
   border-radius: 16px;
   border: 2px solid cyan;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 8px 30px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.detailsImage img:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 12px 40px rgba(0, 0, 0, 0.7);
+  transform: scale(1.02);
 }
 
 #noLinkAdded {
@@ -264,6 +458,7 @@ body.home-background {
   align-items: center;
   gap: 10px;
   padding-bottom: 8px;
+  flex-wrap: wrap;
 }
 
 /* ---------- Project Paragraphs ---------- */
@@ -271,20 +466,24 @@ body.home-background {
   color: cyan;
   padding-top: 8px;
   margin: 0;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  line-height: 1.6;
 }
 
 .retired-project-p,
 .private-github {
-  color: red;
+  color: rgb(255, 50, 100);
+  text-shadow: 0 0 8px rgba(255, 50, 100, 0.5);
+  font-style: italic;
 }
 
 /* ---------- Links ---------- */
 .website-link,
 .github-link {
-  position: relative; /* needed for pseudo-element */
+  position: relative;
   border: 2px solid cyan;
   margin-bottom: 8px;
-  padding: 8px;
+  padding: 8px 16px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -296,9 +495,11 @@ body.home-background {
   text-decoration: none;
   text-shadow: 0 0 10px rgba(0, 255, 255, 1);
   border-radius: 8px;
-  background: linear-gradient(90deg, #002a2a, #9d00ff);
-  overflow: hidden; /* clip the shine */
+  background: linear-gradient(135deg, #002a2a, #9d00ff);
+  overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease, text-shadow 0.4s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2),
+    inset 0 0 20px rgba(157, 0, 255, 0.2);
 }
 
 .website-link a,
@@ -306,7 +507,6 @@ body.home-background {
   font-size: 32px;
   color: cyan;
   text-decoration: none;
-  background-color: linear-gradient(90deg, #00ffff, #9d00ff);
   text-shadow: inherit;
   padding: 8px;
   border-radius: 10px;
@@ -334,6 +534,7 @@ body.home-background {
   );
   transform: skewX(-20deg);
   transition: transform 0.6s ease;
+  z-index: 1;
 }
 
 .website-link:hover::after,
@@ -344,7 +545,9 @@ body.home-background {
 .website-link:hover,
 .github-link:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(183, 0, 255, 0.45);
+  box-shadow: 0 8px 30px rgba(183, 0, 255, 0.6), 0 0 40px rgba(0, 255, 255, 0.4),
+    inset 0 0 30px rgba(157, 0, 255, 0.3);
+  text-shadow: 0 0 15px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 0.5);
 }
 
 .github-link img {
@@ -352,12 +555,14 @@ body.home-background {
   width: 40px;
   border-radius: 50%;
   margin-left: 8px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .github-link:hover img {
   transform: rotate(10deg) scale(1.15);
-  background: linear-gradient(135deg, rgb(29, 29, 29), rgb(217, 255, 0));
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
 }
 
 @media (max-width: 788px) {
@@ -388,14 +593,17 @@ body.home-background {
   cursor: pointer;
   padding: 0px;
   user-select: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease,
+    text-shadow 0.2s ease;
   z-index: 20;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .modal-arrow:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.3);
   color: cyan;
+  text-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 50px rgba(0, 255, 255, 0.4);
 }
 
 .modal-arrow-left {
@@ -404,4 +612,44 @@ body.home-background {
 
 .modal-arrow-right {
   right: -50px;
+}
+
+/* Particle effect overlay */
+@keyframes particleFloat {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(20px);
+    opacity: 0;
+  }
+}
+
+.projectPage::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1000%;
+  height: 1000%;
+  background-image: radial-gradient(
+      circle,
+      rgba(0, 255, 255, 0.3) 1px,
+      transparent 3px
+    ),
+    radial-gradient(circle, rgba(157, 0, 255, 0.3) 1px, transparent 2px);
+  background-size: 50px 50px, 80px 80px;
+  background-position: 0 0, 40px 40px;
+  animation: particleFloat 20s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
 }

@@ -1,6 +1,5 @@
 .timeline {
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.9);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -9,7 +8,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 20px 50px 20px;
   font-size: 24px;
   min-width: 365px;
   max-width: 60%;
@@ -42,7 +40,8 @@
   left: -50%;
   width: 200%;
   height: 100%;
-  background: url(https://www.transparenttextures.com/patterns/stardust.png);
+  background: rgba(37, 0, 69, 0.5);
+  backdrop-filter: blur(2px);
   animation: rotate 10s linear infinite;
   z-index: 0;
 }
@@ -50,7 +49,7 @@
 .timeline h2 {
   text-align: center;
   color: #000000;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Oxanium", sans-serif, cursive;
   font-weight: bold;
   margin-bottom: 20px;
   position: relative;

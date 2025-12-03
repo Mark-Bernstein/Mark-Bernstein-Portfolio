@@ -53,7 +53,7 @@ const ProjectCard = ({
   ));
 
   return (
-    <div>
+    <>
       {!modalOnly && (
         <motion.div
           whileHover={{ scale: 1.15 }}
@@ -85,27 +85,25 @@ const ProjectCard = ({
             animate="visible"
             variants={backdropVariants}
           >
+            {/* LEFT ARROW */}
+            <div
+              className="modal-arrow modal-arrow-left"
+              onClick={goToPrevProject}
+            >
+              ‹
+            </div>
+
+            {/* RIGHT ARROW */}
+            <div
+              className="modal-arrow modal-arrow-right"
+              onClick={goToNextProject}
+            >
+              ›
+            </div>
             <motion.div className="modalContent" variants={modalVariants}>
               <div id="closeIcon" onClick={handleClose}>
                 ×
               </div>
-
-              {/* LEFT ARROW */}
-              <div
-                className="modal-arrow modal-arrow-left"
-                onClick={goToPrevProject}
-              >
-                ‹
-              </div>
-
-              {/* RIGHT ARROW */}
-              <div
-                className="modal-arrow modal-arrow-right"
-                onClick={goToNextProject}
-              >
-                ›
-              </div>
-
               <div className="detailsParagraph">
                 {projectDetails.websiteLink ? (
                   <a
@@ -163,7 +161,7 @@ const ProjectCard = ({
           </motion.div>
         </Modal>
       )}
-    </div>
+    </>
   );
 };
 

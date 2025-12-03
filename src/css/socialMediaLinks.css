@@ -2,7 +2,6 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  background-color: rgba(0, 0, 0, 0.9);
   margin: 20px 0;
   text-align: center;
   position: relative;
@@ -20,7 +19,8 @@
   left: -60%;
   width: 220%;
   height: 220%;
-  background: url("https://www.transparenttextures.com/patterns/stardust.png");
+  background: rgba(37, 0, 69, 0.5);
+  backdrop-filter: blur(2px);
   animation: rotate 10s linear infinite;
   z-index: 0;
   margin: 24px auto;
